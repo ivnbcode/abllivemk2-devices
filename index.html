@@ -3,353 +3,64 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OMNI-LAB MkII — Virtual Suzuki Omnichord & Arturia MiniLab Controller</title>
+  <title>ABLLIVEMK2-DEVICES — Portal de Instrumentos Web MIDI & Max for Live (.amxd)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./src/style.css" />
 </head>
 <body>
-  <div class="app-shell">
-    <!-- Top Hardware Status & MIDI Bar -->
+  <div class="app-shell portal-shell">
+    <!-- Top Portal Header -->
     <header class="top-bar">
       <div class="brand-badge">
-        <span class="brand-series">ABLETON LIVE × ARTURIA MINILAB MkII</span>
-        <h1 class="brand-title">MKII STUDIO <span class="model-tag" id="headerModelTag">SUITE</span></h1>
-      </div>
-
-      <!-- Interactive Web Device Switcher Tabs -->
-      <div class="device-switcher-tabs">
-        <button class="tab-btn active" id="tabOmnichordBtn" data-device="omnichord">
-          01 · OMNI-LAB MkII (Omnichord)
-        </button>
-        <button class="tab-btn" id="tabSpatialBtn" data-device="spatial3d">
-          02 · SPATIAL-LAB 3D (Audio Binaural)
-        </button>
+        <span class="brand-series">ABLETON LIVE SUITE × ARTURIA MINILAB MkII</span>
+        <h1 class="brand-title">ABLLIVEMK2 <span class="model-tag">DEVICES HUB</span></h1>
       </div>
 
       <div class="midi-status-panel">
-        <div class="midi-indicator" id="midiIndicator">
-          <span class="led-dot" id="midiLed"></span>
-          <span id="midiStatusText">Inicializando MIDI...</span>
-        </div>
-
-        <div class="midi-controls">
-          <select id="midiDeviceSelect" class="hardware-select" title="Seleccionar dispositivo MIDI">
-            <option value="">Sin dispositivo MIDI</option>
-          </select>
-
-          <select id="strumStripSelect" class="hardware-select" title="Tira táctil del MiniLab MkII para el Strumplate">
-            <option value="cc:1">Tira Modulación (CC 1)</option>
-            <option value="pitchbend">Tira Pitch Bend</option>
-            <option value="both">Ambas Tiras (Mod + Pitch)</option>
-          </select>
-
-          <button id="midiLearnBtn" class="hw-btn small-btn" title="Aprender cualquier tira o control MIDI">
-            MIDI Learn Strum
-          </button>
-
-          <button id="openCatalogBtn" class="hw-btn catalog-btn" title="Ver catálogo de dispositivos Web y descargar Max for Live (.amxd)">
-            ⬇ Max for Live & Hub
-          </button>
-        </div>
+        <a href="https://github.com/ivnbcode/abllivemk2-devices" target="_blank" rel="noopener" class="hw-btn github-link-btn">
+          Repositorio en GitHub ↗
+        </a>
       </div>
     </header>
 
-    <!-- Main Omnichord Chassis (Device 01) -->
-    <main class="omnichord-chassis" id="omnichordView">
-      <!-- Left & Center Section: Controls + Chord Matrix + MiniLab Pads -->
-      <div class="left-workstation">
-        <!-- Upper Control Strip: OLED Chord Display + Sonic Strings Parameters -->
-        <section class="upper-console">
-          <!-- OLED Screen -->
-          <div class="oled-display">
-            <div class="oled-top-row">
-              <span class="oled-tag" id="inputModeBadge">MODO: HÍBRIDO (PADS + TECLAS)</span>
-              <span class="oled-cc-readout" id="midiActivityReadout">CC1: 000</span>
-            </div>
-            <div class="oled-main-chord">
-              <div class="chord-symbol" id="activeChordSymbol">C</div>
-              <div class="chord-details">
-                <div class="chord-full-name" id="activeChordFullName">C Major</div>
-                <div class="chord-notes-list" id="activeChordNotes">C · E · G</div>
-              </div>
-            </div>
-            <canvas id="waveformCanvas" width="280" height="46"></canvas>
-          </div>
-
-          <!-- Sonic Strings Synth Parameters -->
-          <div class="synth-knobs-panel">
-            <div class="panel-header-row">
-              <span class="section-title">SONIC STRINGS SYNTHESIS</span>
-              <label class="chord-hold-toggle">
-                <input type="checkbox" id="chordPadToggle" checked />
-                <span class="toggle-pill"></span>
-                <span class="toggle-label">CHORD HOLD (ÓRGANO)</span>
-              </label>
-            </div>
-
-            <div class="sliders-grid">
-              <div class="slider-control">
-                <label for="harpVolSlider">VOLUMEN ARPA</label>
-                <input type="range" id="harpVolSlider" min="0" max="1" step="0.01" value="0.85" />
-                <span class="slider-val" id="harpVolVal">85%</span>
-              </div>
-
-              <div class="slider-control">
-                <label for="sustainSlider">SUSTAIN</label>
-                <input type="range" id="sustainSlider" min="0.15" max="3.8" step="0.05" value="1.4" />
-                <span class="slider-val" id="sustainVal">1.4s</span>
-              </div>
-
-              <div class="slider-control">
-                <label for="toneSlider">BRILLO (TONE)</label>
-                <input type="range" id="toneSlider" min="600" max="8500" step="50" value="3400" />
-                <span class="slider-val" id="toneVal">3.4kHz</span>
-              </div>
-
-              <div class="slider-control">
-                <label for="chorusSlider">CHORUS RETRO</label>
-                <input type="range" id="chorusSlider" min="0" max="1" step="0.01" value="0.55" />
-                <span class="slider-val" id="chorusVal">55%</span>
-              </div>
-
-              <div class="slider-control">
-                <label for="reverbSlider">REVERB ESPACIAL</label>
-                <input type="range" id="reverbSlider" min="0" max="0.9" step="0.01" value="0.35" />
-                <span class="slider-val" id="reverbVal">35%</span>
-              </div>
-
-              <div class="slider-control">
-                <label for="chordVolSlider">VOL. ÓRGANO</label>
-                <input type="range" id="chordVolSlider" min="0" max="1" step="0.01" value="0.45" />
-                <span class="slider-val" id="chordVolVal">45%</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Traditional Omnichord 3x12 Chord Buttons Matrix -->
-        <section class="chord-matrix-section">
-          <div class="section-header-bar">
-            <span class="section-title">MATRIZ DE ACORDES OMNICHORD (36 ACORDES + SEXTA/SÉPTIMA)</span>
-            <span class="section-hint">Clic en un botón, toca las teclas de tu MiniLab o usa las teclas 1-0 del PC</span>
-          </div>
-
-          <div class="chord-matrix-container">
-            <div class="matrix-row-labels">
-              <div class="row-label major-label">MAJOR</div>
-              <div class="row-label minor-label">MINOR</div>
-              <div class="row-label seventh-label">7TH</div>
-              <div class="row-label maj7-label">MAJ7</div>
-            </div>
-            <div class="chord-matrix-grid" id="chordMatrixGrid">
-              <!-- Populated dynamically by main.js -->
-            </div>
-          </div>
-        </section>
-
-        <!-- Arturia MiniLab MkII 8 RGB Pads + 25-Key Live Detection Strip -->
-        <section class="minilab-companion-section">
-          <div class="section-header-bar">
-            <div class="header-with-Action">
-              <span class="section-title">PADS ARTURIA MINILAB MkII (BANCO A: NOTAS 36–43)</span>
-              <label class="pad-channel-toggle" title="Permite activar los 8 pads también si tocas las notas C2-G2 en cualquier canal MIDI">
-                <input type="checkbox" id="padsAnyChannelToggle" />
-                <span>Detectar notas 36-43 en cualquier canal como Pads</span>
-              </label>
-            </div>
-            <button id="assignPadBtn" class="hw-btn small-btn" title="Guarda el acorde actual en el próximo Pad que presiones">
-              Asignar Acorde Actual a un Pad
-            </button>
-          </div>
-
-          <div class="minilab-pads-grid" id="minilabPadsGrid">
-            <!-- 8 RGB Pads rendered dynamically -->
-          </div>
-
-          <!-- Visual MiniLab 25-Key Keyboard Indicator -->
-          <div class="keyboard-feedback-bar">
-            <div class="kb-label">
-              <span>TECLADO MINILAB (DETECCIÓN DE ACORDES EN TIEMPO REAL)</span>
-              <span id="heldKeysReadout" class="kb-notes-readout">Toca cualquier nota o tríada en el teclado...</span>
-            </div>
-            <div class="mini-keyboard" id="miniKeyboard">
-              <!-- 25 keys C3 (48) to C5 (72) visual indicator -->
-            </div>
-          </div>
-        </section>
+    <!-- Hero Banner -->
+    <section class="portal-hero">
+      <div class="portal-hero-text">
+        <span class="brand-series">COLECCIÓN DE INSTRUMENTOS VIRTUALES Y EFECTOS MIDI / AUDIO</span>
+        <h2 class="portal-hero-title">Acceso Directo a Dispositivos Web & Descargas Max for Live (<code>.amxd</code>)</h2>
+        <p class="portal-hero-desc">
+          Selecciona cualquiera de los dispositivos para abrir su <strong>versión Web interactiva</strong> en el navegador (con soporte USB directo para tu <strong>Arturia MiniLab MkII</strong>) o descarga el paquete <strong>Max for Live (<code>.amxd</code>)</strong> listo para arrastrar a tus pistas de <strong>Ableton Live</strong>.
+        </p>
       </div>
+    </section>
 
-      <!-- Right Section: Iconic Vertical SONIC STRINGS Strumplate -->
-      <aside class="strumplate-housing">
-        <div class="strumplate-header">
-          <span class="strum-title">SONIC STRINGS</span>
-          <span class="strum-subtitle">DESLIZA LA TIRA MOD (CC 1) O EL CURSOR</span>
-        </div>
-
-        <div class="strumplate-surface" id="strumplateSurface">
-          <!-- Touch strip position indicator synced to Arturia Modulation strip -->
-          <div class="touch-cursor-indicator" id="touchStripIndicator"></div>
-
-          <!-- 16 Metallic Sensor Traces -->
-          <div class="sonic-strings-list" id="sonicStringsList">
-            <!-- Populated dynamically with 16 strings -->
-          </div>
-        </div>
-
-        <div class="strumplate-footer">
-          <div class="strip-meter">
-            <span>MOD STRIP (CC 1)</span>
-            <div class="strip-progress-track">
-              <div class="strip-progress-fill" id="modStripBar"></div>
-            </div>
-            <span id="modStripPercent">0%</span>
-          </div>
-          <button id="autoStrumBtn" class="hw-btn strum-demo-btn">
-            Rasguear Acorde (Espacio)
-          </button>
-        </div>
-      </aside>
-    </main>
-
-    <!-- Device 02: SPATIAL-LAB 3D MkII Interactive Binaural 3D Workstation -->
-    <main class="spatial3d-chassis hidden-view" id="spatial3dView">
-      <!-- Left: 3D Radar / Dome Canvas & Elevation Bar -->
-      <section class="spatial-stage-panel">
-        <div class="section-header-bar">
-          <div>
-            <span class="section-title">ESCENARIO ACÚSTICO 3D BINAURAL (HRTF 360° + ELEVACIÓN + DISTANCIA)</span>
-            <p class="section-hint">Arrastra las esferas con el mouse, gira la tira Mod (CC 1) o dispara los Pads 1–8 de tu Arturia MiniLab MkII</p>
-          </div>
-          <div class="spatial-transport">
-            <button id="spatialPlayBtn" class="hw-btn spatial-play-btn">▶ Iniciar Escena 3D</button>
-          </div>
-        </div>
-
-        <div class="spatial-canvases-row">
-          <div class="radar-canvas-wrap">
-            <canvas id="spatialRadarCanvas" width="540" height="440"></canvas>
-            <div class="radar-overlay-Readout" id="spatialCoordsReadout">
-              FUENTE 1 · X: -1.20m · Y: +0.40m · Z: -1.10m
-            </div>
-          </div>
-
-          <div class="elevation-column">
-            <span class="elev-title">ELEVACIÓN (EJE Y)</span>
-            <div class="elev-slider-wrap">
-              <input type="range" id="spatialYSlider" min="-2.5" max="2.5" step="0.05" value="0.4" orient="vertical" />
-            </div>
-            <span class="elev-val" id="spatialYVal">+0.4m</span>
-          </div>
-        </div>
-
-        <!-- 8 MiniLab MkII Spatial Trajectory Pads -->
-        <div class="spatial-pads-bar">
-          <span class="section-title">PADS ARTURIA MINILAB MkII (NOTAS 36–43): POSICIONES Y ÓRBITAS 3D INSTANTÁNEAS</span>
-          <div class="spatial-pads-grid" id="spatialPadsGrid">
-            <!-- Rendered by main.js -->
-          </div>
-        </div>
-      </section>
-
-      <!-- Right: 4 Sound Sources Inspector & 3D Orbit Controls -->
-      <aside class="spatial-inspector-panel">
-        <div class="inspector-block">
-          <span class="section-title">FUENTES DE SONIDO EN EL ESPACIO 3D</span>
-          <div class="sources-selector-list" id="spatialSourcesList">
-            <!-- 4 sources rendered dynamically -->
-          </div>
-        </div>
-
-        <div class="inspector-block">
-          <span class="section-title" id="selectedSourceHeader">PARÁMETROS 3D: FUENTE 1</span>
-          <div class="sliders-grid spatial-sliders-grid">
-            <div class="slider-control">
-              <label for="spatialXSlider">EJE X (IZQ / DER)</label>
-              <input type="range" id="spatialXSlider" min="-2.5" max="2.5" step="0.05" value="-1.2" />
-              <span class="slider-val" id="spatialXVal">-1.2m</span>
-            </div>
-
-            <div class="slider-control">
-              <label for="spatialZSlider">EJE Z (FRENTE / ATRÁS)</label>
-              <input type="range" id="spatialZSlider" min="-2.5" max="2.5" step="0.05" value="-1.1" />
-              <span class="slider-val" id="spatialZVal">-1.1m</span>
-            </div>
-
-            <div class="slider-control">
-              <label for="spatialOrbitSpeedSlider">VELOCIDAD ÓRBITA</label>
-              <input type="range" id="spatialOrbitSpeedSlider" min="0" max="2.5" step="0.05" value="0.45" />
-              <span class="slider-val" id="spatialOrbitSpeedVal">0.45 Hz</span>
-            </div>
-
-            <div class="slider-control">
-              <label for="spatialOrbitRadiusSlider">RADIO ÓRBITA 3D</label>
-              <input type="range" id="spatialOrbitRadiusSlider" min="0" max="2.4" step="0.05" value="1.4" />
-              <span class="slider-val" id="spatialOrbitRadiusVal">1.4m</span>
-            </div>
-
-            <div class="slider-control">
-              <label for="spatialOrbitModeSelect">FORMA TRAYECTORIA</label>
-              <select id="spatialOrbitModeSelect" class="hardware-select">
-                <option value="circle">Círculo 360°</option>
-                <option value="figure8">Infinito (Figura 8)</option>
-                <option value="spiral">Espiral Domo 3D</option>
-              </select>
-            </div>
-
-            <div class="slider-control">
-              <label for="spatialRoomSlider">REFLEXIONES SALA 3D</label>
-              <input type="range" id="spatialRoomSlider" min="0" max="0.95" step="0.02" value="0.32" />
-              <span class="slider-val" id="spatialRoomVal">32%</span>
-            </div>
-          </div>
-
-          <div class="custom-audio-loader">
-            <label class="hw-btn upload-audio-label">
-              📂 Cargar Tu Propio Audio (.WAV/.MP3) en esta Fuente
-              <input type="file" id="spatialAudioFileInput" accept="audio/*" hidden />
-            </label>
-          </div>
-        </div>
-      </aside>
-    </main>
-
-    <!-- Ableton Live & Arturia MiniLab MkII Devices Hub & Downloads Section -->
-    <section class="devices-hub-section" id="devicesHubSection">
-      <div class="hub-header">
-        <div>
-          <span class="brand-series">ABLETON LIVE SUITE + WEB MIDI COLLECTION</span>
-          <h2 class="hub-title">CATÁLOGO DE INSTRUMENTOS WEB & DISPOSITIVOS MAX FOR LIVE (<code>.amxd</code>)</h2>
-        </div>
-        <a href="https://github.com/ivnbcode/abllivemk2-devices" target="_blank" rel="noopener" class="hw-btn github-link-btn">
-          Ver Repositorio en GitHub ↗
-        </a>
-      </div>
-
+    <!-- Devices Grid -->
+    <section class="devices-hub-section">
       <div class="devices-cards-grid">
         <!-- Device #1 Card: OMNI-LAB MkII -->
         <article class="device-card active-device-card">
           <div class="device-card-top">
             <div class="device-badges">
+              <span class="badge badge-web">APP WEB: OMNILAB.HTML</span>
               <span class="badge badge-m4l">MAX FOR LIVE MIDI (.AMXD)</span>
-              <span class="badge badge-web">WEB SYNTH</span>
             </div>
             <h3 class="device-name">01 · OMNI-LAB MkII (Suzuki Omnichord Strumplate)</h3>
             <p class="device-desc">
-              Convierte la tira táctil de Modulación (<code>CC 1</code>) del <strong>Arturia MiniLab MkII</strong> en las 16 cuerdas metálicas <em>Sonic Strings</em> del Omnichord a través de 4 octavas, con detección de acordes en tiempo real desde las 25 teclas y 8 acordes asignables a los Pads.
+              Emulador del mítico <strong>Suzuki Omnichord (OM-27 / OM-84)</strong>. Convierte la tira táctil de Modulación (<code>CC 1</code>) del <strong>Arturia MiniLab MkII</strong> en las 16 cuerdas metálicas <em>Sonic Strings</em> a través de 4 octavas, con detección de acordes en tiempo real desde las 25 teclas y 8 acordes asignables a los Pads.
             </p>
             <ul class="device-features-list">
-              <li><strong>Ableton Live:</strong> Parámetros nativos automatizables (Strum, Root, Quality, Sustain, Hold).</li>
-              <li><strong>Pads 1–8 (Notas 36–43):</strong> Disparo instantáneo de acordes predefinidos.</li>
-              <li><strong>Teclas C2+ (Nota 48+):</strong> Detección inteligente de tríadas y acordes de 7ma.</li>
+              <li><strong>Versión Web:</strong> Motor de síntesis Sonic Strings con Chorus BBD estéreo, Reverb y órgano Chord Hold.</li>
+              <li><strong>Ableton Live (.amxd):</strong> Parámetros automatizables (Strum, Root, Quality, Sustain, Hold).</li>
+              <li><strong>Pads 1–8 (Notas 36–43) + Teclas (C2+):</strong> Disparo de acordes y detección de tríadas/séptimas en vivo.</li>
             </ul>
           </div>
 
           <div class="device-card-actions">
-            <button class="hw-btn open-web-device-btn" data-open-device="omnichord">
-              🎹 Abrir Instrumento Web Interactivo
-            </button>
+            <a href="./omnilab.html" class="download-btn launch-web-btn">
+              🎹 Abrir Dispositivo Web (omnilab.html) →
+            </a>
             <a href="./max-for-live/omnilab-mk2/OMNI-LAB_MkII_Ableton_M4L.zip" download="OMNI-LAB_MkII_Ableton_M4L.zip" class="download-btn primary-dl">
               ⬇ Descargar Pack Ableton (.ZIP: .amxd + .js)
             </a>
@@ -371,24 +82,24 @@
         <article class="device-card active-device-card">
           <div class="device-card-top">
             <div class="device-badges">
+              <span class="badge badge-web">APP WEB: SPATIALLAB.HTML</span>
               <span class="badge badge-m4l">MAX FOR LIVE AUDIO FX (.AMXD)</span>
-              <span class="badge badge-web">WEB 3D HRTF</span>
             </div>
             <h3 class="device-name">02 · SPATIAL-LAB 3D MkII (Posicionador Espacial Binaural)</h3>
             <p class="device-desc">
               Coloca y mueve fuentes de sonido en un espacio tridimensional de 360° (Azimut, Elevación, Distancia y Órbitas LFO) con procesamiento binaural HRTF, micro-retardos interaurales (ITD), filtro de sombra de cabeza (ILD) y reflexiones de sala.
             </p>
             <ul class="device-features-list">
-              <li><strong>Ableton Live:</strong> Efecto de audio <code>.amxd</code> con perillas X, Y, Z, Velocidad/Radio de Órbita y Sala 3D.</li>
-              <li><strong>Tira Modulación (CC 1):</strong> Gira manualmente la fuente sonora 360° alrededor de tu cabeza.</li>
-              <li><strong>Pads 1–8 (Notas 36–43):</strong> 8 posiciones y trayectorias orbitales 3D instantáneas (Frente, Nuca, Cenit, Órbita 360°, Infinito 8, Espiral).</li>
+              <li><strong>Versión Web:</strong> Radar 3D interactivo con 4 fuentes simultáneas, generadores integrados y carga de archivos <code>.WAV/.MP3</code>.</li>
+              <li><strong>Ableton Live (.amxd):</strong> Efecto de audio con perillas X, Y, Z, Velocidad/Radio de Órbita y Sala 3D.</li>
+              <li><strong>Tira Mod (CC 1) + Pads 1–8:</strong> Gira la fuente 360° alrededor de tu cabeza o salta a 8 órbitas 3D instantáneas.</li>
             </ul>
           </div>
 
           <div class="device-card-actions">
-            <button class="hw-btn open-web-device-btn" data-open-device="spatial3d">
-              🎧 Abrir Escenario 3D Web Interactivo
-            </button>
+            <a href="./spatiallab.html" class="download-btn launch-web-btn">
+              🎧 Abrir Dispositivo Web (spatiallab.html) →
+            </a>
             <a href="./max-for-live/spatiallab-3d/SPATIAL-LAB_3D_MkII_Ableton_M4L.zip" download="SPATIAL-LAB_3D_MkII_Ableton_M4L.zip" class="download-btn primary-dl">
               ⬇ Descargar Pack Ableton (.ZIP: .amxd + .js)
             </a>
@@ -408,7 +119,5 @@
       </div>
     </section>
   </div>
-
-  <script type="module" src="./src/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SPATIAL-LAB 3D MkII — Escenario de Audio Espacial Binaural 3D & Arturia MiniLab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./src/style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <!-- Top Hardware Status & MIDI Bar -->
+    <header class="top-bar">
+      <div class="brand-badge">
+        <span class="brand-series">ABLETON LIVE × ARTURIA MINILAB MkII</span>
+        <h1 class="brand-title">02 · SPATIAL-LAB 3D <span class="model-tag">HRTF BINAURAL</span></h1>
+      </div>
+
+      <div class="midi-status-panel">
+        <a href="./index.html" class="hw-btn catalog-btn" title="Volver al Portal / Hub Principal">
+          ← Hub de Dispositivos
+        </a>
+
+        <div class="midi-indicator" id="midiIndicator">
+          <span class="led-dot" id="midiLed"></span>
+          <span id="midiStatusText">Inicializando MIDI...</span>
+        </div>
+
+        <div class="midi-controls">
+          <select id="midiDeviceSelect" class="hardware-select" title="Seleccionar dispositivo MIDI">
+            <option value="">Sin dispositivo MIDI</option>
+          </select>
+
+          <a href="./max-for-live/spatiallab-3d/SPATIAL-LAB_3D_MkII_Ableton_M4L.zip" download="SPATIAL-LAB_3D_MkII_Ableton_M4L.zip" class="hw-btn primary-dl-mini">
+            ⬇ Descargar .AMXD
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main SPATIAL-LAB 3D Workstation -->
+    <main class="spatial3d-chassis">
+      <!-- Left: 3D Radar / Dome Canvas & Elevation Bar -->
+      <section class="spatial-stage-panel">
+        <div class="section-header-bar">
+          <div>
+            <span class="section-title">ESCENARIO ACÚSTICO 3D BINAURAL (HRTF 360° + ELEVACIÓN + DISTANCIA)</span>
+            <p class="section-hint">Arrastra las esferas con el mouse, gira la tira Mod (CC 1) o dispara los Pads 1–8 de tu Arturia MiniLab MkII</p>
+          </div>
+          <div class="spatial-transport">
+            <button id="spatialPlayBtn" class="hw-btn spatial-play-btn">▶ Iniciar Escena 3D</button>
+          </div>
+        </div>
+
+        <div class="spatial-canvases-row">
+          <div class="radar-canvas-wrap">
+            <canvas id="spatialRadarCanvas" width="540" height="440"></canvas>
+            <div class="radar-overlay-Readout" id="spatialCoordsReadout">
+              FUENTE 1 · X: -1.20m · Y: +0.40m · Z: -1.10m
+            </div>
+          </div>
+
+          <div class="elevation-column">
+            <span class="elev-title">ELEVACIÓN (EJE Y)</span>
+            <div class="elev-slider-wrap">
+              <input type="range" id="spatialYSlider" min="-2.5" max="2.5" step="0.05" value="0.4" orient="vertical" />
+            </div>
+            <span class="elev-val" id="spatialYVal">+0.4m</span>
+          </div>
+        </div>
+
+        <!-- 8 MiniLab MkII Spatial Trajectory Pads -->
+        <div class="spatial-pads-bar">
+          <span class="section-title">PADS ARTURIA MINILAB MkII (NOTAS 36–43): POSICIONES Y ÓRBITAS 3D INSTANTÁNEAS</span>
+          <div class="spatial-pads-grid" id="spatialPadsGrid"></div>
+        </div>
+      </section>
+
+      <!-- Right: 4 Sound Sources Inspector & 3D Orbit Controls -->
+      <aside class="spatial-inspector-panel">
+        <div class="inspector-block">
+          <span class="section-title">FUENTES DE SONIDO EN EL ESPACIO 3D</span>
+          <div class="sources-selector-list" id="spatialSourcesList"></div>
+        </div>
+
+        <div class="inspector-block">
+          <span class="section-title" id="selectedSourceHeader">PARÁMETROS 3D: FUENTE 1</span>
+          <div class="sliders-grid spatial-sliders-grid">
+            <div class="slider-control">
+              <label for="spatialXSlider">EJE X (IZQ / DER)</label>
+              <input type="range" id="spatialXSlider" min="-2.5" max="2.5" step="0.05" value="-1.2" />
+              <span class="slider-val" id="spatialXVal">-1.2m</span>
+            </div>
+
+            <div class="slider-control">
+              <label for="spatialZSlider">EJE Z (FRENTE / ATRÁS)</label>
+              <input type="range" id="spatialZSlider" min="-2.5" max="2.5" step="0.05" value="-1.1" />
+              <span class="slider-val" id="spatialZVal">-1.1m</span>
+            </div>
+
+            <div class="slider-control">
+              <label for="spatialOrbitSpeedSlider">VELOCIDAD ÓRBITA</label>
+              <input type="range" id="spatialOrbitSpeedSlider" min="0" max="2.5" step="0.05" value="0.45" />
+              <span class="slider-val" id="spatialOrbitSpeedVal">0.45 Hz</span>
+            </div>
+
+            <div class="slider-control">
+              <label for="spatialOrbitRadiusSlider">RADIO ÓRBITA 3D</label>
+              <input type="range" id="spatialOrbitRadiusSlider" min="0" max="2.4" step="0.05" value="1.4" />
+              <span class="slider-val" id="spatialOrbitRadiusVal">1.4m</span>
+            </div>
+
+            <div class="slider-control">
+              <label for="spatialOrbitModeSelect">FORMA TRAYECTORIA</label>
+              <select id="spatialOrbitModeSelect" class="hardware-select">
+                <option value="circle">Círculo 360°</option>
+                <option value="figure8">Infinito (Figura 8)</option>
+                <option value="spiral">Espiral Domo 3D</option>
+              </select>
+            </div>
+
+            <div class="slider-control">
+              <label for="spatialRoomSlider">REFLEXIONES SALA 3D</label>
+              <input type="range" id="spatialRoomSlider" min="0" max="0.95" step="0.02" value="0.32" />
+              <span class="slider-val" id="spatialRoomVal">32%</span>
+            </div>
+          </div>
+
+          <div class="custom-audio-loader">
+            <label class="hw-btn upload-audio-label">
+              📂 Cargar Tu Propio Audio (.WAV/.MP3) en esta Fuente
+              <input type="file" id="spatialAudioFileInput" accept="audio/*" hidden />
+            </label>
+          </div>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <script type="module" src="./src/spatiallabApp.js"></script>
+</body>
+</html>

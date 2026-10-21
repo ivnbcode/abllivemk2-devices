@@ -1160,6 +1160,54 @@ body {
   color: var(--oled-cyan);
 }
 
+.launch-web-btn {
+  background: linear-gradient(180deg, #227860 0%, #154d3d 100%);
+  color: var(--oled-cyan);
+  padding: 11px 14px;
+  font-size: 0.9rem;
+  border: 1px solid var(--oled-cyan);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+.launch-web-btn:hover {
+  background: var(--oled-cyan);
+  color: #0b1411;
+  box-shadow: 0 0 16px rgba(72, 245, 200, 0.55);
+}
+
+.primary-dl-mini {
+  background: linear-gradient(180deg, var(--accent-orange) 0%, #b8431b 100%);
+  border-color: #ff946b;
+  color: #fff;
+  text-decoration: none;
+}
+
+.portal-shell {
+  max-width: 1180px;
+}
+
+.portal-hero {
+  background: linear-gradient(135deg, #23201d 0%, #171b22 100%);
+  border: 2px solid #3f3a34;
+  border-radius: 18px;
+  padding: 26px 28px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+}
+
+.portal-hero-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.45rem;
+  color: var(--chassis-cream);
+  margin: 6px 0 10px;
+}
+
+.portal-hero-desc {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: #ccc3b6;
+  max-width: 880px;
+}
+
 @media (max-width: 1060px) {
   .omnichord-chassis {
     grid-template-columns: 1fr;
