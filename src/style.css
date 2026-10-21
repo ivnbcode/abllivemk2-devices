@@ -720,6 +720,195 @@ body {
   color: #fff;
 }
 
+.catalog-btn {
+  background: linear-gradient(180deg, #226b58 0%, #154538 100%);
+  border-color: var(--oled-cyan);
+  color: var(--oled-cyan);
+}
+
+.catalog-btn:hover {
+  background: var(--oled-cyan);
+  color: #0b1411;
+}
+
+/* Devices Hub & Max for Live Downloads Section */
+.devices-hub-section {
+  background: var(--panel-dark);
+  border: 2px solid #3c3732;
+  border-radius: 18px;
+  padding: 20px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+  margin-top: 6px;
+}
+
+.hub-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  border-bottom: 1px solid #38332e;
+  padding-bottom: 12px;
+}
+
+.hub-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.05rem;
+  color: var(--chassis-cream);
+  margin-top: 3px;
+}
+
+.github-link-btn {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.devices-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 16px;
+}
+
+.device-card {
+  background: var(--panel-charcoal);
+  border: 2px solid #474039;
+  border-radius: 14px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.active-device-card {
+  border-color: var(--accent-gold);
+}
+
+.upcoming-device-card {
+  opacity: 0.78;
+  border-style: dashed;
+}
+
+.device-badges {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.badge-m4l {
+  background: rgba(224, 90, 43, 0.2);
+  color: #ff9c7a;
+  border: 1px solid var(--accent-orange);
+}
+
+.badge-web {
+  background: rgba(72, 245, 200, 0.15);
+  color: var(--oled-cyan);
+  border: 1px solid var(--oled-cyan);
+}
+
+.badge-soon {
+  background: rgba(217, 155, 38, 0.15);
+  color: var(--oled-amber);
+  border: 1px solid var(--accent-gold);
+}
+
+.device-name {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.device-desc {
+  font-size: 0.84rem;
+  line-height: 1.48;
+  color: #d6cdc2;
+  margin-bottom: 10px;
+}
+
+.device-features-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.78rem;
+  color: #bfb5a8;
+}
+
+.device-features-list li::before {
+  content: "• ";
+  color: var(--oled-cyan);
+  font-weight: bold;
+}
+
+.device-card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.download-btn {
+  text-decoration: none;
+  text-align: center;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  border-radius: 8px;
+  transition: all 0.15s ease;
+}
+
+.primary-dl {
+  background: linear-gradient(180deg, var(--accent-orange) 0%, #b8431b 100%);
+  color: #fff;
+  padding: 10px 14px;
+  font-size: 0.85rem;
+  border: 1px solid #ff946b;
+}
+
+.primary-dl:hover {
+  filter: brightness(1.12);
+  box-shadow: 0 0 14px rgba(224, 90, 43, 0.6);
+}
+
+.secondary-dl-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.secondary-dl {
+  background: #1c1a17;
+  color: var(--chassis-cream);
+  border: 1px solid #524a42;
+  padding: 7px 8px;
+  font-size: 0.74rem;
+}
+
+.secondary-dl:hover {
+  border-color: var(--oled-cyan);
+  color: var(--oled-cyan);
+}
+
+.coming-soon-note {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.74rem;
+  color: var(--text-muted);
+}
+
 @media (max-width: 1060px) {
   .omnichord-chassis {
     grid-template-columns: 1fr;

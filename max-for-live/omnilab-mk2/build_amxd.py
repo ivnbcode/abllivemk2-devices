@@ -27,3 +27,18 @@ def write_amxd(path, device_type_code, patch_bytes):
 
 # 1. Guardar Efecto MIDI ('mddf')
 write_amxd(midi_amxd_path, b"mddf", midi_json_bytes)
+
+# 2. Empaquetar ZIP listo para descargar desde GitHub Pages (.amxd + .js + .maxpat + README)
+import zipfile
+
+zip_path = os.path.join(script_dir, "OMNI-LAB_MkII_Ableton_M4L.zip")
+files_to_pack = ["OMNI-LAB_MkII.amxd", "omnilab_m4l.js", "OMNI-LAB_MkII.maxpat", "README.md"]
+
+with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as zf:
+    for fname in files_to_pack:
+        fpath = os.path.join(script_dir, fname)
+        if os.path.exists(fpath):
+            zf.write(fpath, arcname=f"OMNI-LAB_MkII/{fname}")
+
+print(f"Paquete ZIP generado: {zip_path} ({os.path.getsize(zip_path)} bytes)")
+

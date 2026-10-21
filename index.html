@@ -38,6 +38,10 @@
           <button id="midiLearnBtn" class="hw-btn small-btn" title="Aprender cualquier tira o control MIDI">
             MIDI Learn Strum
           </button>
+
+          <button id="openCatalogBtn" class="hw-btn catalog-btn" title="Ver catálogo de dispositivos Web y descargar Max for Live (.amxd)">
+            ⬇ Max for Live & Hub
+          </button>
         </div>
       </div>
     </header>
@@ -198,6 +202,73 @@
         </div>
       </aside>
     </main>
+
+    <!-- Ableton Live & Arturia MiniLab MkII Devices Hub & Downloads Section -->
+    <section class="devices-hub-section" id="devicesHubSection">
+      <div class="hub-header">
+        <div>
+          <span class="brand-series">ABLETON LIVE SUITE + WEB MIDI COLLECTION</span>
+          <h2 class="hub-title">CATÁLOGO DE INSTRUMENTOS WEB & DISPOSITIVOS MAX FOR LIVE (<code>.amxd</code>)</h2>
+        </div>
+        <a href="https://github.com/ivnbcode/abllivemk2-devices" target="_blank" rel="noopener" class="hw-btn github-link-btn">
+          Ver Repositorio en GitHub ↗
+        </a>
+      </div>
+
+      <div class="devices-cards-grid">
+        <!-- Device #1 Card: OMNI-LAB MkII -->
+        <article class="device-card active-device-card">
+          <div class="device-card-top">
+            <div class="device-badges">
+              <span class="badge badge-m4l">MAX FOR LIVE (.AMXD)</span>
+              <span class="badge badge-web">WEB SYNTH ACTIVO</span>
+            </div>
+            <h3 class="device-name">01 · OMNI-LAB MkII (Suzuki Omnichord Strumplate)</h3>
+            <p class="device-desc">
+              Convierte la tira táctil de Modulación (<code>CC 1</code>) del <strong>Arturia MiniLab MkII</strong> en las 16 cuerdas metálicas <em>Sonic Strings</em> del Omnichord a través de 4 octavas, con detección de acordes en tiempo real desde las 25 teclas y 8 acordes asignables a los Pads.
+            </p>
+            <ul class="device-features-list">
+              <li><strong>Ableton Live:</strong> Parámetros nativos automatizables (Strum, Root, Quality, Sustain, Hold).</li>
+              <li><strong>Pads 1–8 (Notas 36–43):</strong> Disparo instantáneo de acordes predefinidos.</li>
+              <li><strong>Teclas C2+ (Nota 48+):</strong> Detección inteligente de tríadas y acordes de 7ma.</li>
+            </ul>
+          </div>
+
+          <div class="device-card-actions">
+            <a href="./max-for-live/omnilab-mk2/OMNI-LAB_MkII_Ableton_M4L.zip" download="OMNI-LAB_MkII_Ableton_M4L.zip" class="download-btn primary-dl">
+              ⬇ Descargar Pack Ableton (.ZIP: .amxd + .js)
+            </a>
+            <div class="secondary-dl-row">
+              <a href="./max-for-live/omnilab-mk2/OMNI-LAB_MkII.amxd" download="OMNI-LAB_MkII.amxd" class="download-btn secondary-dl">
+                Solo .amxd
+              </a>
+              <a href="./max-for-live/omnilab-mk2/omnilab_m4l.js" download="omnilab_m4l.js" class="download-btn secondary-dl">
+                Motor .js
+              </a>
+              <a href="./max-for-live/omnilab-mk2/OMNI-LAB_MkII.maxpat" download="OMNI-LAB_MkII.maxpat" class="download-btn secondary-dl">
+                Patch .maxpat
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Placeholder Card for Upcoming MiniLab MkII Devices -->
+        <article class="device-card upcoming-device-card">
+          <div class="device-card-top">
+            <div class="device-badges">
+              <span class="badge badge-soon">PRÓXIMO DISPOSITIVO</span>
+            </div>
+            <h3 class="device-name">02 · Nuevo Dispositivo Max for Live + Web</h3>
+            <p class="device-desc">
+              Espacio reservado en el hub para tu próximo instrumento o efecto MIDI diseñado para el <strong>Arturia MiniLab MkII</strong> y <strong>Ableton Live</strong>. Cada nuevo dispositivo que agregues a <code>max-for-live/</code> tendrá su acceso Web y descarga directa aquí.
+            </p>
+          </div>
+          <div class="device-card-actions">
+            <span class="coming-soon-note">Carpeta: <code>max-for-live/tu-nuevo-device/</code></span>
+          </div>
+        </article>
+      </div>
+    </section>
   </div>
 
   <script type="module" src="./src/main.js"></script>

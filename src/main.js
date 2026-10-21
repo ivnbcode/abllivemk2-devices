@@ -53,7 +53,15 @@ const touchStripIndicator = document.getElementById('touchStripIndicator');
 const modStripBar = document.getElementById('modStripBar');
 const modStripPercent = document.getElementById('modStripPercent');
 const autoStrumBtn = document.getElementById('autoStrumBtn');
+const openCatalogBtn = document.getElementById('openCatalogBtn');
+const devicesHubSection = document.getElementById('devicesHubSection');
 const waveformCanvas = document.getElementById('waveformCanvas');
+
+if (openCatalogBtn && devicesHubSection) {
+  openCatalogBtn.addEventListener('click', () => {
+    devicesHubSection.scrollIntoView({ behavior: 'smooth' });
+  });
+}
 
 // Ensure AudioContext starts on first user gesture
 async function ensureAudioReady() {
