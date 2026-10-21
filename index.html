@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OMNI-LAB MkII — Virtual Suzuki Omnichord & Arturia MiniLab Controller</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./src/style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <!-- Top Hardware Status & MIDI Bar -->
+    <header class="top-bar">
+      <div class="brand-badge">
+        <span class="brand-series">SUZUKI × ARTURIA</span>
+        <h1 class="brand-title">OMNI-LAB <span class="model-tag">OM-84 MkII</span></h1>
+      </div>
+
+      <div class="midi-status-panel">
+        <div class="midi-indicator" id="midiIndicator">
+          <span class="led-dot" id="midiLed"></span>
+          <span id="midiStatusText">Inicializando MIDI...</span>
+        </div>
+
+        <div class="midi-controls">
+          <select id="midiDeviceSelect" class="hardware-select" title="Seleccionar dispositivo MIDI">
+            <option value="">Sin dispositivo MIDI</option>
+          </select>
+
+          <select id="strumStripSelect" class="hardware-select" title="Tira táctil del MiniLab MkII para el Strumplate">
+            <option value="cc:1">Tira Modulación (CC 1)</option>
+            <option value="pitchbend">Tira Pitch Bend</option>
+            <option value="both">Ambas Tiras (Mod + Pitch)</option>
+          </select>
+
+          <button id="midiLearnBtn" class="hw-btn small-btn" title="Aprender cualquier tira o control MIDI">
+            MIDI Learn Strum
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Omnichord Chassis -->
+    <main class="omnichord-chassis">
+      <!-- Left & Center Section: Controls + Chord Matrix + MiniLab Pads -->
+      <div class="left-workstation">
+        <!-- Upper Control Strip: OLED Chord Display + Sonic Strings Parameters -->
+        <section class="upper-console">
+          <!-- OLED Screen -->
+          <div class="oled-display">
+            <div class="oled-top-row">
+              <span class="oled-tag" id="inputModeBadge">MODO: HÍBRIDO (PADS + TECLAS)</span>
+              <span class="oled-cc-readout" id="midiActivityReadout">CC1: 000</span>
+            </div>
+            <div class="oled-main-chord">
+              <div class="chord-symbol" id="activeChordSymbol">C</div>
+              <div class="chord-details">
+                <div class="chord-full-name" id="activeChordFullName">C Major</div>
+                <div class="chord-notes-list" id="activeChordNotes">C · E · G</div>
+              </div>
+            </div>
+            <canvas id="waveformCanvas" width="280" height="46"></canvas>
+          </div>
+
+          <!-- Sonic Strings Synth Parameters -->
+          <div class="synth-knobs-panel">
+            <div class="panel-header-row">
+              <span class="section-title">SONIC STRINGS SYNTHESIS</span>
+              <label class="chord-hold-toggle">
+                <input type="checkbox" id="chordPadToggle" checked />
+                <span class="toggle-pill"></span>
+                <span class="toggle-label">CHORD HOLD (ÓRGANO)</span>
+              </label>
+            </div>
+
+            <div class="sliders-grid">
+              <div class="slider-control">
+                <label for="harpVolSlider">VOLUMEN ARPA</label>
+                <input type="range" id="harpVolSlider" min="0" max="1" step="0.01" value="0.85" />
+                <span class="slider-val" id="harpVolVal">85%</span>
+              </div>
+
+              <div class="slider-control">
+                <label for="sustainSlider">SUSTAIN</label>
+                <input type="range" id="sustainSlider" min="0.15" max="3.8" step="0.05" value="1.4" />
+                <span class="slider-val" id="sustainVal">1.4s</span>
+              </div>
+
+              <div class="slider-control">
+                <label for="toneSlider">BRILLO (TONE)</label>
+                <input type="range" id="toneSlider" min="600" max="8500" step="50" value="3400" />
+                <span class="slider-val" id="toneVal">3.4kHz</span>
+              </div>
+
+              <div class="slider-control">
+                <label for="chorusSlider">CHORUS RETRO</label>
+                <input type="range" id="chorusSlider" min="0" max="1" step="0.01" value="0.55" />
+                <span class="slider-val" id="chorusVal">55%</span>
+              </div>
+
+              <div class="slider-control">
+                <label for="reverbSlider">REVERB ESPACIAL</label>
+                <input type="range" id="reverbSlider" min="0" max="0.9" step="0.01" value="0.35" />
+                <span class="slider-val" id="reverbVal">35%</span>
+              </div>
+
+              <div class="slider-control">
+                <label for="chordVolSlider">VOL. ÓRGANO</label>
+                <input type="range" id="chordVolSlider" min="0" max="1" step="0.01" value="0.45" />
+                <span class="slider-val" id="chordVolVal">45%</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Traditional Omnichord 3x12 Chord Buttons Matrix -->
+        <section class="chord-matrix-section">
+          <div class="section-header-bar">
+            <span class="section-title">MATRIZ DE ACORDES OMNICHORD (36 ACORDES + SEXTA/SÉPTIMA)</span>
+            <span class="section-hint">Clic en un botón, toca las teclas de tu MiniLab o usa las teclas 1-0 del PC</span>
+          </div>
+
+          <div class="chord-matrix-container">
+            <div class="matrix-row-labels">
+              <div class="row-label major-label">MAJOR</div>
+              <div class="row-label minor-label">MINOR</div>
+              <div class="row-label seventh-label">7TH</div>
+              <div class="row-label maj7-label">MAJ7</div>
+            </div>
+            <div class="chord-matrix-grid" id="chordMatrixGrid">
+              <!-- Populated dynamically by main.js -->
+            </div>
+          </div>
+        </section>
+
+        <!-- Arturia MiniLab MkII 8 RGB Pads + 25-Key Live Detection Strip -->
+        <section class="minilab-companion-section">
+          <div class="section-header-bar">
+            <div class="header-with-Action">
+              <span class="section-title">PADS ARTURIA MINILAB MkII (BANCO A: NOTAS 36–43)</span>
+              <label class="pad-channel-toggle" title="Permite activar los 8 pads también si tocas las notas C2-G2 en cualquier canal MIDI">
+                <input type="checkbox" id="padsAnyChannelToggle" />
+                <span>Detectar notas 36-43 en cualquier canal como Pads</span>
+              </label>
+            </div>
+            <button id="assignPadBtn" class="hw-btn small-btn" title="Guarda el acorde actual en el próximo Pad que presiones">
+              Asignar Acorde Actual a un Pad
+            </button>
+          </div>
+
+          <div class="minilab-pads-grid" id="minilabPadsGrid">
+            <!-- 8 RGB Pads rendered dynamically -->
+          </div>
+
+          <!-- Visual MiniLab 25-Key Keyboard Indicator -->
+          <div class="keyboard-feedback-bar">
+            <div class="kb-label">
+              <span>TECLADO MINILAB (DETECCIÓN DE ACORDES EN TIEMPO REAL)</span>
+              <span id="heldKeysReadout" class="kb-notes-readout">Toca cualquier nota o tríada en el teclado...</span>
+            </div>
+            <div class="mini-keyboard" id="miniKeyboard">
+              <!-- 25 keys C3 (48) to C5 (72) visual indicator -->
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Right Section: Iconic Vertical SONIC STRINGS Strumplate -->
+      <aside class="strumplate-housing">
+        <div class="strumplate-header">
+          <span class="strum-title">SONIC STRINGS</span>
+          <span class="strum-subtitle">DESLIZA LA TIRA MOD (CC 1) O EL CURSOR</span>
+        </div>
+
+        <div class="strumplate-surface" id="strumplateSurface">
+          <!-- Touch strip position indicator synced to Arturia Modulation strip -->
+          <div class="touch-cursor-indicator" id="touchStripIndicator"></div>
+
+          <!-- 16 Metallic Sensor Traces -->
+          <div class="sonic-strings-list" id="sonicStringsList">
+            <!-- Populated dynamically with 16 strings -->
+          </div>
+        </div>
+
+        <div class="strumplate-footer">
+          <div class="strip-meter">
+            <span>MOD STRIP (CC 1)</span>
+            <div class="strip-progress-track">
+              <div class="strip-progress-fill" id="modStripBar"></div>
+            </div>
+            <span id="modStripPercent">0%</span>
+          </div>
+          <button id="autoStrumBtn" class="hw-btn strum-demo-btn">
+            Rasguear Acorde (Espacio)
+          </button>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
