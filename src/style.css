@@ -909,6 +909,257 @@ body {
   color: var(--text-muted);
 }
 
+.hidden-view {
+  display: none !important;
+}
+
+/* Top Device Switcher Tabs */
+.device-switcher-tabs {
+  display: flex;
+  background: #141311;
+  padding: 4px;
+  border-radius: 10px;
+  border: 1px solid #3c3630;
+  gap: 6px;
+}
+
+.tab-btn {
+  background: transparent;
+  color: #a89f93;
+  border: none;
+  border-radius: 7px;
+  padding: 7px 14px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.74rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.tab-btn:hover {
+  color: #fff;
+}
+
+.tab-btn.active {
+  background: linear-gradient(180deg, var(--accent-orange) 0%, #b8431b 100%);
+  color: #fff;
+  box-shadow: 0 2px 10px rgba(224, 90, 43, 0.45);
+}
+
+/* SPATIAL-LAB 3D Chassis */
+.spatial3d-chassis {
+  background: linear-gradient(145deg, #1b2028 0%, #12151b 100%);
+  border: 4px solid #36404f;
+  border-radius: 26px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 370px;
+  gap: 20px;
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.75);
+  color: var(--text-light);
+}
+
+.spatial-stage-panel {
+  background: #161920;
+  border: 2px solid #2b3340;
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.spatial-play-btn {
+  background: linear-gradient(180deg, #1f8a68 0%, #145e46 100%);
+  border-color: var(--oled-cyan);
+  color: #fff;
+  padding: 8px 16px;
+}
+
+.spatial-play-btn.playing {
+  background: linear-gradient(180deg, var(--accent-orange) 0%, #a83814 100%);
+  border-color: #ff9c7a;
+}
+
+.spatial-canvases-row {
+  display: grid;
+  grid-template-columns: 1fr 92px;
+  gap: 14px;
+  align-items: stretch;
+}
+
+.radar-canvas-wrap {
+  position: relative;
+  background: radial-gradient(circle at 50% 50%, #152229 0%, #090d11 100%);
+  border: 2px solid #2d3e4a;
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#spatialRadarCanvas {
+  width: 100%;
+  height: auto;
+  max-height: 430px;
+  cursor: grab;
+  touch-action: none;
+}
+
+#spatialRadarCanvas:active {
+  cursor: grabbing;
+}
+
+.radar-overlay-Readout {
+  position: absolute;
+  bottom: 10px;
+  left: 14px;
+  background: rgba(9, 13, 17, 0.85);
+  border: 1px solid #2e4452;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--oled-cyan);
+  pointer-events: none;
+}
+
+.elevation-column {
+  background: #10141a;
+  border: 2px solid #2a3340;
+  border-radius: 14px;
+  padding: 12px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.elev-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.62rem;
+  text-align: center;
+  color: var(--oled-amber);
+}
+
+.elev-slider-wrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 0;
+}
+
+#spatialYSlider {
+  writing-mode: vertical-lr;
+  direction: rtl;
+  height: 290px;
+  accent-color: var(--oled-cyan);
+  cursor: ns-resize;
+}
+
+.elev-val {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--oled-cyan);
+}
+
+.spatial-pads-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.spatial-pads-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 8px;
+}
+
+.spatial-inspector-panel {
+  background: #161920;
+  border: 2px solid #2b3340;
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.inspector-block {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sources-selector-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.source-item-card {
+  background: #101318;
+  border: 2px solid #2c3442;
+  border-radius: 10px;
+  padding: 10px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.12s ease;
+}
+
+.source-item-card.selected {
+  border-color: var(--oled-cyan);
+  background: rgba(72, 245, 200, 0.08);
+}
+
+.source-left-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.source-color-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.source-item-title {
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.source-coords-mini {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  color: #9ba5b5;
+}
+
+.spatial-sliders-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.upload-audio-label {
+  display: block;
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+  border-style: dashed;
+}
+
+.open-web-device-btn {
+  width: 100%;
+  padding: 9px;
+  background: linear-gradient(180deg, #226b58 0%, #154538 100%);
+  border-color: var(--oled-cyan);
+  color: var(--oled-cyan);
+}
+
 @media (max-width: 1060px) {
   .omnichord-chassis {
     grid-template-columns: 1fr;

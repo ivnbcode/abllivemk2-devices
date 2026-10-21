@@ -14,8 +14,18 @@
     <!-- Top Hardware Status & MIDI Bar -->
     <header class="top-bar">
       <div class="brand-badge">
-        <span class="brand-series">SUZUKI × ARTURIA</span>
-        <h1 class="brand-title">OMNI-LAB <span class="model-tag">OM-84 MkII</span></h1>
+        <span class="brand-series">ABLETON LIVE × ARTURIA MINILAB MkII</span>
+        <h1 class="brand-title">MKII STUDIO <span class="model-tag" id="headerModelTag">SUITE</span></h1>
+      </div>
+
+      <!-- Interactive Web Device Switcher Tabs -->
+      <div class="device-switcher-tabs">
+        <button class="tab-btn active" id="tabOmnichordBtn" data-device="omnichord">
+          01 · OMNI-LAB MkII (Omnichord)
+        </button>
+        <button class="tab-btn" id="tabSpatialBtn" data-device="spatial3d">
+          02 · SPATIAL-LAB 3D (Audio Binaural)
+        </button>
       </div>
 
       <div class="midi-status-panel">
@@ -46,8 +56,8 @@
       </div>
     </header>
 
-    <!-- Main Omnichord Chassis -->
-    <main class="omnichord-chassis">
+    <!-- Main Omnichord Chassis (Device 01) -->
+    <main class="omnichord-chassis" id="omnichordView">
       <!-- Left & Center Section: Controls + Chord Matrix + MiniLab Pads -->
       <div class="left-workstation">
         <!-- Upper Control Strip: OLED Chord Display + Sonic Strings Parameters -->
@@ -203,6 +213,108 @@
       </aside>
     </main>
 
+    <!-- Device 02: SPATIAL-LAB 3D MkII Interactive Binaural 3D Workstation -->
+    <main class="spatial3d-chassis hidden-view" id="spatial3dView">
+      <!-- Left: 3D Radar / Dome Canvas & Elevation Bar -->
+      <section class="spatial-stage-panel">
+        <div class="section-header-bar">
+          <div>
+            <span class="section-title">ESCENARIO ACÚSTICO 3D BINAURAL (HRTF 360° + ELEVACIÓN + DISTANCIA)</span>
+            <p class="section-hint">Arrastra las esferas con el mouse, gira la tira Mod (CC 1) o dispara los Pads 1–8 de tu Arturia MiniLab MkII</p>
+          </div>
+          <div class="spatial-transport">
+            <button id="spatialPlayBtn" class="hw-btn spatial-play-btn">▶ Iniciar Escena 3D</button>
+          </div>
+        </div>
+
+        <div class="spatial-canvases-row">
+          <div class="radar-canvas-wrap">
+            <canvas id="spatialRadarCanvas" width="540" height="440"></canvas>
+            <div class="radar-overlay-Readout" id="spatialCoordsReadout">
+              FUENTE 1 · X: -1.20m · Y: +0.40m · Z: -1.10m
+            </div>
+          </div>
+
+          <div class="elevation-column">
+            <span class="elev-title">ELEVACIÓN (EJE Y)</span>
+            <div class="elev-slider-wrap">
+              <input type="range" id="spatialYSlider" min="-2.5" max="2.5" step="0.05" value="0.4" orient="vertical" />
+            </div>
+            <span class="elev-val" id="spatialYVal">+0.4m</span>
+          </div>
+        </div>
+
+        <!-- 8 MiniLab MkII Spatial Trajectory Pads -->
+        <div class="spatial-pads-bar">
+          <span class="section-title">PADS ARTURIA MINILAB MkII (NOTAS 36–43): POSICIONES Y ÓRBITAS 3D INSTANTÁNEAS</span>
+          <div class="spatial-pads-grid" id="spatialPadsGrid">
+            <!-- Rendered by main.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Right: 4 Sound Sources Inspector & 3D Orbit Controls -->
+      <aside class="spatial-inspector-panel">
+        <div class="inspector-block">
+          <span class="section-title">FUENTES DE SONIDO EN EL ESPACIO 3D</span>
+          <div class="sources-selector-list" id="spatialSourcesList">
+            <!-- 4 sources rendered dynamically -->
+          </div>
+        </div>
+
+        <div class="inspector-block">
+          <span class="section-title" id="selectedSourceHeader">PARÁMETROS 3D: FUENTE 1</span>
+          <div class="sliders-grid spatial-sliders-grid">
+            <div class="slider-control">
+              <label for="spatialXSlider">EJE X (IZQ / DER)</label>
+              <input type="range" id="spatialXSlider" min="-2.5" max="2.5" step="0.05" value="-1.2" />
+              <span class="slider-val" id="spatialXVal">-1.2m</span>
+            </div>
+
+            <div class="slider-control">
+              <label for="spatialZSlider">EJE Z (FRENTE / ATRÁS)</label>
+              <input type="range" id="spatialZSlider" min="-2.5" max="2.5" step="0.05" value="-1.1" />
+              <span class="slider-val" id="spatialZVal">-1.1m</span>
+            </div>
+
+            <div class="slider-control">
+              <label for="spatialOrbitSpeedSlider">VELOCIDAD ÓRBITA</label>
+              <input type="range" id="spatialOrbitSpeedSlider" min="0" max="2.5" step="0.05" value="0.45" />
+              <span class="slider-val" id="spatialOrbitSpeedVal">0.45 Hz</span>
+            </div>
+
+            <div class="slider-control">
+              <label for="spatialOrbitRadiusSlider">RADIO ÓRBITA 3D</label>
+              <input type="range" id="spatialOrbitRadiusSlider" min="0" max="2.4" step="0.05" value="1.4" />
+              <span class="slider-val" id="spatialOrbitRadiusVal">1.4m</span>
+            </div>
+
+            <div class="slider-control">
+              <label for="spatialOrbitModeSelect">FORMA TRAYECTORIA</label>
+              <select id="spatialOrbitModeSelect" class="hardware-select">
+                <option value="circle">Círculo 360°</option>
+                <option value="figure8">Infinito (Figura 8)</option>
+                <option value="spiral">Espiral Domo 3D</option>
+              </select>
+            </div>
+
+            <div class="slider-control">
+              <label for="spatialRoomSlider">REFLEXIONES SALA 3D</label>
+              <input type="range" id="spatialRoomSlider" min="0" max="0.95" step="0.02" value="0.32" />
+              <span class="slider-val" id="spatialRoomVal">32%</span>
+            </div>
+          </div>
+
+          <div class="custom-audio-loader">
+            <label class="hw-btn upload-audio-label">
+              📂 Cargar Tu Propio Audio (.WAV/.MP3) en esta Fuente
+              <input type="file" id="spatialAudioFileInput" accept="audio/*" hidden />
+            </label>
+          </div>
+        </div>
+      </aside>
+    </main>
+
     <!-- Ableton Live & Arturia MiniLab MkII Devices Hub & Downloads Section -->
     <section class="devices-hub-section" id="devicesHubSection">
       <div class="hub-header">
@@ -220,8 +332,8 @@
         <article class="device-card active-device-card">
           <div class="device-card-top">
             <div class="device-badges">
-              <span class="badge badge-m4l">MAX FOR LIVE (.AMXD)</span>
-              <span class="badge badge-web">WEB SYNTH ACTIVO</span>
+              <span class="badge badge-m4l">MAX FOR LIVE MIDI (.AMXD)</span>
+              <span class="badge badge-web">WEB SYNTH</span>
             </div>
             <h3 class="device-name">01 · OMNI-LAB MkII (Suzuki Omnichord Strumplate)</h3>
             <p class="device-desc">
@@ -235,6 +347,9 @@
           </div>
 
           <div class="device-card-actions">
+            <button class="hw-btn open-web-device-btn" data-open-device="omnichord">
+              🎹 Abrir Instrumento Web Interactivo
+            </button>
             <a href="./max-for-live/omnilab-mk2/OMNI-LAB_MkII_Ableton_M4L.zip" download="OMNI-LAB_MkII_Ableton_M4L.zip" class="download-btn primary-dl">
               ⬇ Descargar Pack Ableton (.ZIP: .amxd + .js)
             </a>
@@ -252,19 +367,42 @@
           </div>
         </article>
 
-        <!-- Placeholder Card for Upcoming MiniLab MkII Devices -->
-        <article class="device-card upcoming-device-card">
+        <!-- Device #2 Card: SPATIAL-LAB 3D MkII -->
+        <article class="device-card active-device-card">
           <div class="device-card-top">
             <div class="device-badges">
-              <span class="badge badge-soon">PRÓXIMO DISPOSITIVO</span>
+              <span class="badge badge-m4l">MAX FOR LIVE AUDIO FX (.AMXD)</span>
+              <span class="badge badge-web">WEB 3D HRTF</span>
             </div>
-            <h3 class="device-name">02 · Nuevo Dispositivo Max for Live + Web</h3>
+            <h3 class="device-name">02 · SPATIAL-LAB 3D MkII (Posicionador Espacial Binaural)</h3>
             <p class="device-desc">
-              Espacio reservado en el hub para tu próximo instrumento o efecto MIDI diseñado para el <strong>Arturia MiniLab MkII</strong> y <strong>Ableton Live</strong>. Cada nuevo dispositivo que agregues a <code>max-for-live/</code> tendrá su acceso Web y descarga directa aquí.
+              Coloca y mueve fuentes de sonido en un espacio tridimensional de 360° (Azimut, Elevación, Distancia y Órbitas LFO) con procesamiento binaural HRTF, micro-retardos interaurales (ITD), filtro de sombra de cabeza (ILD) y reflexiones de sala.
             </p>
+            <ul class="device-features-list">
+              <li><strong>Ableton Live:</strong> Efecto de audio <code>.amxd</code> con perillas X, Y, Z, Velocidad/Radio de Órbita y Sala 3D.</li>
+              <li><strong>Tira Modulación (CC 1):</strong> Gira manualmente la fuente sonora 360° alrededor de tu cabeza.</li>
+              <li><strong>Pads 1–8 (Notas 36–43):</strong> 8 posiciones y trayectorias orbitales 3D instantáneas (Frente, Nuca, Cenit, Órbita 360°, Infinito 8, Espiral).</li>
+            </ul>
           </div>
+
           <div class="device-card-actions">
-            <span class="coming-soon-note">Carpeta: <code>max-for-live/tu-nuevo-device/</code></span>
+            <button class="hw-btn open-web-device-btn" data-open-device="spatial3d">
+              🎧 Abrir Escenario 3D Web Interactivo
+            </button>
+            <a href="./max-for-live/spatiallab-3d/SPATIAL-LAB_3D_MkII_Ableton_M4L.zip" download="SPATIAL-LAB_3D_MkII_Ableton_M4L.zip" class="download-btn primary-dl">
+              ⬇ Descargar Pack Ableton (.ZIP: .amxd + .js)
+            </a>
+            <div class="secondary-dl-row">
+              <a href="./max-for-live/spatiallab-3d/SPATIAL-LAB_3D_MkII.amxd" download="SPATIAL-LAB_3D_MkII.amxd" class="download-btn secondary-dl">
+                Solo .amxd
+              </a>
+              <a href="./max-for-live/spatiallab-3d/spatiallab_m4l.js" download="spatiallab_m4l.js" class="download-btn secondary-dl">
+                Motor .js
+              </a>
+              <a href="./max-for-live/spatiallab-3d/SPATIAL-LAB_3D_MkII.maxpat" download="SPATIAL-LAB_3D_MkII.maxpat" class="download-btn secondary-dl">
+                Patch .maxpat
+              </a>
+            </div>
           </div>
         </article>
       </div>
