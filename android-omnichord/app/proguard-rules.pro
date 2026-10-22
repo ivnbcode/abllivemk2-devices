@@ -1,0 +1,3 @@
+-keep class com.omnilab.touch.** { *; }
+-optimizationpasses 5
+-allowaccessmodification

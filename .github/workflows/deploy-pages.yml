@@ -34,6 +34,7 @@ jobs:
           npm install
           npm run build
           cp -r max-for-live dist/max-for-live
+          cp OMNI-TOUCH_MkII_Android.apk dist/OMNI-TOUCH_MkII_Android.apk
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5

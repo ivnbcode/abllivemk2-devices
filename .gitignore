@@ -24,3 +24,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+
+# Android build intermediates
+android-omnichord/.gradle/
+android-omnichord/build/
+android-omnichord/app/build/
+android-omnichord/local.properties
