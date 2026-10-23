@@ -9,7 +9,8 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         omnilab: resolve(__dirname, 'omnilab.html'),
-        spatiallab: resolve(__dirname, 'spatiallab.html')
+        spatiallab: resolve(__dirname, 'spatiallab.html'),
+        solarambient: resolve(__dirname, 'solar-ambient.html')
       }
     }
   }
