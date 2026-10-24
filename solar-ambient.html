@@ -3,32 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>☉ 420 ☽</title>
+  <title>𓂀 ANCIENT AMBIENT MACHINE 𓋹</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Orbitron:wght@500;700;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Orbitron:wght@500;700;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      /* Estética Esotérica Cósmica 420: Obsidiana Sideral + Oro Alquímico + Violeta Nebular + Carmesí */
-      --panel-black: #07060c;
-      --panel-matte: #0d0b14;
-      --panel-module: #12101c;
-      --panel-inset: #090810;
-      --silk-gold: #dfba69;
-      --silk-gold-bright: #f9dc94;
-      --silk-gold-dim: rgba(223, 186, 105, 0.35);
-      --silk-cream: #f0eadc;
-      --silk-muted: #9e9589;
-      --polivoks-red: #d9383a;
-      --cosmic-violet: #9d4edd;
-      --led-red: #ff3b30;
-      --led-amber: #ffbe0b;
-      --led-green: #28cd41;
-      --led-cyan: #72efdd;
-      --copper-trace: #cc9742;
-      --font-tech: 'JetBrains Mono', monospace;
+      --bg-obsidian: #050403;
+      --panel-basalt: #0c0a07;
+      --panel-module: #130f0a;
+      --panel-inset: #080604;
+      --gold: #e6b84c;
+      --gold-bright: #ffe494;
+      --gold-dim: rgba(230, 184, 76, 0.32);
+      --cream: #f5ebd6;
+      --muted: #9e8f73;
+      --alien-cyan: #00f5d4;
+      --ra-crimson: #e63946;
+      --ra-amber: #ff9f1c;
+      --pad-red: #ff3b30;
+      --pad-blue: #00bbf9;
+      --pad-green: #00f5d4;
+      --pad-purple: #c77dff;
       --font-title: 'Cinzel', 'Orbitron', serif;
-      --font-ui: 'Space Grotesk', sans-serif;
+      --font-tech: 'JetBrains Mono', monospace;
     }
 
     * {
@@ -40,387 +38,442 @@
     }
 
     body {
-      background-color: #040308;
+      background-color: var(--bg-obsidian);
       background-image:
-        radial-gradient(circle at 50% 0%, rgba(157, 78, 221, 0.14) 0%, rgba(223, 186, 105, 0.06) 40%, transparent 75%),
-        radial-gradient(circle at 15% 80%, rgba(223, 186, 105, 0.07) 0%, transparent 45%),
-        repeating-linear-gradient(90deg, rgba(255,255,255,0.008) 0px, rgba(255,255,255,0.008) 1px, transparent 1px, transparent 5px);
-      color: var(--silk-cream);
+        radial-gradient(circle at 50% 0%, rgba(0, 245, 212, 0.12) 0%, rgba(230, 184, 76, 0.07) 42%, transparent 75%),
+        repeating-linear-gradient(90deg, rgba(230, 184, 76, 0.01) 0px, rgba(230, 184, 76, 0.01) 1px, transparent 1px, transparent 6px);
+      color: var(--cream);
       font-family: var(--font-tech);
-      padding: 10px;
+      padding: 8px;
       min-height: 100vh;
       overflow-x: hidden;
     }
 
-    /* Marco Exterior del Chasis Esotérico 420 */
-    .solar-workstation {
+    .monolith-chassis {
       max-width: 1620px;
       margin: 0 auto;
-      background:
-        radial-gradient(circle at 50% 50%, rgba(223, 186, 105, 0.035) 0%, transparent 70%),
-        var(--panel-matte);
-      border: 2px solid var(--silk-gold);
+      background: var(--panel-basalt);
+      border: 2px solid var(--gold);
       border-radius: 8px;
       padding: 10px;
       box-shadow:
-        0 20px 70px rgba(0, 0, 0, 0.95),
-        0 0 35px rgba(223, 186, 105, 0.12),
-        inset 0 0 0 1px rgba(223, 186, 105, 0.25);
+        0 20px 70px rgba(0, 0, 0, 0.96),
+        0 0 35px rgba(230, 184, 76, 0.14),
+        inset 0 0 0 1px rgba(0, 245, 212, 0.2);
       display: flex;
       flex-direction: column;
-      gap: 10px;
-      position: relative;
+      gap: 9px;
     }
 
-    /* Tornillos Hexava en Esquinas */
-    .screw {
-      width: 9px;
-      height: 9px;
-      border-radius: 50%;
-      background: radial-gradient(circle at 35% 35%, #555, #1b1d22);
-      border: 1px solid #3a3d45;
-      box-shadow: inset 0 1px 2px rgba(0,0,0,0.8);
-      display: inline-block;
-    }
-
-    /* CABECERA SUPERIOR: IDENTIDAD SOLAR 42N + ESTADO ARTURIA MINILAB MKII */
-    .top-silkscreen-bar {
+    /* CABECERA MINIMALISTA */
+    .top-bar {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
-      gap: 10px;
-      padding: 8px 14px;
-      background: linear-gradient(180deg, #171a21 0%, #0e1015 100%);
-      border: 1px solid var(--silk-gold);
-      border-radius: 5px;
+      gap: 8px;
+      padding: 7px 12px;
+      background: linear-gradient(180deg, #18130c 0%, #0d0a06 100%);
+      border: 1px solid var(--gold);
+      border-radius: 6px;
     }
 
-    .solar-logo-block {
+    .brand-block {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
     }
 
-    .solar-sun-emblem {
-      width: 38px;
-      height: 38px;
+    .horus-medallion {
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
-      border: 2px solid var(--silk-gold-bright);
-      background: radial-gradient(circle, var(--silk-gold-bright) 18%, #70531c 65%, #111 100%);
-      box-shadow: 0 0 15px rgba(242, 204, 118, 0.45);
-      position: relative;
+      border: 2px solid var(--gold-bright);
+      background: radial-gradient(circle, var(--alien-cyan) 10%, #8f6b20 65%, #090704 100%);
+      box-shadow: 0 0 14px rgba(0, 245, 212, 0.45);
       display: flex;
       align-items: center;
       justify-content: center;
+      font-size: 1.05rem;
+      color: #050403;
       font-weight: 900;
-      color: #0a0b0d;
-      font-size: 0.78rem;
     }
 
-    .title-group h1 {
+    .brand-block h1 {
       font-family: var(--font-title);
-      font-size: 1.18rem;
+      font-size: 1.08rem;
       font-weight: 900;
       letter-spacing: 0.14em;
-      color: var(--silk-gold-bright);
-      text-transform: uppercase;
+      color: var(--gold-bright);
     }
 
-    .title-group p {
-      font-size: 0.65rem;
-      letter-spacing: 0.1em;
-      color: var(--silk-muted);
-    }
-
-    .top-actions-bar {
+    .top-controls {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      gap: 8px;
+      gap: 7px;
     }
 
-    .solar-btn {
+    .hw-btn {
       font-family: var(--font-tech);
-      font-size: 0.7rem;
+      font-size: 0.66rem;
       font-weight: 700;
-      letter-spacing: 0.05em;
-      padding: 6px 11px;
-      background: #171a20;
-      color: var(--silk-cream);
-      border: 1px solid var(--silk-gold-dim);
+      padding: 5px 10px;
+      background: #17130c;
+      color: var(--cream);
+      border: 1px solid var(--gold-dim);
       border-radius: 4px;
       cursor: pointer;
-      transition: all 0.12s ease;
-      text-decoration: none;
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      text-transform: uppercase;
+      gap: 5px;
+      text-decoration: none;
+      transition: all 0.12s;
     }
 
-    .solar-btn:hover {
-      border-color: var(--silk-gold-bright);
-      color: var(--silk-gold-bright);
-      background: #20242d;
+    .hw-btn:hover {
+      border-color: var(--gold-bright);
+      color: var(--gold-bright);
     }
 
-    .solar-btn.active {
-      background: var(--silk-gold);
-      color: #090a0c;
-      border-color: var(--silk-gold-bright);
-      box-shadow: 0 0 12px rgba(216, 177, 90, 0.5);
+    .hw-btn.active {
+      background: var(--gold);
+      color: #070503;
+      border-color: var(--gold-bright);
+      box-shadow: 0 0 10px rgba(230, 184, 76, 0.5);
     }
 
-    .solar-btn.power-switch {
-      border-color: var(--polivoks-red);
-      background: rgba(217, 56, 41, 0.18);
-      color: #ff9c93;
-    }
-
-    .solar-btn.power-switch.active {
-      background: var(--polivoks-red);
-      color: #fff;
-      box-shadow: 0 0 18px rgba(255, 59, 48, 0.75);
-    }
-
-    .solar-btn.learn-active {
-      background: var(--led-cyan);
-      color: #05080a;
+    .hw-btn.cyan-active {
+      background: var(--alien-cyan);
+      color: #040908;
       border-color: #fff;
-      animation: blinkLearn 0.8s infinite;
+      box-shadow: 0 0 12px rgba(0, 245, 212, 0.65);
     }
 
-    @keyframes blinkLearn {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.55; }
+    .hw-btn.power-btn {
+      border-color: var(--ra-crimson);
+      color: #ff9b9b;
+      background: rgba(230, 57, 70, 0.16);
     }
 
-    .solar-select {
+    .hw-btn.power-btn.active {
+      background: var(--ra-crimson);
+      color: #fff;
+      box-shadow: 0 0 16px rgba(230, 57, 70, 0.8);
+    }
+
+    .hw-select {
       font-family: var(--font-tech);
-      font-size: 0.7rem;
-      font-weight: 600;
-      padding: 6px 9px;
-      background: #0d0f13;
-      color: var(--silk-gold-bright);
-      border: 1px solid var(--silk-gold-dim);
+      font-size: 0.66rem;
+      font-weight: 700;
+      padding: 5px 8px;
+      background: #0b0906;
+      color: var(--gold-bright);
+      border: 1px solid var(--gold-dim);
       border-radius: 4px;
       outline: none;
       cursor: pointer;
     }
 
-    .solar-select:focus {
-      border-color: var(--silk-gold-bright);
+    .hw-badge {
+      font-size: 0.58rem;
+      padding: 3px 7px;
+      border: 1px solid var(--gold-dim);
+      color: var(--alien-cyan);
+      background: rgba(0, 245, 212, 0.06);
+      border-radius: 3px;
     }
 
-    /* LED Hardware */
-    .hw-led {
-      width: 8px;
-      height: 8px;
+    .led {
+      width: 7px;
+      height: 7px;
       border-radius: 50%;
-      background: #2b2d33;
-      border: 1px solid #000;
+      background: #2b251c;
       display: inline-block;
-      transition: all 0.1s;
     }
+    .led.on.red { background: var(--pad-red); box-shadow: 0 0 8px var(--pad-red); }
+    .led.on.cyan { background: var(--alien-cyan); box-shadow: 0 0 8px var(--alien-cyan); }
+    .led.on.amber { background: var(--ra-amber); box-shadow: 0 0 8px var(--ra-amber); }
 
-    .hw-led.red.on { background: var(--led-red); box-shadow: 0 0 8px var(--led-red); }
-    .hw-led.amber.on { background: var(--led-amber); box-shadow: 0 0 8px var(--led-amber); }
-    .hw-led.green.on { background: var(--led-green); box-shadow: 0 0 8px var(--led-green); }
-    .hw-led.cyan.on { background: var(--led-cyan); box-shadow: 0 0 8px var(--led-cyan); }
-
-    /* FILA 1: ARQUITECTURA DE VOCES SOLAR 42N + FORMAS DE ONDA + FOTOCELDA LDR */
-    .solar-panel-row {
+    /* FILA MONITORES CRT + 6 DRONES COMPACTOS */
+    .telemetry-row {
       display: grid;
-      grid-template-columns: 1.05fr 1.65fr 1.1fr;
-      gap: 10px;
+      grid-template-columns: 1fr 1fr 1.35fr;
+      gap: 9px;
     }
 
-    @media (max-width: 1320px) {
-      .solar-panel-row {
+    @media (max-width: 1180px) {
+      .telemetry-row {
         grid-template-columns: 1fr;
       }
     }
 
-    .hw-module {
-      background: var(--panel-module);
-      border: 1px solid var(--silk-gold);
-      border-radius: 5px;
-      padding: 10px;
+    .crt-box {
+      background: #050402;
+      border: 1.5px solid var(--gold);
+      border-radius: 6px;
+      height: 142px;
       position: relative;
+      overflow: hidden;
+      box-shadow: inset 0 0 22px rgba(0, 0, 0, 0.92);
+    }
+
+    .crt-box canvas {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .crt-overlay-tag {
+      position: absolute;
+      top: 5px;
+      left: 7px;
+      font-size: 0.56rem;
+      color: var(--gold-bright);
+      background: rgba(6, 5, 3, 0.85);
+      padding: 2px 6px;
+      border: 1px solid var(--gold-dim);
+      border-radius: 3px;
+      pointer-events: none;
+    }
+
+    .crt-corner-btn {
+      position: absolute;
+      top: 5px;
+      right: 7px;
+      z-index: 2;
+    }
+
+    /* 6 Cámaras de Drone en la barra superior */
+    .drones-chamber-module {
+      background: var(--panel-module);
+      border: 1px solid var(--gold);
+      border-radius: 6px;
+      padding: 7px 9px;
       display: flex;
       flex-direction: column;
-      gap: 8px;
-      box-shadow: inset 0 0 18px rgba(0, 0, 0, 0.65);
-    }
-
-    .hw-module.polivoks-module {
-      border-color: #c84b31;
-    }
-
-    .module-silk-header {
-      display: flex;
       justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid var(--silk-gold-dim);
-      padding-bottom: 5px;
-      margin-bottom: 2px;
-    }
-
-    .module-silk-title {
-      font-family: var(--font-title);
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      color: var(--silk-gold-bright);
-      display: flex;
-      align-items: center;
-      gap: 7px;
-      text-transform: uppercase;
-    }
-
-    .silk-badge {
-      font-size: 0.58rem;
-      padding: 2px 6px;
-      border: 1px solid var(--silk-gold-dim);
-      color: var(--silk-cream);
-      border-radius: 3px;
-      background: rgba(216, 177, 90, 0.08);
-    }
-
-    /* Selectores de Forma de Onda con Iconos SVG */
-    .wave-selector-strip {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
       gap: 6px;
     }
 
-    .wave-box {
-      background: var(--panel-inset);
-      border: 1px solid rgba(216, 177, 90, 0.25);
-      border-radius: 4px;
-      padding: 6px 8px;
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
-
-    .wave-box-label {
-      font-size: 0.58rem;
-      color: var(--silk-gold);
-      letter-spacing: 0.05em;
+    .module-header-line {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      border-bottom: 1px solid var(--gold-dim);
+      padding-bottom: 4px;
+      font-family: var(--font-title);
+      font-size: 0.66rem;
+      font-weight: 700;
+      color: var(--gold-bright);
+      letter-spacing: 0.08em;
     }
 
-    .wave-pills {
+    .drones-6-strip {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 5px;
+      flex: 1;
+    }
+
+    .drone-pill-box {
+      background: var(--panel-inset);
+      border: 1px solid var(--gold-dim);
+      border-radius: 4px;
+      padding: 4px 3px;
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
       gap: 3px;
     }
 
-    .wave-pill {
-      flex: 1;
-      min-width: 34px;
-      font-family: var(--font-tech);
-      font-size: 0.58rem;
-      font-weight: 700;
-      padding: 4px 3px;
-      background: #161920;
-      color: var(--silk-muted);
-      border: 1px solid #2c303a;
+    .drone-pill-box.muted {
+      opacity: 0.38;
+      border-color: #262015;
+    }
+
+    input[type="range"].egypt-slider {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 4px;
+      background: #241d13;
+      border: 1px solid var(--gold-dim);
       border-radius: 3px;
+      outline: none;
       cursor: pointer;
-      text-align: center;
-      transition: all 0.1s;
     }
 
-    .wave-pill:hover {
-      color: var(--silk-cream);
-      border-color: var(--silk-gold-dim);
+    input[type="range"].egypt-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--gold-bright);
+      border: 1.5px solid #050403;
+      box-shadow: 0 0 5px var(--alien-cyan);
+      cursor: grab;
     }
 
-    .wave-pill.active {
-      background: rgba(216, 177, 90, 0.22);
-      color: var(--silk-gold-bright);
-      border-color: var(--silk-gold-bright);
-      box-shadow: 0 0 6px rgba(216, 177, 90, 0.35);
-    }
-
-    /* Enjambre de 6 Voces Drone Solar 42N */
-    .solar-6-drones-grid {
+    /* =====================================================================
+       SUPERFICIE EXACTA DEL ARTURIA MINILAB MkII
+       Columna Izquierda (4 Botones + 2 Tiras Táctiles Verticales)
+       Columna Derecha (16 Perillas con K1/K9 Clickables + 8 Pads RGB / 16 Steps)
+       ===================================================================== */
+    .minilab-surface-grid {
       display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 6px;
+      grid-template-columns: 215px 1fr;
+      gap: 10px;
+      background: linear-gradient(180deg, #15110b 0%, #0b0906 100%);
+      border: 1.5px solid var(--gold);
+      border-radius: 7px;
+      padding: 10px;
     }
 
-    @media (max-width: 720px) {
-      .solar-6-drones-grid {
-        grid-template-columns: repeat(3, 1fr);
+    @media (max-width: 1024px) {
+      .minilab-surface-grid {
+        grid-template-columns: 1fr;
       }
     }
 
-    .drone-channel {
+    /* COLUMNA IZQUIERDA: 4 BOTONES + 2 TIRAS TÁCTILES VERTICALES */
+    .minilab-left-wing {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 10px;
       background: var(--panel-inset);
-      border: 1px solid rgba(216, 177, 90, 0.28);
+      border: 1px solid var(--gold-dim);
+      border-radius: 6px;
+      padding: 9px;
+    }
+
+    .minilab-4-buttons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+    }
+
+    .ml-sys-btn {
+      font-family: var(--font-tech);
+      font-size: 0.6rem;
+      font-weight: 700;
+      padding: 7px 4px;
+      background: #17130d;
+      color: var(--cream);
+      border: 1.5px solid #3a3020;
       border-radius: 4px;
-      padding: 6px 5px;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.12s;
+    }
+
+    .ml-sys-btn:hover {
+      border-color: var(--gold);
+    }
+
+    .ml-sys-btn.shift-on {
+      background: rgba(0, 187, 249, 0.24);
+      border-color: var(--pad-blue);
+      color: #fff;
+      box-shadow: 0 0 12px rgba(0, 187, 249, 0.6);
+    }
+
+    .ml-sys-btn.bank-b {
+      background: rgba(199, 125, 255, 0.24);
+      border-color: var(--pad-purple);
+      color: #fff;
+      box-shadow: 0 0 12px rgba(199, 125, 255, 0.55);
+    }
+
+    /* Las 2 Tiras Táctiles Verticales (Pitch y Modulación) */
+    .vertical-strips-pair {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      flex: 1;
+      min-height: 210px;
+    }
+
+    .v-strip-unit {
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 5px;
-      transition: all 0.12s;
+      height: 100%;
     }
 
-    .drone-channel.muted {
-      opacity: 0.42;
-      border-color: #262932;
-    }
-
-    .drone-ch-header {
-      font-size: 0.6rem;
-      font-weight: 700;
-      color: var(--silk-gold-bright);
-      display: flex;
-      align-items: center;
-      gap: 4px;
-    }
-
-    .drone-toggle-btn {
-      width: 100%;
-      font-family: var(--font-tech);
+    .v-strip-label {
       font-size: 0.56rem;
       font-weight: 700;
-      padding: 3px 2px;
-      border-radius: 3px;
-      border: 1px solid var(--silk-gold);
-      background: rgba(216, 177, 90, 0.2);
-      color: var(--silk-gold-bright);
-      cursor: pointer;
+      color: var(--gold-bright);
+      letter-spacing: 0.05em;
     }
 
-    .drone-channel.muted .drone-toggle-btn {
-      background: #14171d;
-      border-color: #353942;
-      color: var(--silk-muted);
-    }
-
-    /* MATRIZ DE 16 PERILLAS ROTATORIAS ARTURIA MINILAB MKII (2 FILAS x 8 ENCODERS) */
-    .minilab-knobs-deck {
-      background: linear-gradient(180deg, #14171e 0%, #0d0f14 100%);
-      border: 1px solid var(--silk-gold);
+    .v-strip-track {
+      width: 44px;
+      flex: 1;
+      min-height: 165px;
+      background:
+        repeating-linear-gradient(
+          0deg,
+          rgba(230, 184, 76, 0.12) 0px,
+          rgba(230, 184, 76, 0.12) 2px,
+          #090705 2px,
+          #090705 6px
+        );
+      border: 1.5px solid var(--gold);
       border-radius: 6px;
-      padding: 10px 12px;
+      position: relative;
+      overflow: hidden;
+      cursor: ns-resize;
+      touch-action: none;
+      box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.9);
+    }
+
+    /* Marca central en la tira de Pitch como en el Arturia MiniLab MkII */
+    .v-strip-track.pitch-center-line::after {
+      content: "";
+      position: absolute;
+      left: 6px;
+      right: 6px;
+      top: 50%;
+      height: 2px;
+      background: var(--gold-bright);
+      opacity: 0.7;
+      pointer-events: none;
+    }
+
+    .v-strip-fill {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 50%;
+      background: linear-gradient(0deg, rgba(230, 184, 76, 0.35), rgba(0, 245, 212, 0.65));
+      border-top: 2px solid #fff;
+      pointer-events: none;
+    }
+
+    .v-strip-val {
+      font-size: 0.56rem;
+      color: var(--alien-cyan);
+      font-weight: 700;
+    }
+
+    /* COLUMNA DERECHA: 16 PERILLAS (CON K1 Y K9 CLICKABLES) + 8 PADS RGB + 16 STEPS */
+    .minilab-right-deck {
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 9px;
     }
 
     .knobs-row-8 {
       display: grid;
       grid-template-columns: repeat(8, 1fr);
-      gap: 8px;
+      gap: 7px;
     }
 
     @media (max-width: 1180px) {
@@ -436,63 +489,63 @@
     }
 
     .rotary-cell {
-      background: #11141a;
-      border: 1px solid rgba(216, 177, 90, 0.25);
+      background: #0e0b07;
+      border: 1px solid rgba(230, 184, 76, 0.26);
       border-radius: 5px;
-      padding: 6px 5px;
+      padding: 5px 4px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 3px;
+      gap: 2px;
       position: relative;
       cursor: ns-resize;
-      transition: border-color 0.12s, box-shadow 0.12s;
+      transition: all 0.12s;
     }
 
     .rotary-cell:hover {
-      border-color: var(--silk-gold-bright);
+      border-color: var(--gold-bright);
+    }
+
+    /* Perillas 1 y 9 tienen anillo doble clickable igual que en el Arturia MiniLab MkII */
+    .rotary-cell.clickable-encoder {
+      border: 1.5px solid var(--alien-cyan);
+      background: linear-gradient(180deg, rgba(0, 245, 212, 0.09) 0%, #0e0b07 100%);
     }
 
     .rotary-cell.midi-active {
-      border-color: var(--led-cyan);
-      box-shadow: 0 0 12px rgba(0, 229, 255, 0.35);
+      border-color: var(--alien-cyan);
+      box-shadow: 0 0 12px rgba(0, 245, 212, 0.45);
     }
 
     .rotary-cell.learning-target {
-      border-color: var(--led-amber);
-      box-shadow: 0 0 14px rgba(255, 170, 0, 0.6);
+      border-color: var(--ra-amber);
+      box-shadow: 0 0 14px rgba(255, 159, 28, 0.7);
     }
 
     .knob-top-badges {
       width: 100%;
       display: flex;
       justify-content: space-between;
-      font-size: 0.54rem;
-      color: var(--silk-muted);
+      font-size: 0.52rem;
+      color: var(--muted);
     }
 
     .knob-k-num {
-      color: var(--silk-gold-bright);
+      color: var(--gold-bright);
       font-weight: 700;
     }
 
     .knob-cc-tag {
-      background: rgba(255,255,255,0.05);
-      padding: 0 4px;
-      border-radius: 2px;
-      color: #a3e635;
+      color: var(--alien-cyan);
     }
 
-    /* Perilla Física Estilo Davies 1900H / Solar 42N */
     .solar-knob-dial {
-      width: 44px;
-      height: 44px;
+      width: 42px;
+      height: 42px;
       border-radius: 50%;
-      background: radial-gradient(circle at 32% 30%, #2e323b, #121419 75%);
-      border: 2px solid #3f4450;
-      box-shadow:
-        0 4px 8px rgba(0, 0, 0, 0.75),
-        inset 0 1px 1px rgba(255, 255, 255, 0.12);
+      background: radial-gradient(circle at 32% 30%, #2b2419, #0d0a06 75%);
+      border: 2px solid #4a3e28;
+      box-shadow: 0 3px 7px rgba(0, 0, 0, 0.8);
       position: relative;
       display: flex;
       align-items: center;
@@ -500,13 +553,10 @@
       margin: 2px 0;
     }
 
-    .solar-knob-dial::after {
-      content: "";
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      border: 1px dashed rgba(216, 177, 90, 0.35);
-      position: absolute;
+    /* Anillo exterior blanco/turquesa para Knobs 1 y 9 Clickables */
+    .rotary-cell.clickable-encoder .solar-knob-dial {
+      border: 2px solid var(--alien-cyan);
+      box-shadow: 0 0 0 3px rgba(0, 245, 212, 0.22), 0 3px 8px rgba(0, 0, 0, 0.9);
     }
 
     .knob-pointer {
@@ -526,107 +576,56 @@
       left: 50%;
       transform: translateX(-50%);
       width: 3px;
-      height: 13px;
+      height: 12px;
       border-radius: 2px;
-      background: var(--silk-cream);
-      box-shadow: 0 0 5px var(--silk-gold-bright);
+      background: var(--gold-bright);
+      box-shadow: 0 0 5px var(--gold-bright);
     }
 
-    .rotary-cell.polivoks-knob .knob-pointer::before {
-      background: #ff6b5b;
-      box-shadow: 0 0 6px var(--polivoks-red);
+    .rotary-cell.clickable-encoder .knob-pointer::before {
+      background: var(--alien-cyan);
+      box-shadow: 0 0 6px var(--alien-cyan);
+    }
+
+    /* Botón central de Push-Click en Knobs 1 y 9 */
+    .knob-push-cap {
+      z-index: 3;
+      font-family: var(--font-tech);
+      font-size: 0.48rem;
+      font-weight: 700;
+      padding: 2px 5px;
+      border-radius: 3px;
+      background: rgba(0, 245, 212, 0.18);
+      color: var(--alien-cyan);
+      border: 1px solid var(--alien-cyan);
+      cursor: pointer;
+      margin-top: 1px;
+      transition: all 0.1s;
+    }
+
+    .knob-push-cap:hover {
+      background: var(--alien-cyan);
+      color: #040807;
     }
 
     .knob-title {
-      font-size: 0.58rem;
+      font-size: 0.56rem;
       font-weight: 700;
-      color: var(--silk-cream);
+      color: var(--cream);
       text-align: center;
-      letter-spacing: 0.03em;
-      line-height: 1.15;
     }
 
     .knob-readout {
-      font-size: 0.6rem;
-      color: var(--silk-gold-bright);
+      font-size: 0.56rem;
+      color: var(--gold-bright);
       font-weight: 700;
     }
 
-    /* Pantallas de Visualización (Joystick Vectorial + Osciloscopio + Fotocelda LDR) */
-    .displays-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 8px;
-    }
-
-    .crt-screen {
-      background: #06080b;
-      border: 1.5px solid var(--silk-gold);
-      border-radius: 4px;
-      height: 165px;
-      position: relative;
-      overflow: hidden;
-      box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.9);
-    }
-
-    .crt-screen canvas {
-      width: 100%;
-      height: 100%;
-      display: block;
-    }
-
-    .crt-label {
-      position: absolute;
-      top: 5px;
-      left: 7px;
-      font-size: 0.56rem;
-      color: var(--silk-gold-bright);
-      background: rgba(6, 8, 11, 0.8);
-      padding: 2px 5px;
-      border: 1px solid rgba(216, 177, 90, 0.3);
-      border-radius: 3px;
-      pointer-events: none;
-    }
-
-    /* Tiras Táctiles del Arturia MiniLab MkII + Fotocelda LDR */
-    .strips-and-ldr-bar {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1.2fr;
-      gap: 6px;
-      margin-top: 2px;
-    }
-
-    .strip-indicator-box {
-      background: var(--panel-inset);
-      border: 1px solid rgba(216, 177, 90, 0.28);
-      border-radius: 4px;
-      padding: 5px 7px;
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
-
-    .strip-bar-track {
-      width: 100%;
-      height: 8px;
-      background: #1a1d24;
-      border-radius: 4px;
-      overflow: hidden;
-      position: relative;
-      cursor: ew-resize;
-    }
-
-    .strip-bar-fill {
-      height: 100%;
-      background: linear-gradient(90deg, var(--silk-gold), var(--led-cyan));
-      width: 50%;
-    }
-
-    /* 8 Pads RGB del Arturia MiniLab MkII */
+    /* FILA DE 8 PADS RGB FÍSICOS DEL MINILAB MkII (PAD 1/9 .. PAD 8/16) */
     .minilab-pads-row {
       display: grid;
       grid-template-columns: repeat(8, 1fr);
-      gap: 6px;
+      gap: 7px;
     }
 
     @media (max-width: 780px) {
@@ -636,535 +635,345 @@
     }
 
     .minilab-pad {
-      background: #13161d;
-      border: 2px solid #2e3442;
+      background: #14110c;
+      border: 2px solid #332a1c;
       border-radius: 5px;
       padding: 6px 4px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 2px;
+      justify-content: space-between;
+      gap: 3px;
       cursor: pointer;
       transition: all 0.1s;
     }
 
-    .minilab-pad:hover {
-      border-color: var(--silk-gold);
-    }
-
-    .minilab-pad.pad-active {
-      background: rgba(216, 177, 90, 0.22);
-      border-color: var(--silk-gold-bright);
-      box-shadow: 0 0 12px rgba(216, 177, 90, 0.45);
-    }
+    .minilab-pad.pad-rgb-red.pad-active    { border-color: var(--pad-red);    box-shadow: 0 0 12px rgba(255, 59, 48, 0.5);   background: rgba(255, 59, 48, 0.16); }
+    .minilab-pad.pad-rgb-blue.pad-active   { border-color: var(--pad-blue);   box-shadow: 0 0 12px rgba(0, 187, 249, 0.5);   background: rgba(0, 187, 249, 0.16); }
+    .minilab-pad.pad-rgb-green.pad-active  { border-color: var(--pad-green);  box-shadow: 0 0 12px rgba(0, 245, 212, 0.5);   background: rgba(0, 245, 212, 0.16); }
+    .minilab-pad.pad-rgb-purple.pad-active { border-color: var(--pad-purple); box-shadow: 0 0 12px rgba(199, 125, 255, 0.5); background: rgba(199, 125, 255, 0.16); }
+    .minilab-pad.pad-rgb-gold.pad-active   { border-color: var(--gold-bright);box-shadow: 0 0 12px rgba(255, 228, 148, 0.5); background: rgba(230, 184, 76, 0.18); }
 
     .pad-num {
-      font-size: 0.55rem;
-      color: var(--silk-muted);
+      font-size: 0.5rem;
+      color: var(--muted);
     }
 
     .pad-action {
-      font-size: 0.6rem;
+      font-size: 0.58rem;
       font-weight: 700;
-      color: var(--silk-gold-bright);
+      color: var(--gold-bright);
       text-align: center;
     }
 
-    /* SECCIÓN INFERIOR: 12 PLACAS CAPACITIVAS DE COBRE SOLAR 42N + SECUENCIADOR POR PASOS */
-    .bottom-performance-row {
+    /* SECUENCIADOR DE 16 STEPS INTEGRADO CON SHIFT + KNOBS 1–16 */
+    .seq-16-strip {
       display: grid;
-      grid-template-columns: 1.45fr 1fr;
-      gap: 10px;
+      grid-template-columns: repeat(16, 1fr);
+      gap: 4px;
+      background: var(--panel-inset);
+      border: 1px solid var(--gold-dim);
+      border-radius: 5px;
+      padding: 6px;
     }
 
-    @media (max-width: 1180px) {
-      .bottom-performance-row {
-        grid-template-columns: 1fr;
+    @media (max-width: 960px) {
+      .seq-16-strip {
+        grid-template-columns: repeat(8, 1fr);
       }
     }
 
-    .solar-copper-plates {
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: 5px;
-    }
-
-    @media (max-width: 680px) {
-      .solar-copper-plates {
-        grid-template-columns: repeat(6, 1fr);
-      }
-    }
-
-    .copper-plate-unit {
+    .seq-step-cell {
+      background: #0d0a07;
+      border: 1px solid rgba(230, 184, 76, 0.25);
+      border-radius: 4px;
+      padding: 4px 2px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 4px;
-      background: #0e1014;
-      border: 1px solid rgba(216, 177, 90, 0.35);
-      border-radius: 5px;
-      padding: 5px 3px;
-    }
-
-    .plate-hold-toggle {
-      font-size: 0.52rem;
-      padding: 2px 5px;
-      background: #171a22;
-      color: var(--silk-muted);
-      border: 1px solid #2f3440;
-      border-radius: 3px;
+      gap: 3px;
       cursor: pointer;
-      width: 90%;
-      text-align: center;
+      transition: all 0.08s;
     }
 
-    .plate-hold-toggle.held {
-      background: var(--polivoks-red);
-      color: #fff;
-      border-color: #ff7b6e;
-      box-shadow: 0 0 8px var(--polivoks-red);
+    .seq-step-cell.gate-off {
+      opacity: 0.35;
     }
 
-    /* Placa Táctil de Cobre Dorado Grabado en PCB (Idéntica al Solar 42N) */
-    .pcb-touch-pad {
-      width: 100%;
-      height: 112px;
-      background-color: #0b0d10;
-      background-image:
-        repeating-linear-gradient(
-          0deg,
-          var(--copper-trace) 0px,
-          var(--copper-trace) 2px,
-          #0b0d10 2px,
-          #0b0d10 6px
-        );
-      border: 1.5px solid var(--silk-gold);
-      border-radius: 4px;
+    .seq-step-cell.active-step {
+      border-color: var(--alien-cyan);
+      background: rgba(0, 245, 212, 0.2);
+      box-shadow: 0 0 10px rgba(0, 245, 212, 0.6);
+      opacity: 1;
+    }
+
+    /* TECLADO DE 25 MINI-TECLAS DEL ARTURIA MINILAB MkII (2 OCTAVAS C2–C4) */
+    .minilab-keybed-section {
+      background: var(--panel-module);
+      border: 1.5px solid var(--gold);
+      border-radius: 7px;
+      padding: 8px 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .keybed-25-wrapper {
+      position: relative;
+      height: 118px;
+      display: grid;
+      grid-template-columns: repeat(15, 1fr);
+      gap: 3px;
+      background: #050403;
+      padding: 4px;
+      border-radius: 5px;
+      border: 1px solid var(--gold-dim);
+    }
+
+    .white-key {
+      background: linear-gradient(180deg, #211b12 0%, #382d1d 90%, #4d3d26 100%);
+      border: 1px solid var(--gold);
+      border-radius: 0 0 5px 5px;
       position: relative;
       cursor: pointer;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: flex-end;
       align-items: center;
-      padding: 5px 2px;
+      padding-bottom: 5px;
       touch-action: none;
-      overflow: hidden;
-      transition: all 0.08s;
+      transition: all 0.06s;
     }
 
-    /* Línea central vertical de interdigitación PCB */
-    .pcb-touch-pad::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 50%;
-      width: 2px;
-      background: var(--silk-gold-bright);
-      opacity: 0.55;
-      transform: translateX(-50%);
-      pointer-events: none;
-    }
-
-    .pcb-touch-pad.touched {
+    .white-key.key-active {
+      background: linear-gradient(180deg, rgba(0, 245, 212, 0.35) 0%, var(--gold) 100%);
       border-color: #fff;
-      box-shadow: 0 0 18px var(--silk-gold-bright), inset 0 0 15px rgba(242, 204, 118, 0.55);
-      transform: scale(0.985);
+      box-shadow: 0 0 15px var(--alien-cyan);
+      transform: translateY(2px);
     }
 
-    .plate-label-badge {
-      background: rgba(10, 11, 13, 0.88);
-      border: 1px solid var(--silk-gold);
-      color: var(--silk-gold-bright);
-      font-size: 0.62rem;
-      font-weight: 700;
-      padding: 1px 4px;
-      border-radius: 2px;
-      z-index: 2;
-    }
-
-    .plate-pressure-bar {
+    .black-key {
       position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 0%;
-      background: linear-gradient(0deg, rgba(242, 204, 118, 0.55), rgba(0, 229, 255, 0.35));
-      pointer-events: none;
-      z-index: 1;
-    }
-
-    /* Secuenciador Analógico CV/Gate de 8 Pasos */
-    .seq-8-columns {
-      display: grid;
-      grid-template-columns: repeat(8, 1fr);
-      gap: 5px;
-      height: 100%;
-    }
-
-    .seq-col {
-      background: #0d0f13;
-      border: 1px solid rgba(216, 177, 90, 0.25);
-      border-radius: 4px;
-      padding: 6px 3px;
+      top: 4px;
+      height: 66px;
+      width: 4.2%;
+      background: linear-gradient(180deg, #060504 0%, #17120b 100%);
+      border: 1.5px solid var(--alien-cyan);
+      border-radius: 0 0 4px 4px;
+      z-index: 4;
+      cursor: pointer;
       display: flex;
       flex-direction: column;
+      justify-content: flex-end;
       align-items: center;
-      justify-content: space-between;
-      gap: 4px;
+      padding-bottom: 4px;
+      touch-action: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.85);
     }
 
-    .seq-col.active-step {
-      border-color: var(--led-red);
-      box-shadow: 0 0 12px rgba(255, 59, 48, 0.45);
-      background: rgba(217, 56, 41, 0.14);
+    .black-key.key-active {
+      background: var(--alien-cyan);
+      color: #040807;
+      border-color: #fff;
+      box-shadow: 0 0 14px var(--alien-cyan);
     }
 
-    input[type="range"].solar-slider {
-      -webkit-appearance: none;
-      appearance: none;
-      width: 100%;
-      height: 5px;
-      background: #232730;
-      border: 1px solid rgba(216, 177, 90, 0.3);
-      border-radius: 3px;
-      outline: none;
-      cursor: pointer;
+    .key-glyph {
+      font-size: 0.54rem;
+      font-weight: 700;
+      color: var(--gold-bright);
+      pointer-events: none;
     }
 
-    input[type="range"].solar-slider::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      appearance: none;
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: var(--silk-gold-bright);
-      border: 2px solid #090a0d;
-      cursor: grab;
+    .black-key .key-glyph {
+      color: var(--alien-cyan);
+      font-size: 0.48rem;
+    }
+
+    .black-key.key-active .key-glyph,
+    .white-key.key-active .key-glyph {
+      color: #050403;
     }
   </style>
 </head>
 <body>
 
-  <div class="solar-workstation">
+  <div class="monolith-chassis">
 
-    <!-- CABECERA SIMBÓLICA 420 -->
-    <header class="top-silkscreen-bar">
-      <div class="solar-logo-block">
-        <div class="solar-sun-emblem">☉</div>
-        <div class="title-group">
-          <h1>✦ 420 ✦</h1>
+    <!-- CABECERA SIN CONTROLES DUPLICADOS -->
+    <header class="top-bar">
+      <div class="brand-block">
+        <div class="horus-medallion">𓂀</div>
+        <div>
+          <h1>𓋹 ANCIENT AMBIENT MACHINE 𓇳</h1>
         </div>
       </div>
 
-      <div class="top-actions-bar">
-        <a href="./index.html" class="solar-btn" title="Hub">←</a>
+      <div class="top-controls">
+        <a href="./index.html" class="hw-btn" title="Hub">←</a>
 
-        <button id="powerBtn" class="solar-btn power-switch" title="Power">
-          <span class="hw-led red" id="powerLed"></span>
-          ☉
+        <button id="powerBtn" class="hw-btn power-btn" title="Power">
+          <span class="led red" id="powerLed"></span>
+          𓋹
         </button>
 
-        <select id="presetSelect" class="solar-select" title="Presets">
-          <option value="0">I · SOLARIS</option>
-          <option value="1">II · MONOLITH</option>
-          <option value="2">III · OUROBOROS</option>
-          <option value="3">IV · BOREALIS</option>
-          <option value="4">V · HERMETIC</option>
-          <option value="5">VI · VOID</option>
-          <option value="6">VII · SATURN</option>
-          <option value="7">VIII · HORIZON</option>
+        <select id="presetSelect" class="hw-select" title="Presets (Pad Bank 9–16)">
+          <option value="0">I · GIZA STARGATE</option>
+          <option value="1">II · ORION MONOLITH</option>
+          <option value="2">III · OSIRIS TOMB</option>
+          <option value="3">IV · SIRIUS TEMPLE</option>
+          <option value="4">V · ANUBIS VOID</option>
+          <option value="5">VI · THOTH EMERALD</option>
+          <option value="6">VII · HORUS SKYSHIP</option>
+          <option value="7">VIII · DUAT PORTAL</option>
         </select>
 
-        <select id="scaleSelect" class="solar-select" title="Scale">
-          <option value="just">☉ JUST</option>
-          <option value="minor">☽ AEOLIAN</option>
-          <option value="pentatonic">☿ PENTATONIC</option>
-          <option value="lydian">♃ LYDIAN</option>
-          <option value="phrygian">♄ PHRYGIAN</option>
-          <option value="microtonal">⚝ MICROTONAL</option>
+        <select id="scaleSelect" class="hw-select" title="Scale">
+          <option value="just">𓇳 JUST</option>
+          <option value="phrygian">𓆙 PHRYGIAN</option>
+          <option value="minor">𓂀 AEOLIAN</option>
+          <option value="pentatonic">𓆣 PENTATONIC</option>
+          <option value="lydian">𓇼 LYDIAN</option>
+          <option value="microtonal">𓊽 MICROTONAL</option>
         </select>
 
-        <button id="midiLearnBtn" class="solar-btn" title="MIDI Learn">
-          🎛️ LEARN
-        </button>
+        <button id="midiLearnBtn" class="hw-btn" title="MIDI Learn">🎛️ LEARN</button>
 
-        <select id="midiDeviceSelect" class="solar-select" title="MIDI Device">
+        <select id="midiDeviceSelect" class="hw-select" title="MIDI USB Input">
           <option value="">MIDI USB</option>
         </select>
 
-        <span class="silk-badge" id="midiMonitorBadge">MIDI</span>
+        <span class="hw-badge" id="midiMonitorBadge">MINILAB MkII</span>
 
-        <button id="recBtn" class="solar-btn" title="Record">●</button>
+        <button id="recBtn" class="hw-btn" title="Record Audio">●</button>
       </div>
     </header>
 
-    <!-- FILA SUPERIOR: FORMAS DE ONDA + 6 ESFERAS DRONE + ASTROLABIO -->
-    <div class="solar-panel-row">
-
-      <!-- MÓDULO 1: FORMAS DE ONDA -->
-      <section class="hw-module">
-        <div class="module-silk-header">
-          <div class="module-silk-title">
-            <span class="screw"></span>
-            ∿ OSC / MOD
-          </div>
-          <span class="silk-badge">☉ ☽</span>
-        </div>
-
-        <div class="wave-selector-strip">
-          <!-- VCO Melodic -->
-          <div class="wave-box">
-            <div class="wave-box-label">
-              <span>I · VCO</span>
-              <span id="lblVcoWave">⟋</span>
-            </div>
-            <div class="wave-pills" id="vcoWavePills">
-              <button class="wave-pill active" data-wave="sawtooth" title="Saw">⟋</button>
-              <button class="wave-pill" data-wave="triangle" title="Triangle">△</button>
-              <button class="wave-pill" data-wave="square" title="Pulse">⊓</button>
-              <button class="wave-pill" data-wave="glass" title="Glass">✧</button>
-              <button class="wave-pill" data-wave="organ" title="Organ">Ψ</button>
-            </div>
-          </div>
-
-          <!-- 6 Drones Swarm -->
-          <div class="wave-box">
-            <div class="wave-box-label">
-              <span>II · DRONE</span>
-              <span id="lblDroneWave">≋</span>
-            </div>
-            <div class="wave-pills" id="droneWavePills">
-              <button class="wave-pill active" data-wave="supersaw" title="SuperSaw">≋</button>
-              <button class="wave-pill" data-wave="triangle" title="Triangle">△</button>
-              <button class="wave-pill" data-wave="square" title="Square">⊓</button>
-              <button class="wave-pill" data-wave="choir" title="Choir">❖</button>
-              <button class="wave-pill" data-wave="organ" title="Organ">Ψ</button>
-            </div>
-          </div>
-
-          <!-- Yin Wave -->
-          <div class="wave-box">
-            <div class="wave-box-label">
-              <span>III · YIN ☽</span>
-              <span id="lblYinWave">❖</span>
-            </div>
-            <div class="wave-pills" id="yinWavePills">
-              <button class="wave-pill active" data-wave="choir" title="Choir">❖</button>
-              <button class="wave-pill" data-wave="glass" title="Glass">✧</button>
-              <button class="wave-pill" data-wave="astral" title="Astral">✦</button>
-              <button class="wave-pill" data-wave="strings" title="Strings">≋</button>
-            </div>
-          </div>
-
-          <!-- Yang Wave -->
-          <div class="wave-box">
-            <div class="wave-box-label">
-              <span>IV · YANG ☉</span>
-              <span id="lblYangWave">✦</span>
-            </div>
-            <div class="wave-pills" id="yangWavePills">
-              <button class="wave-pill" data-wave="choir" title="Choir">❖</button>
-              <button class="wave-pill" data-wave="glass" title="Glass">✧</button>
-              <button class="wave-pill active" data-wave="astral" title="Astral">✦</button>
-              <button class="wave-pill" data-wave="organ" title="Organ">Ψ</button>
-            </div>
-          </div>
-
-          <!-- Sub-Osc -->
-          <div class="wave-box">
-            <div class="wave-box-label">
-              <span>V · SUB</span>
-              <span id="lblSubWave">∿</span>
-            </div>
-            <div class="wave-pills" id="subWavePills">
-              <button class="wave-pill active" data-wave="sine" title="Sine">∿</button>
-              <button class="wave-pill" data-wave="triangle" title="Triangle">△</button>
-              <button class="wave-pill" data-wave="square" title="Square">⊓</button>
-              <button class="wave-pill" data-wave="sawtooth" title="Saw">⟋</button>
-            </div>
-          </div>
-
-          <!-- LFO -->
-          <div class="wave-box">
-            <div class="wave-box-label">
-              <span>VI · LFO</span>
-              <span id="lblLfoWave">∿</span>
-            </div>
-            <div class="wave-pills" id="lfoWavePills">
-              <button class="wave-pill active" data-wave="sine" title="Sine">∿</button>
-              <button class="wave-pill" data-wave="triangle" title="Triangle">△</button>
-              <button class="wave-pill" data-wave="square" title="Pulse">⊓</button>
-              <button class="wave-pill" data-wave="sawtooth" title="Ramp">⟋</button>
-            </div>
-          </div>
-
-          <!-- Tremolo Waveform -->
-          <div class="wave-box">
-            <div class="wave-box-label">
-              <span>VII · TREM</span>
-              <span id="lblTremWave">∿</span>
-            </div>
-            <div class="wave-pills" id="tremWavePills">
-              <button class="wave-pill active" data-wave="sine" title="Sine">∿</button>
-              <button class="wave-pill" data-wave="triangle" title="Triangle">△</button>
-              <button class="wave-pill" data-wave="square" title="Pulser">⊓</button>
-              <button class="wave-pill" data-wave="sawtooth" title="Saw">⟋</button>
-            </div>
-          </div>
-
-          <!-- Tremolo Mode -->
-          <div class="wave-box">
-            <div class="wave-box-label">
-              <span>VIII · PAN</span>
-              <span id="lblTremMode">◐↔◑</span>
-            </div>
-            <div class="wave-pills" id="tremModePills">
-              <button class="wave-pill active" data-mode="stereo" title="Stereo Pan 180°">◐↔◑</button>
-              <button class="wave-pill" data-mode="mono" title="Mono Amp">◎</button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- MÓDULO 2: 6 ESFERAS DRONE + 8 PADS -->
-      <section class="hw-module">
-        <div class="module-silk-header">
-          <div class="module-silk-title">
-            <span class="hw-led amber on"></span>
-            ✶ I–VI
-          </div>
-          <div style="display:flex; gap:6px;">
-            <button id="droneMasterHoldBtn" class="solar-btn active" style="padding:3px 8px; font-size:0.62rem;" title="Drone Hold">∞</button>
-            <button id="chordLockBtn" class="solar-btn" style="padding:3px 8px; font-size:0.62rem;" title="Harmonic Lock">✧</button>
-          </div>
-        </div>
-
-        <div class="solar-6-drones-grid" id="droneBanksGrid"></div>
-
-        <!-- 8 Pads MiniLab MkII -->
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-top:2px;">
-          <span style="font-size:0.58rem; color:var(--silk-gold);">PADS I–VIII</span>
-          <div style="display:flex; gap:5px;">
-            <button id="padModeDronesBtn" class="solar-btn active" style="padding:2px 7px; font-size:0.56rem;">✶ I–VI</button>
-            <button id="padModeScenesBtn" class="solar-btn" style="padding:2px 7px; font-size:0.56rem;">☯ I–VIII</button>
-          </div>
-        </div>
-        <div class="minilab-pads-row" id="minilabPadsRow"></div>
-      </section>
-
-      <!-- MÓDULO 3: ASTROLABIO VECTORIAL + OSCILOSCOPIO + STRIPS -->
-      <section class="hw-module polivoks-module">
-        <div class="module-silk-header">
-          <div class="module-silk-title">
-            <span class="hw-led red on"></span>
-            ❂ XY · LP/HP
-          </div>
-          <button id="autoOrbitBtn" class="solar-btn active" style="padding:2px 8px; font-size:0.62rem;" title="Auto Orbit">↻</button>
-        </div>
-
-        <div class="displays-grid">
-          <div class="crt-screen">
-            <canvas id="vectorCanvas" width="240" height="165"></canvas>
-            <span class="crt-label">❂ XY</span>
-          </div>
-          <div class="crt-screen">
-            <canvas id="scopeCanvas" width="240" height="165"></canvas>
-            <span class="crt-label" id="chordReadoutBadge">∿ LP/HP</span>
-          </div>
-        </div>
-
-        <div class="strips-and-ldr-bar">
-          <div class="strip-indicator-box">
-            <div style="display:flex; justify-content:space-between; font-size:0.55rem; color:var(--silk-gold);">
-              <span>↕ PITCH</span>
-              <span id="pitchStripVal">50%</span>
-            </div>
-            <div class="strip-bar-track" id="pitchStripTrack">
-              <div class="strip-bar-fill" id="pitchStripFill" style="width:50%;"></div>
-            </div>
-          </div>
-
-          <div class="strip-indicator-box">
-            <div style="display:flex; justify-content:space-between; font-size:0.55rem; color:var(--led-cyan);">
-              <span>☼ CC1</span>
-              <span id="modStripVal">45%</span>
-            </div>
-            <div class="strip-bar-track" id="modStripTrack">
-              <div class="strip-bar-fill" id="modStripFill" style="width:45%;"></div>
-            </div>
-          </div>
-
-          <div class="strip-indicator-box">
-            <div style="display:flex; justify-content:space-between; font-size:0.55rem; color:var(--silk-gold-bright);">
-              <span>VCF</span>
-              <span id="filterModeLbl">LP+HP</span>
-            </div>
-            <div class="wave-pills" id="filterModePills">
-              <button class="wave-pill active" data-mode="lphp">LP+HP</button>
-              <button class="wave-pill" data-mode="lowpass">LP</button>
-              <button class="wave-pill" data-mode="highpass">HP</button>
-              <button class="wave-pill" data-mode="bandpass">BP</button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-
-    <!-- FILA CENTRAL: 16 PERILLAS (KNOBS K1–K16) -->
-    <section class="minilab-knobs-deck">
-      <div class="module-silk-header">
-        <div class="module-silk-title">
-          <span class="hw-led cyan on" id="midiKnobLed"></span>
-          🎛️ K1 – K16
-        </div>
-        <span class="silk-badge">MINILAB MkII</span>
+    <!-- FILA DE PANTALLAS CRT + 6 CÁMARAS DE DRONE -->
+    <div class="telemetry-row">
+      <!-- Stargate XY Vector CRT -->
+      <div class="crt-box">
+        <canvas id="vectorCanvas" width="280" height="142"></canvas>
+        <span class="crt-overlay-tag" id="waveStatusBadge">𓂀 STARGATE XY · ≋ SUPERSAW</span>
+        <button id="autoOrbitBtn" class="hw-btn active crt-corner-btn" style="padding:2px 7px; font-size:0.56rem;" title="Auto Orbit">↻</button>
       </div>
 
-      <div class="knobs-row-8" id="knobsRowTop"></div>
-      <div class="knobs-row-8" id="knobsRowBottom"></div>
+      <!-- Oscilloscope & LPF/HPF Window CRT -->
+      <div class="crt-box">
+        <canvas id="scopeCanvas" width="280" height="142"></canvas>
+        <span class="crt-overlay-tag" id="filterStatusBadge">⏷⏶ LP+HP · ◐↔◑ STEREO</span>
+      </div>
+
+      <!-- 6 Cámaras de Drone (Controladas con Pads 1–6 del MiniLab MkII) -->
+      <div class="drones-chamber-module">
+        <div class="module-header-line">
+          <span>𓂀 DRONE CHAMBERS I–VI (PADS 1–6)</span>
+          <div style="display:flex; gap:5px;">
+            <button id="droneMasterHoldBtn" class="hw-btn active" style="padding:2px 7px; font-size:0.56rem;" title="Drone Master Hold">𓋹 ∞</button>
+            <button id="chordLockBtn" class="hw-btn" style="padding:2px 7px; font-size:0.56rem;" title="Lock Fifths & Octaves">𓇼 5TH</button>
+          </div>
+        </div>
+        <div class="drones-6-strip" id="droneBanksGrid"></div>
+      </div>
+    </div>
+
+    <!-- =========================================================================
+         CONSOLA FÍSICA ARTURIA MINILAB MkII (1:1 CON LA FOTO DEL CONTROLADOR)
+         ========================================================================= -->
+    <section class="minilab-surface-grid">
+
+      <!-- ALA IZQUIERDA: 4 BOTONES (SHIFT, PAD 1-8/9-16, OCT-, OCT+) + 2 TIRAS TÁCTILES VERTICALES -->
+      <div class="minilab-left-wing">
+        <div class="minilab-4-buttons">
+          <button id="mlShiftBtn" class="ml-sys-btn" title="Shift: Knobs 1–16 edit 16-Step Sequencer CV Pitch">SHIFT (K→SEQ)</button>
+          <button id="mlPadBankBtn" class="ml-sys-btn" title="Switch Pads between 1–8 (Drones/Transport) and 9–16 (Scenes)">PAD 1-8/9-16</button>
+          <button id="mlOctDownBtn" class="ml-sys-btn" title="Octave Down">OCT −</button>
+          <button id="mlOctUpBtn" class="ml-sys-btn" title="Octave Up">OCT +</button>
+        </div>
+
+        <div class="vertical-strips-pair">
+          <!-- Tira Táctil Izquierda: PITCH BEND (Con retorno al centro o bloqueo) -->
+          <div class="v-strip-unit">
+            <span class="v-strip-label">↕ PITCH</span>
+            <div class="v-strip-track pitch-center-line" id="pitchStripTrack">
+              <div class="v-strip-fill" id="pitchStripFill" style="height:50%;"></div>
+            </div>
+            <span class="v-strip-val" id="pitchStripVal">0 st</span>
+          </div>
+
+          <!-- Tira Táctil Derecha: MODULATION CC1 (Mantiene posición táctil) -->
+          <div class="v-strip-unit">
+            <span class="v-strip-label">☼ MOD CC1</span>
+            <div class="v-strip-track" id="modStripTrack">
+              <div class="v-strip-fill" id="modStripFill" style="height:45%;"></div>
+            </div>
+            <span class="v-strip-val" id="modStripVal">45%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ALA DERECHA: 16 PERILLAS (K1 Y K9 CLICKABLES) + 8 PADS RGB + 16 STEPS -->
+      <div class="minilab-right-deck">
+        <div class="module-header-line">
+          <span>𓂀 16 ENCODERS · K1 CLICK = WAVEFORM · K9 CLICK = VCF MODE · SHIFT = 16-STEP CV</span>
+          <span class="hw-badge" id="encoderModeBadge">MODE: SYNTHESIS</span>
+        </div>
+
+        <!-- Fila Superior: Knobs 1–8 (K1 tiene Push-Click) -->
+        <div class="knobs-row-8" id="knobsRowTop"></div>
+
+        <!-- Fila Inferior: Knobs 9–16 (K9 tiene Push-Click) -->
+        <div class="knobs-row-8" id="knobsRowBottom"></div>
+
+        <!-- 8 Pads RGB Físicos (1/9 .. 8/16) -->
+        <div class="minilab-pads-row" id="minilabPadsRow"></div>
+
+        <!-- Secuenciador de 16 Steps (1–16) controlado por K12 (Tempo) y SHIFT + K1–K16 -->
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-size:0.58rem; color:var(--gold-bright);">
+            <span class="led amber on" id="seqClockLed"></span>
+            𓇳 16-STEP SEQUENCER (CLICK STEP = GATE · SHIFT + K1–K16 = PITCH)
+          </span>
+          <div style="display:flex; gap:4px;">
+            <button id="seqDirBtn" class="hw-btn" style="padding:2px 7px; font-size:0.55rem;" title="Direction">→</button>
+            <button id="seqMultBtn" class="hw-btn" style="padding:2px 7px; font-size:0.55rem;" title="Clock Multiplier">×1</button>
+            <button id="seqSyncBtn" class="hw-btn" style="padding:2px 7px; font-size:0.55rem;" title="Sync Delay & Tremolo">🔗</button>
+            <button id="seqResetBtn" class="hw-btn" style="padding:2px 7px; font-size:0.55rem;" title="Reset Step 1">↺</button>
+            <button id="seqToggleBtn" class="hw-btn active" style="padding:2px 8px; font-size:0.55rem;" title="Play / Pause (Pad 7)">▶</button>
+            <button id="seqRandomizeBtn" class="hw-btn" style="padding:2px 7px; font-size:0.55rem;" title="Randomize 16 Steps">🎲</button>
+          </div>
+        </div>
+        <div class="seq-16-strip" id="seqColumnsContainer"></div>
+      </div>
+
     </section>
 
-    <!-- FILA INFERIOR: 12 PLACAS DE COBRE + 8 FASES LUNARES -->
-    <div class="bottom-performance-row">
-
-      <section class="hw-module">
-        <div class="module-silk-header">
-          <div class="module-silk-title">
-            <span class="screw"></span>
-            ☽ I – XII ☉
-          </div>
-          <div style="display:flex; gap:6px; align-items:center;">
-            <button id="releaseAllPlatesBtn" class="solar-btn" style="padding:2px 8px; font-size:0.58rem;" title="Release All">✕</button>
-          </div>
+    <!-- TECLADO INFERIOR DE 25 MINI-TECLAS DEL ARTURIA MINILAB MkII -->
+    <section class="minilab-keybed-section">
+      <div class="module-header-line">
+        <span id="keybedOctaveLabel">𓋹 MINILAB MkII · 25 VELOCITY KEYS (OCTAVE 0 · C2–C4)</span>
+        <div style="display:flex; gap:6px; align-items:center;">
+          <button id="keyHoldLatchBtn" class="hw-btn" style="padding:2px 8px; font-size:0.56rem;" title="Key Hold Latch (Sustain)">𓋹 HOLD LATCH</button>
+          <button id="releaseAllKeysBtn" class="hw-btn" style="padding:2px 8px; font-size:0.56rem;" title="Release Held Keys">✕</button>
         </div>
+      </div>
 
-        <div class="solar-copper-plates" id="copperPlatesContainer"></div>
-      </section>
-
-      <section class="hw-module">
-        <div class="module-silk-header">
-          <div class="module-silk-title">
-            <span class="hw-led amber on"></span>
-            🌑 – 🌘
-          </div>
-          <div style="display:flex; gap:5px;">
-            <button id="seqToggleBtn" class="solar-btn active" style="padding:2px 8px; font-size:0.58rem;">▶</button>
-            <button id="seqRandomizeBtn" class="solar-btn" style="padding:2px 8px; font-size:0.58rem;">🎲</button>
-          </div>
-        </div>
-
-        <div class="seq-8-columns" id="seqColumnsContainer"></div>
-      </section>
-
-    </div>
+      <div class="keybed-25-wrapper" id="keybed25Container"></div>
+    </section>
 
   </div>
 
   <script>
     /**
-     * SOLAR 42N × AMBIENT Ø — Motor de Síntesis Analógico-Espectral Mejorado
-     * Diseñado a medida para Arturia MiniLab MkII (16 Knobs, 8 Pads, 2 Touch Strips, 25 Keys)
+     * 𓂀 ANCIENT AMBIENT MACHINE 𓋹
+     * Arquitectura 1:1 para Arturia MiniLab MkII:
+     * - 16 Encoders (K1–K16) sin controles redundantes
+     * - K1 Click (CC 113 / Click en pantalla): Cicla las Formas de Onda del motor (SuperSaw, Choir, Organ, Glass, Triangle, Pulse)
+     * - K9 Click (CC 115 / Click en pantalla): Cicla el Modo de Filtro Dual (LP+HP, LP, HP, BP) y Paneo Estéreo/Mono del Trémolo
+     * - Botón SHIFT: Conmuta K1–K16 para editar directamente las notas de los 16 Steps del Secuenciador
+     * - 2 Tiras Táctiles Verticales: Pitch Bend (con retorno al centro) y Modulación CC1 (posición retenida)
+     * - 8 Pads RGB con 2 Bancos (Pad 1–8: 6 Drones + Play/Stop + Mutate; Pad 9–16: 8 Escenas Egipcio-Alienígenas)
+     * - 25 Mini-Teclas sensibles a la velocidad con botones OCT- / OCT+ y Hold Latch
      */
 
     const SCALES = {
@@ -1176,104 +985,132 @@
       microtonal: [0, 1.35, 2.75, 4.4, 6.0, 7.25, 8.85, 10.3, 11.75, 13.4, 15.0, 16.8].map(s => Math.pow(2, s / 12))
     };
 
-    const ROMAN_NOTES = ['☉ I', '☽ II♭', '☿ II', '♀ III♭', '♂ III', '♃ IV', '♄ V♭', '♅ V', '♆ VI♭', '♇ VI', '☊ VII♭', '⚝ VII'];
-    const LUNAR_PHASES = ['🌑', '🌒', '🌓', '🌔', '🌕', '🌖', '🌗', '🌘'];
-    const PC_KEYS = ['a', 'w', 's', 'e', 'd', 'f', 't', 'g', 'y', 'h', 'u', 'j'];
-
-    // Definición de las 16 Perillas Rotatorias (2 filas x 8) con etiquetas simbólicas concisas
-    const KNOB_DEFS = [
-      // FILA SUPERIOR (K1–K8)
-      { id: 'droneLvl',   kNum: 'K1',  cc: 112, altCc: 74,  name: '✶ DRONE',    min: 0,   max: 1,    step: 0.01, val: 0.80, fmt: v => `${Math.round(v*100)}%` },
-      { id: 'droneRoot',  kNum: 'K2',  cc: 74,  altCc: 71,  name: '☉ ROOT',     min: 32,  max: 146,  step: 0.5,  val: 55.0, fmt: v => `${v.toFixed(1)}Hz` },
-      { id: 'droneSpread',kNum: 'K3',  cc: 71,  altCc: 76,  name: '≋ DRIFT',    min: 0,   max: 1,    step: 0.01, val: 0.32, fmt: v => `${Math.round(v*100)}%` },
-      { id: 'padLvl',     kNum: 'K4',  cc: 76,  altCc: 77,  name: '☯ PAD',      min: 0,   max: 1,    step: 0.01, val: 0.76, fmt: v => `${Math.round(v*100)}%` },
-      { id: 'padMorph',   kNum: 'K5',  cc: 77,  altCc: 93,  name: '☽↔☉ MORPH', min: 0,   max: 1,    step: 0.01, val: 0.50, fmt: v => `${Math.round(v*100)}%` },
-      { id: 'atmosLvl',   kNum: 'K6',  cc: 93,  altCc: 73,  name: '✧ V/OCT',    min: 0,   max: 1,    step: 0.01, val: 0.68, fmt: v => `${Math.round(v*100)}%` },
-      { id: 'atmosFm',    kNum: 'K7',  cc: 73,  altCc: 75,  name: '⋈ FM',       min: 0,   max: 1,    step: 0.01, val: 0.30, fmt: v => `${Math.round(v*100)}%` },
-      { id: 'drive',      kNum: 'K8',  cc: 75,  altCc: 114, name: '⚡ DRIVE',    min: 0,   max: 1,    step: 0.01, val: 0.28, fmt: v => `${Math.round(v*100)}%`, polivoks: true },
-
-      // FILA INFERIOR (K9–K16)
-      { id: 'cutoff',     kNum: 'K9',  cc: 114, altCc: 18,  name: '⏷ LPF',      min: 80,  max: 9500, step: 10,   val: 1650, fmt: v => `${Math.round(v)}Hz`, polivoks: true },
-      { id: 'hpfCutoff',  kNum: 'K10', cc: 18,  altCc: 19,  name: '⏶ HPF',      min: 20,  max: 2400, step: 5,    val: 45,   fmt: v => `${Math.round(v)}Hz`, polivoks: true },
-      { id: 'reso',       kNum: 'K11', cc: 19,  altCc: 16,  name: '∆ RESO',     min: 0.5, max: 15,   step: 0.1,  val: 3.6,  fmt: v => `${v.toFixed(1)}Q`,  polivoks: true },
-      { id: 'lfoDepth',   kNum: 'K12', cc: 16,  altCc: 17,  name: '∿ → VCF',    min: 0,   max: 1,    step: 0.01, val: 0.38, fmt: v => `${Math.round(v*100)}%` },
-      { id: 'tremDepth',  kNum: 'K13', cc: 17,  altCc: 91,  name: '◈ TREM %',   min: 0,   max: 1,    step: 0.01, val: 0.35, fmt: v => `${Math.round(v*100)}%` },
-      { id: 'tremRate',   kNum: 'K14', cc: 91,  altCc: 79,  name: '◈ TREM HZ',  min: 0.1, max: 14.0, step: 0.05, val: 1.85, fmt: v => `${v.toFixed(2)}Hz` },
-      { id: 'delayMix',   kNum: 'K15', cc: 79,  altCc: 72,  name: '⧖ DELAY',    min: 0,   max: 1,    step: 0.01, val: 0.46, fmt: v => `${Math.round(v*100)}%` },
-      { id: 'shimmer',    kNum: 'K16', cc: 72,  altCc: 7,   name: '✦ SHIMMER',  min: 0,   max: 1,    step: 0.01, val: 0.68, fmt: v => `${Math.round(v*100)}%` }
+    const NOTE_GLYPHS = ['𓂀 I', '𓋹 II♭', '𓇳 II', '𓆣 III♭', '𓅃 III', '𓇼 IV', '𓊽 V♭', '𓆙 V', '𓉴 VI♭', '𓈖 VI', '𓁿 VII♭', '𓊖 VII'];
+    const STEP_HIEROGLYPHS = [
+      '1·𓂀', '2·𓋹', '3·𓇳', '4·𓆣', '5·𓅃', '6·𓇼', '7·𓊽', '8·𓆙',
+      '9·𓉴', '10·𓈖', '11·𓁿', '12·𓊖', '13·𓏏', '14·𓎛', '15·𓅓', '16·𓇯'
     ];
 
-    // Estado Global
+    // Ciclos de K1 Click (Formas de Onda) y K9 Click (Modos de Filtro + Trémolo)
+    const WAVE_PRESETS = [
+      { id: 'supersaw', label: '≋ SUPERSAW', vco: 'sawtooth', drone: 'supersaw', yin: 'choir',   yang: 'astral', sub: 'sine' },
+      { id: 'choir',    label: '❖ CHOIR',    vco: 'choir',    drone: 'choir',    yin: 'choir',   yang: 'glass',  sub: 'sine' },
+      { id: 'organ',    label: 'Ψ ORGAN',    vco: 'organ',    drone: 'organ',    yin: 'organ',   yang: 'astral', sub: 'triangle' },
+      { id: 'glass',    label: '✧ GLASS',    vco: 'glass',    drone: 'glass',    yin: 'glass',   yang: 'choir',  sub: 'sine' },
+      { id: 'triangle', label: '△ TRIANGLE', vco: 'triangle', drone: 'triangle', yin: 'strings', yang: 'glass',  sub: 'triangle' },
+      { id: 'square',   label: '⊓ PULSE',    vco: 'square',   drone: 'square',   yin: 'organ',   yang: 'strings',sub: 'square' }
+    ];
+
+    const FILTER_MODES = [
+      { mode: 'lphp',     trem: 'stereo', label: 'LP+HP · ◐↔◑' },
+      { mode: 'lowpass',  trem: 'stereo', label: 'LP ONLY · ◐↔◑' },
+      { mode: 'highpass', trem: 'stereo', label: 'HP ONLY · ◐↔◑' },
+      { mode: 'bandpass', trem: 'mono',   label: 'BP · ◎ MONO' }
+    ];
+
+    // 16 Perillas Rotatorias (2 filas x 8) mapeadas 1:1 al Arturia MiniLab MkII
+    const KNOB_DEFS = [
+      // FILA SUPERIOR (K1–K8: DRONE MONOLITH & YIN-YANG / V/OCT)
+      { id: 'droneLvl',   kNum: 'K1',  cc: 112, altCc: 74,  clickable: true, pushCc: 113, name: '𓂀 DRONE',    min: 0,   max: 1,    step: 0.01, val: 0.80, fmt: v => `${Math.round(v*100)}%` },
+      { id: 'droneRoot',  kNum: 'K2',  cc: 74,  altCc: 71,  name: '𓇳 ROOT HZ',  min: 32,  max: 146,  step: 0.5,  val: 55.0, fmt: v => `${v.toFixed(1)}Hz` },
+      { id: 'droneSpread',kNum: 'K3',  cc: 71,  altCc: 76,  name: '≋ DRIFT',    min: 0,   max: 1,    step: 0.01, val: 0.32, fmt: v => `${Math.round(v*100)}%` },
+      { id: 'padLvl',     kNum: 'K4',  cc: 76,  altCc: 77,  name: '𓋹 PAD LVL',  min: 0,   max: 1,    step: 0.01, val: 0.76, fmt: v => `${Math.round(v*100)}%` },
+      { id: 'padMorph',   kNum: 'K5',  cc: 77,  altCc: 93,  name: '☽↔☉ MORPH', min: 0,   max: 1,    step: 0.01, val: 0.50, fmt: v => `${Math.round(v*100)}%` },
+      { id: 'atmosLvl',   kNum: 'K6',  cc: 93,  altCc: 73,  name: '𓇼 V/OCT',    min: 0,   max: 1,    step: 0.01, val: 0.70, fmt: v => `${Math.round(v*100)}%` },
+      { id: 'atmosFm',    kNum: 'K7',  cc: 73,  altCc: 75,  name: '⋈ FM/GLIDE', min: 0,   max: 1,    step: 0.01, val: 0.32, fmt: v => `${Math.round(v*100)}%` },
+      { id: 'drive',      kNum: 'K8',  cc: 75,  altCc: 114, name: '⚡ DRIVE',    min: 0,   max: 1,    step: 0.01, val: 0.28, fmt: v => `${Math.round(v*100)}%` },
+
+      // FILA INFERIOR (K9–K16: FILTROS LPF/HPF, TEMPO, TRÉMOLO, DELAY, REVERB Y MASTER)
+      { id: 'cutoff',     kNum: 'K9',  cc: 114, altCc: 18,  clickable: true, pushCc: 115, name: '⏷ LPF',      min: 80,  max: 9500, step: 10,   val: 1650, fmt: v => `${Math.round(v)}Hz` },
+      { id: 'hpfCutoff',  kNum: 'K10', cc: 18,  altCc: 19,  name: '⏶ HPF',      min: 20,  max: 2400, step: 5,    val: 45,   fmt: v => `${Math.round(v)}Hz` },
+      { id: 'reso',       kNum: 'K11', cc: 19,  altCc: 16,  name: '∆ RESO',     min: 0.5, max: 15,   step: 0.1,  val: 3.6,  fmt: v => `${v.toFixed(1)}Q` },
+      { id: 'seqTempo',   kNum: 'K12', cc: 16,  altCc: 17,  name: '⏱ TEMPO',    min: 15,  max: 240,  step: 1,    val: 68,   fmt: v => `${Math.round(v)}BPM` },
+      { id: 'tremDepth',  kNum: 'K13', cc: 17,  altCc: 91,  name: '◈ TREMOLO',  min: 0,   max: 1,    step: 0.01, val: 0.35, fmt: v => `${Math.round(v*100)}%` },
+      { id: 'delayMix',   kNum: 'K14', cc: 91,  altCc: 79,  name: '⧖ DELAY',    min: 0,   max: 1,    step: 0.01, val: 0.46, fmt: v => `${Math.round(v*100)}%` },
+      { id: 'revMix',     kNum: 'K15', cc: 79,  altCc: 72,  name: '𓉴 REVERB',   min: 0,   max: 1,    step: 0.01, val: 0.72, fmt: v => `${Math.round(v*100)}%` },
+      { id: 'masterVol',  kNum: 'K16', cc: 72,  altCc: 7,   name: '𓇳 MASTER',   min: 0,   max: 1,    step: 0.01, val: 0.85, fmt: v => `${Math.round(v*100)}%` }
+    ];
+
     const state = {
       running: false,
       scale: 'just',
+      wavePresetIdx: 0,
+      filterModeIdx: 0,
+
       vcoWave: 'sawtooth',
       droneWave: 'supersaw',
       yinWave: 'choir',
       yangWave: 'astral',
       subWave: 'sine',
-      lfoWave: 'sine',
-      tremWave: 'sine',
-      tremMode: 'stereo', // 'stereo' | 'mono'
-      filterMode: 'lphp', // 'lphp' | 'lowpass' | 'highpass' | 'bandpass'
+      tremMode: 'stereo',
+      filterMode: 'lphp',
+
+      shiftSeqEdit: false, // Cuando SHIFT está activo, K1–K16 editan las notas de los 16 Steps
+      padBankB: false,     // false = Pads 1–8 (Drones + Play + Mutate), true = Pads 9–16 (Escenas I–VIII)
+      octaveShift: 0,      // -2 a +2 octavas con botones OCT- y OCT+
+      keyHoldLatch: false,
+      heldKeySet: new Set(),
+      activeKeyIdx: -1,
+      keyVelocity: 0.75,
 
       droneMasterHold: true,
       autoOrbit: true,
-      padMode: 'drones', // 'drones' | 'scenes'
       midiLearnActive: false,
       learningKnobId: null,
 
-      // 6 Esferas de Drone
       droneVoices: [
-        { ratio: 1.00, muted: false, label: '☉ I' },
-        { ratio: 1.50, muted: false, label: '☽ II' },
-        { ratio: 2.00, muted: false, label: '☿ III' },
-        { ratio: 1.25, muted: false, label: '♀ IV' },
-        { ratio: 3.00, muted: true,  label: '♂ V' },
-        { ratio: 0.50, muted: false, label: '♃ VI' }
+        { ratio: 1.00, muted: false, label: '𓂀 I' },
+        { ratio: 1.50, muted: false, label: '𓋹 II' },
+        { ratio: 2.00, muted: false, label: '𓇳 III' },
+        { ratio: 1.25, muted: false, label: '𓆣 IV' },
+        { ratio: 3.00, muted: true,  label: '𓅃 V' },
+        { ratio: 0.50, muted: false, label: '𓊽 VI' }
       ],
 
-      // 12 Placas Táctiles Capacitivas
-      platesHeld: new Array(12).fill(false),
-      activePlateIdx: -1,
-      platePressureY: 0.65,
-
-      // Tiras táctiles MiniLab MkII
       pitchStripNorm: 0.5,
       modStripNorm: 0.45,
 
-      // Joystick Vectorial XY
       vecX: 0.5,
       vecY: 0.5,
       draggingVec: false,
 
-      // Secuenciador 8 pasos
       seqRunning: true,
+      seqMult: 1.0,
+      seqDir: 'forward',
+      seqPendulumDir: 1,
+      seqSync: false,
       seqStepIdx: 0,
       seqSteps: [
-        { noteIdx: 0, gate: true },
-        { noteIdx: 4, gate: true },
-        { noteIdx: 7, gate: true },
-        { noteIdx: 9, gate: false },
-        { noteIdx: 5, gate: true },
-        { noteIdx: 7, gate: true },
+        { noteIdx: 0,  gate: true },
+        { noteIdx: 4,  gate: true },
+        { noteIdx: 7,  gate: true },
+        { noteIdx: 9,  gate: false },
+        { noteIdx: 5,  gate: true },
+        { noteIdx: 7,  gate: true },
         { noteIdx: 11, gate: true },
-        { noteIdx: 2, gate: false }
+        { noteIdx: 2,  gate: false },
+        { noteIdx: 0,  gate: true },
+        { noteIdx: 7,  gate: true },
+        { noteIdx: 10, gate: true },
+        { noteIdx: 7,  gate: false },
+        { noteIdx: 5,  gate: true },
+        { noteIdx: 3,  gate: true },
+        { noteIdx: 7,  gate: true },
+        { noteIdx: 11, gate: true }
       ],
 
       shValue: 0,
       shTarget: 0
     };
 
-    // Mapa rápido de valores de los 16 Knobs + auxiliares
     const params = {
-      noiseLvl: 0.26,
-      lfoRate: 0.11,
-      revMix: 0.76
+      lfoRate: 0.14,
+      lfoDepth: 0.38,
+      tremRate: 1.85
     };
     KNOB_DEFS.forEach(k => { params[k.id] = k.val; });
 
-    // Nodos Web Audio API
+    // Web Audio API Nodes
     let ctx = null;
     let masterGain = null;
     let subBassBoost = null;
@@ -1282,9 +1119,8 @@
     let mediaRecorder = null;
     let recordedChunks = [];
 
-    // Nodos de las Capas
     let periodicWaves = {};
-    let droneVoiceNodes = []; // 6 voces con par de osciladores desfasados (estereofonía cálida)
+    let droneVoiceNodes = [];
     let droneSubOsc = null;
     let droneLayerGain = null;
 
@@ -1307,55 +1143,31 @@
     let noiseBandFilter = null;
     let noiseLayerGain = null;
 
-    // Filtro Pasa-Altos (HPF) + Filtro Pasa-Bajos (LPF) Polivoks + Trémolo Estéreo
-    let hpfL = null;
-    let hpfR = null;
-    let filterL = null; // LPF L
-    let filterR = null; // LPF R
-    let filterL2 = null; // 2da etapa suave
-    let filterR2 = null;
+    let hpfL = null, hpfR = null;
+    let filterL = null, filterR = null;
+    let filterL2 = null, filterR2 = null;
     let polivoksShaper = null;
 
-    // Trémolo / Pulser Estéreo
-    let tremGainL = null;
-    let tremGainR = null;
+    let tremGainL = null, tremGainR = null;
     let tremOsc = null;
-    let tremDepthL = null;
-    let tremDepthR = null;
+    let tremDepthL = null, tremDepthR = null;
 
-    let lfoOsc = null;
-    let lfoGainL = null;
-    let lfoGainR = null;
+    let lfoOsc = null, lfoGainL = null, lfoGainR = null;
+    let chorusDelayL = null, chorusDelayR = null;
+    let tapeDelayL = null, tapeDelayR = null, tapeFeedback = null, tapeFilter = null, tapeMixGain = null;
+    let reverbConvolver = null, reverbMixGain = null;
+    let shimmerHarmOsc1 = null, shimmerHarmOsc2 = null, shimmerFilter = null, shimmerSendGain = null;
 
-    let chorusDelayL = null;
-    let chorusDelayR = null;
-
-    let tapeDelayL = null;
-    let tapeDelayR = null;
-    let tapeFeedback = null;
-    let tapeFilter = null;
-    let tapeMixGain = null;
-
-    let reverbConvolver = null;
-    let reverbMixGain = null;
-    let shimmerHarmOsc1 = null;
-    let shimmerHarmOsc2 = null;
-    let shimmerFilter = null;
-    let shimmerSendGain = null;
-
-    // 1. Generar Tablas de Onda Espectrales Ricas (Blendwave + Solar Harmonics)
     function createCustomWavetables(audioCtx) {
       const N = 48;
       const tables = {};
 
-      // Glass Harmonics (Campanas de cristal cálidas sin aliasing agudo)
       let real = new Float32Array(N), imag = new Float32Array(N);
       for (let k = 1; k < N; k++) {
         imag[k] = (k % 2 === 1 ? 1.0 / k : 0.45 / k) * Math.exp(-k * 0.075);
       }
       tables.glass = audioCtx.createPeriodicWave(real, imag);
 
-      // Spectral Choir (Formantes vocales A-O-U suaves)
       real = new Float32Array(N); imag = new Float32Array(N);
       for (let k = 1; k < N; k++) {
         const f1 = Math.exp(-Math.pow((k - 3) / 1.8, 2));
@@ -1365,21 +1177,18 @@
       }
       tables.choir = audioCtx.createPeriodicWave(real, imag);
 
-      // Cathedral Pipe Organ (Drawbars armónicos puros)
       real = new Float32Array(N); imag = new Float32Array(N);
       [1, 2, 3, 4, 6, 8, 12, 16].forEach((h, i) => {
         if (h < N) imag[h] = Math.pow(0.78, i);
       });
       tables.organ = audioCtx.createPeriodicWave(real, imag);
 
-      // Astral Fifths (Armónicos espaciales Ambient Ø)
       real = new Float32Array(N); imag = new Float32Array(N);
       for (let k = 1; k < N; k++) {
         imag[k] = [1, 2, 3, 6, 9, 12, 18].includes(k) ? 1 / Math.pow(k, 0.65) : 0.05 / k;
       }
       tables.astral = audioCtx.createPeriodicWave(real, imag);
 
-      // Warm Strings / SuperSaw suave
       real = new Float32Array(N); imag = new Float32Array(N);
       for (let k = 1; k < N; k++) {
         imag[k] = (1 / k) * Math.exp(-k * 0.035);
@@ -1400,20 +1209,17 @@
       }
     }
 
-    // Curva de Saturación Analógica Polivoks (Cálida y musical, sin distorsión áspera)
     function createWarmPolivoksCurve(driveAmount) {
       const k = 1 + driveAmount * 14;
       const n = 2048;
       const curve = new Float32Array(n);
       for (let i = 0; i < n; i++) {
         const x = (i * 2) / n - 1;
-        // Saturación asimétrica de válvula/diodo soviético con compresión suave
         curve[i] = Math.tanh(x * k + 0.06 * x * x) / Math.tanh(k + 0.06);
       }
       return curve;
     }
 
-    // Impulso Estéreo Terciopelo de Catedral (Sin resonancias metálicas)
     function buildVelvetCathedralIR(audioCtx, duration = 5.4, decay = 3.1) {
       const sr = audioCtx.sampleRate;
       const len = Math.floor(sr * duration);
@@ -1425,7 +1231,6 @@
           const t = i / sr;
           const env = Math.pow(1 - i / len, decay) * (1 - Math.exp(-t * 22));
           const raw = (Math.random() * 2 - 1);
-          // Filtro paso-bajo progresivo en la cola para sonido sedoso y oscuro
           const dampCoeff = Math.max(0.08, 0.55 - (i / len) * 0.42);
           lp = lp + dampCoeff * (raw - lp);
           data[i] = lp * env * 0.85;
@@ -1434,7 +1239,6 @@
       return buffer;
     }
 
-    // 2. Inicializar Motor de Audio Estéreo de Alta Definición
     function initAudioEngine() {
       if (ctx) return;
       const AudioCtx = window.AudioContext || window.webkitAudioContext;
@@ -1442,9 +1246,8 @@
       periodicWaves = createCustomWavetables(ctx);
 
       masterGain = ctx.createGain();
-      masterGain.gain.value = 0.82;
+      masterGain.gain.value = params.masterVol;
 
-      // Realce Sub-Grave Analógico Cálido (85 Hz) + Limitador Suave
       subBassBoost = ctx.createBiquadFilter();
       subBassBoost.type = 'lowshelf';
       subBassBoost.frequency.value = 85;
@@ -1460,19 +1263,14 @@
       analyser = ctx.createAnalyser();
       analyser.fftSize = 1024;
 
-      // Bus Pre-Filtro Estéreo (Izquierdo y Derecho como en el Solar 42N)
       const mixBusL = ctx.createGain();
       const mixBusR = ctx.createGain();
 
-      // Etapa 1: Filtro Pasa-Altos Estéreo (HPF L / R) con resonancia
       hpfL = ctx.createBiquadFilter();
       hpfR = ctx.createBiquadFilter();
       hpfL.type = 'highpass';
       hpfR.type = 'highpass';
-      hpfL.frequency.value = params.hpfCutoff;
-      hpfR.frequency.value = params.hpfCutoff;
 
-      // Etapa 2: Filtro Pasa-Bajos Polivoks Estéreo (LPF L / R) + 2da etapa suave
       filterL = ctx.createBiquadFilter();
       filterR = ctx.createBiquadFilter();
       filterL.type = 'lowpass';
@@ -1485,22 +1283,14 @@
       filterL2.frequency.value = 7200;
       filterR2.frequency.value = 7200;
 
-      // Etapa 3: Trémolo / Pulser Estéreo (Binaural Pan o Mono Amp)
       tremGainL = ctx.createGain();
       tremGainR = ctx.createGain();
-      tremGainL.gain.value = 0.85;
-      tremGainR.gain.value = 0.85;
-
       tremOsc = ctx.createOscillator();
-      applyWaveformToOsc(tremOsc, state.tremWave);
+      tremOsc.type = 'sine';
       tremOsc.frequency.value = params.tremRate;
 
       tremDepthL = ctx.createGain();
       tremDepthR = ctx.createGain();
-      tremDepthL.gain.value = params.tremDepth * 0.45;
-      // En modo Stereo Pan, el canal derecho tiene fase invertida (-180°) para paneo espacial
-      tremDepthR.gain.value = -params.tremDepth * 0.45;
-
       tremOsc.connect(tremDepthL);
       tremOsc.connect(tremDepthR);
       tremDepthL.connect(tremGainL.gain);
@@ -1511,7 +1301,6 @@
       polivoksShaper.curve = createWarmPolivoksCurve(params.drive);
       polivoksShaper.oversample = '4x';
 
-      // LFO Principal hacia ambos filtros Polivoks
       lfoOsc = ctx.createOscillator();
       lfoOsc.frequency.value = params.lfoRate;
       lfoGainL = ctx.createGain();
@@ -1522,7 +1311,6 @@
       lfoGainR.connect(filterR.frequency);
       lfoOsc.start();
 
-      // Chorus BBD Estéreo Analógico (ensancha enormemente las voces Drone y Pad)
       chorusDelayL = ctx.createDelay(0.05);
       chorusDelayR = ctx.createDelay(0.05);
       chorusDelayL.delayTime.value = 0.014;
@@ -1542,7 +1330,6 @@
 
       const stereoMerger = ctx.createChannelMerger(2);
 
-      // Ruta serie: MixBus -> HPF (Pasa-Altos) -> LPF (Pasa-Bajos) -> Filter2 -> Trémolo -> Merger + Chorus
       mixBusL.connect(hpfL);
       mixBusR.connect(hpfR);
       hpfL.connect(filterL);
@@ -1554,19 +1341,15 @@
 
       tremGainL.connect(stereoMerger, 0, 0);
       tremGainR.connect(stereoMerger, 0, 1);
-
-      // Sumar señal Chorus BBD al campo estéreo
       tremGainL.connect(chorusDelayL);
       tremGainR.connect(chorusDelayR);
       chorusDelayL.connect(stereoMerger, 0, 0);
       chorusDelayR.connect(stereoMerger, 0, 1);
-
       stereoMerger.connect(polivoksShaper);
 
-      // --- CAPA 1: 6 VOCES DRONE SOLAR 42N (Cada voz tiene 2 osciladores desfasados + Drift) ---
+      // Capa 1: 6 Voces Drone
       droneLayerGain = ctx.createGain();
       droneVoiceNodes = [];
-
       state.droneVoices.forEach((v, idx) => {
         const oscA = ctx.createOscillator();
         const oscB = ctx.createOscillator();
@@ -1576,7 +1359,6 @@
         const voiceGain = ctx.createGain();
         voiceGain.gain.value = v.muted ? 0 : 0.14;
 
-        // Paneo distribuido en el campo estéreo como el mezclador del Solar 42N
         const panPos = ((idx / 5) * 2 - 1) * 0.75;
         const gainL = ctx.createGain();
         const gainR = ctx.createGain();
@@ -1587,7 +1369,6 @@
         oscB.connect(voiceGain);
         voiceGain.connect(gainL);
         voiceGain.connect(gainR);
-
         gainL.connect(droneLayerGain);
         gainR.connect(droneLayerGain);
 
@@ -1596,7 +1377,6 @@
         droneVoiceNodes.push({ oscA, oscB, voiceGain });
       });
 
-      // Sub-Oscilador Profundo (-1 Octava)
       droneSubOsc = ctx.createOscillator();
       applyWaveformToOsc(droneSubOsc, state.subWave);
       const subGain = ctx.createGain();
@@ -1608,16 +1388,14 @@
       droneLayerGain.connect(mixBusL);
       droneLayerGain.connect(mixBusR);
 
-      // --- CAPA 2: SONICWARE AMBIENT Ø YIN-YANG BLENDWAVE PAD ---
+      // Capa 2: Yin-Yang Pad
       padLayerGain = ctx.createGain();
       yinGain = ctx.createGain();
       yangGain = ctx.createGain();
       yinOscs = [];
       yangOscs = [];
 
-      // Acorde de 4 voces espaciadas (Fundamental, Quinta, Octava, Décima)
-      const padIntervals = [1.0, 1.5, 2.0, 2.5];
-      padIntervals.forEach((intv, i) => {
+      [1.0, 1.5, 2.0, 2.5].forEach((intv, i) => {
         const oYin = ctx.createOscillator();
         const oYang = ctx.createOscillator();
         applyWaveformToOsc(oYin, state.yinWave);
@@ -1644,7 +1422,7 @@
       padLayerGain.connect(mixBusL);
       padLayerGain.connect(mixBusR);
 
-      // --- CAPA 3: VOCES MELÓDICAS V/OCT + ATMOS FM (PLACAS CAPACITIVAS Y TECLADO MINILAB) ---
+      // Capa 3: Voz Melódica V/Oct + FM
       atmosLayerGain = ctx.createGain();
       vcoEnvGain = ctx.createGain();
       vcoEnvGain.gain.value = 0.14;
@@ -1677,7 +1455,7 @@
       atmosLayerGain.connect(mixBusL);
       atmosLayerGain.connect(mixBusR);
 
-      // --- CAPA 4: RUIDO ROSA + OSCILADORES CAÓTICOS SCHMITT-TRIGGER ---
+      // Capa 4: Ruido Rosa + Schmitt Chaos
       noiseLayerGain = ctx.createGain();
       const noiseLen = ctx.sampleRate * 4;
       const noiseBuf = ctx.createBuffer(1, noiseLen, ctx.sampleRate);
@@ -1728,7 +1506,7 @@
       noiseLayerGain.connect(mixBusL);
       noiseLayerGain.connect(mixBusR);
 
-      // --- CARTUCHO DUAL DE EFECTOS: TAPE DELAY CON FILTRO DE CINTA + CATHEDRAL SHIMMER ---
+      // Tape Delay + Temple Shimmer Reverb
       tapeDelayL = ctx.createDelay(2.0);
       tapeDelayR = ctx.createDelay(2.0);
       tapeDelayL.delayTime.value = 0.42;
@@ -1736,13 +1514,12 @@
 
       tapeFilter = ctx.createBiquadFilter();
       tapeFilter.type = 'lowpass';
-      tapeFilter.frequency.value = 2400; // Oscurece las repeticiones como cinta real
+      tapeFilter.frequency.value = 2400;
 
       tapeFeedback = ctx.createGain();
       tapeFeedback.gain.value = 0.52;
       tapeMixGain = ctx.createGain();
 
-      // Modulación Wow & Flutter
       const wowOsc = ctx.createOscillator();
       wowOsc.frequency.value = 0.45;
       const wowDepth = ctx.createGain();
@@ -1762,7 +1539,6 @@
       tapeDelayR.connect(delayMerger, 0, 1);
       delayMerger.connect(tapeMixGain);
 
-      // Tanque Catedral Shimmer Reverb (+1 Octava y Quinta justa filtradas con terciopelo)
       reverbConvolver = ctx.createConvolver();
       reverbConvolver.buffer = buildVelvetCathedralIR(ctx, 5.4, 3.0);
       reverbMixGain = ctx.createGain();
@@ -1790,7 +1566,6 @@
       tapeMixGain.connect(reverbConvolver);
       reverbConvolver.connect(reverbMixGain);
 
-      // Salida Final con Realce Sub-Grave y Compresor Analógico
       polivoksShaper.connect(subBassBoost);
       tapeMixGain.connect(subBassBoost);
       reverbMixGain.connect(subBassBoost);
@@ -1806,22 +1581,21 @@
       updateDSP();
     }
 
-    // 3. Actualizar todos los parámetros del motor de audio sin clics
     function updateDSP() {
       if (!ctx) return;
       const now = ctx.currentTime;
 
-      const root = params.droneRoot * (1 + (state.pitchStripNorm - 0.5) * 0.08);
+      const octMult = Math.pow(2, state.octaveShift * 0.5);
+      const pitchBendSemis = (state.pitchStripNorm - 0.5) * 4; // ±2 semitonos en la tira táctil Pitch
+      const root = params.droneRoot * octMult * Math.pow(2, pitchBendSemis / 12);
       const spread = params.droneSpread;
       const modStrip = state.modStripNorm;
 
-      // Pesos del Joystick Vectorial 2D
       const wDrone = (1 - state.vecX * 0.5) * (1 - state.vecY * 0.5);
       const wPad   = (0.5 + state.vecX * 0.5) * (1 - state.vecY * 0.5);
       const wAtmos = (1 - state.vecX * 0.5) * (0.5 + state.vecY * 0.5);
       const wNoise = (0.5 + state.vecX * 0.5) * (0.5 + state.vecY * 0.5);
 
-      // Capa 1: 6 Voces Drone Solar 42N
       const droneActive = state.droneMasterHold ? 1 : 0;
       droneLayerGain.gain.setTargetAtTime(params.droneLvl * wDrone * droneActive * 0.65, now, 0.06);
 
@@ -1836,8 +1610,7 @@
 
       droneSubOsc.frequency.setTargetAtTime(Math.max(18, root * 0.5), now, 0.08);
 
-      // Capa 2: Ambient Ø Blendwave Yin-Yang Pad
-      const morph = params.padMorph;
+      const morph = Math.min(1, Math.max(0, params.padMorph * 0.7 + modStrip * 0.3));
       padLayerGain.gain.setTargetAtTime(params.padLvl * wPad * 0.55, now, 0.06);
       yinGain.gain.setTargetAtTime((1 - morph) * 0.48, now, 0.06);
       yangGain.gain.setTargetAtTime(morph * 0.48, now, 0.06);
@@ -1849,55 +1622,43 @@
         o.osc.frequency.setTargetAtTime(root * 2 * o.intv * (1 + spread * 0.0045), now, 0.1);
       });
 
-      // Capa 3: Atmos Melódico V/Oct + FM
       atmosLayerGain.gain.setTargetAtTime(params.atmosLvl * wAtmos * 0.58, now, 0.06);
-      vcoFmGain.gain.setTargetAtTime(params.atmosFm * 280 * (0.35 + state.platePressureY), now, 0.05);
+      vcoFmGain.gain.setTargetAtTime(params.atmosFm * 280 * (0.35 + state.keyVelocity), now, 0.05);
 
-      // Capa 4: Schmitt Chaos & Formant Noise
       noiseLayerGain.gain.setTargetAtTime((params.atmosFm * 0.4 + 0.15) * wNoise * 0.65, now, 0.06);
       noiseBandFilter.frequency.setTargetAtTime(180 + modStrip * 2200 + state.shValue * 300, now, 0.08);
       schmittOscA.frequency.setTargetAtTime(65 + modStrip * 380 + state.shValue * 110, now, 0.08);
-      schmittOscB.frequency.setTargetAtTime(8 + params.lfoRate * 45, now, 0.08);
+      schmittOscB.frequency.setTargetAtTime(8 + (params.seqTempo / 60) * 8, now, 0.08);
 
-      // Etapa de Filtros: Pasa-Bajos (LPF) + Pasa-Altos (HPF) Polivoks
       const effectiveLPF = Math.min(9500, Math.max(70, params.cutoff * (0.55 + modStrip * 1.15)));
       const effectiveHPF = Math.min(3200, Math.max(20, params.hpfCutoff));
 
       if (state.filterMode === 'lphp') {
-        hpfL.type = 'highpass';
-        hpfR.type = 'highpass';
-        filterL.type = 'lowpass';
-        filterR.type = 'lowpass';
+        hpfL.type = 'highpass'; hpfR.type = 'highpass';
+        filterL.type = 'lowpass'; filterR.type = 'lowpass';
         hpfL.frequency.setTargetAtTime(effectiveHPF, now, 0.06);
         hpfR.frequency.setTargetAtTime(effectiveHPF, now, 0.06);
         filterL.frequency.setTargetAtTime(effectiveLPF * 0.94, now, 0.06);
         filterR.frequency.setTargetAtTime(effectiveLPF * 1.06, now, 0.06);
       } else if (state.filterMode === 'lowpass') {
-        hpfL.type = 'highpass';
-        hpfR.type = 'highpass';
+        hpfL.type = 'highpass'; hpfR.type = 'highpass';
         hpfL.frequency.setTargetAtTime(20, now, 0.06);
         hpfR.frequency.setTargetAtTime(20, now, 0.06);
-        filterL.type = 'lowpass';
-        filterR.type = 'lowpass';
+        filterL.type = 'lowpass'; filterR.type = 'lowpass';
         filterL.frequency.setTargetAtTime(effectiveLPF * 0.94, now, 0.06);
         filterR.frequency.setTargetAtTime(effectiveLPF * 1.06, now, 0.06);
       } else if (state.filterMode === 'highpass') {
-        hpfL.type = 'highpass';
-        hpfR.type = 'highpass';
+        hpfL.type = 'highpass'; hpfR.type = 'highpass';
         hpfL.frequency.setTargetAtTime(effectiveHPF, now, 0.06);
         hpfR.frequency.setTargetAtTime(effectiveHPF, now, 0.06);
-        filterL.type = 'lowpass';
-        filterR.type = 'lowpass';
+        filterL.type = 'lowpass'; filterR.type = 'lowpass';
         filterL.frequency.setTargetAtTime(9500, now, 0.06);
         filterR.frequency.setTargetAtTime(9500, now, 0.06);
       } else {
-        // Bandpass quirúrgico Polivoks
-        hpfL.type = 'highpass';
-        hpfR.type = 'highpass';
+        hpfL.type = 'highpass'; hpfR.type = 'highpass';
         hpfL.frequency.setTargetAtTime(effectiveHPF, now, 0.06);
         hpfR.frequency.setTargetAtTime(effectiveHPF, now, 0.06);
-        filterL.type = 'bandpass';
-        filterR.type = 'bandpass';
+        filterL.type = 'bandpass'; filterR.type = 'bandpass';
         filterL.frequency.setTargetAtTime(effectiveLPF * 0.92, now, 0.06);
         filterR.frequency.setTargetAtTime(effectiveLPF * 1.08, now, 0.06);
       }
@@ -1907,34 +1668,77 @@
       hpfL.Q.setTargetAtTime(Math.min(8, params.reso * 0.55), now, 0.05);
       hpfR.Q.setTargetAtTime(Math.min(8, params.reso * 0.55), now, 0.05);
 
-      lfoOsc.frequency.setTargetAtTime(params.lfoRate, now, 0.08);
-      lfoGainL.gain.setTargetAtTime(params.lfoDepth * effectiveLPF * 0.55, now, 0.06);
-      lfoGainR.gain.setTargetAtTime(params.lfoDepth * effectiveLPF * 0.48, now, 0.06);
+      const lfoHz = Math.max(0.05, (params.seqTempo / 60) * 0.25);
+      lfoOsc.frequency.setTargetAtTime(lfoHz, now, 0.08);
+      lfoGainL.gain.setTargetAtTime(params.lfoDepth * effectiveLPF * 0.45, now, 0.06);
+      lfoGainR.gain.setTargetAtTime(params.lfoDepth * effectiveLPF * 0.38, now, 0.06);
 
-      // Etapa de Trémolo / Pulser Estéreo
       if (tremOsc && tremDepthL && tremDepthR) {
-        tremOsc.frequency.setTargetAtTime(params.tremRate, now, 0.05);
+        const tremHz = state.seqSync
+          ? Math.min(14, Math.max(0.2, (params.seqTempo * state.seqMult) / 30))
+          : (0.4 + params.tremDepth * 6.5);
+        params.tremRate = tremHz;
+        tremOsc.frequency.setTargetAtTime(tremHz, now, 0.05);
         const depthAmp = params.tremDepth * 0.48;
         const baseGain = 1.0 - depthAmp * 0.5;
         tremGainL.gain.setTargetAtTime(baseGain, now, 0.05);
         tremGainR.gain.setTargetAtTime(baseGain, now, 0.05);
         tremDepthL.gain.setTargetAtTime(depthAmp, now, 0.05);
-        // Si está en modo STEREO PAN, invierte la fase del canal derecho (-depthAmp)
         tremDepthR.gain.setTargetAtTime(state.tremMode === 'stereo' ? -depthAmp : depthAmp, now, 0.05);
       }
 
-      // Efectos: Tape Delay + Cathedral Shimmer
       tapeMixGain.gain.setTargetAtTime(params.delayMix * 0.65, now, 0.06);
       tapeFeedback.gain.setTargetAtTime(0.32 + params.delayMix * 0.42, now, 0.06);
 
-      reverbMixGain.gain.setTargetAtTime((0.45 + params.shimmer * 0.5) * 0.95, now, 0.06);
-      shimmerSendGain.gain.setTargetAtTime(params.shimmer * 0.24, now, 0.08);
+      reverbMixGain.gain.setTargetAtTime(params.revMix * 1.05, now, 0.06);
+      shimmerSendGain.gain.setTargetAtTime(params.revMix * 0.26, now, 0.08);
       shimmerHarmOsc1.frequency.setTargetAtTime(root * 4.0, now, 0.15);
       shimmerHarmOsc2.frequency.setTargetAtTime(root * 6.0, now, 0.15);
+
+      if (masterGain) {
+        masterGain.gain.setTargetAtTime(params.masterVol, now, 0.04);
+      }
     }
 
-    // 4. Disparar Placa Táctil Capacitiva Solar 42N o Nota MIDI del Arturia MiniLab MkII
-    function triggerSolarPlate(plateIdx, pressureY = 0.72) {
+    // Acción Push-Click de Knob 1 (Ciclar Formas de Onda) y Knob 9 (Ciclar Modo de Filtro y Trémolo)
+    function triggerEncoderPush(knobId) {
+      if (knobId === 'droneLvl') {
+        state.wavePresetIdx = (state.wavePresetIdx + 1) % WAVE_PRESETS.length;
+        const wp = WAVE_PRESETS[state.wavePresetIdx];
+        state.vcoWave = wp.vco;
+        state.droneWave = wp.drone;
+        state.yinWave = wp.yin;
+        state.yangWave = wp.yang;
+        state.subWave = wp.sub;
+
+        applyWaveformToOsc(vcoMainOsc, wp.vco);
+        applyWaveformToOsc(droneSubOsc, wp.sub);
+        applyWaveformToOsc(vcoSubOsc, wp.sub);
+        droneVoiceNodes.forEach(n => {
+          applyWaveformToOsc(n.oscA, wp.drone);
+          applyWaveformToOsc(n.oscB, wp.drone);
+        });
+        yinOscs.forEach(o => applyWaveformToOsc(o.osc, wp.yin));
+        yangOscs.forEach(o => applyWaveformToOsc(o.osc, wp.yang));
+
+        const cap = document.getElementById('pushCap_droneLvl');
+        if (cap) cap.textContent = wp.label;
+        document.getElementById('waveStatusBadge').textContent = `𓂀 STARGATE XY · ${wp.label}`;
+      } else if (knobId === 'cutoff') {
+        state.filterModeIdx = (state.filterModeIdx + 1) % FILTER_MODES.length;
+        const fm = FILTER_MODES[state.filterModeIdx];
+        state.filterMode = fm.mode;
+        state.tremMode = fm.trem;
+
+        const cap = document.getElementById('pushCap_cutoff');
+        if (cap) cap.textContent = fm.label;
+        document.getElementById('filterStatusBadge').textContent = `⏷⏶ ${fm.label}`;
+        updateDSP();
+      }
+    }
+
+    // Disparar una de las 25 Mini-Teclas (0..24) desde Mouse/Touch, PC o Arturia MiniLab MkII
+    function triggerMiniLabKey(keyIdx, velocity = 0.78) {
       if (!ctx) {
         initAudioEngine();
         state.running = true;
@@ -1943,56 +1747,70 @@
       }
       if (ctx.state === 'suspended') ctx.resume();
 
-      state.activePlateIdx = plateIdx;
-      state.platePressureY = pressureY;
+      const clampedKey = Math.max(0, Math.min(24, keyIdx));
+      state.activeKeyIdx = clampedKey;
+      state.keyVelocity = velocity;
+      state.heldKeySet.add(clampedKey);
 
-      document.querySelectorAll('.pcb-touch-pad').forEach((el, i) => {
-        el.classList.toggle('touched', i === plateIdx || state.platesHeld[i]);
+      document.querySelectorAll('[data-key-idx]').forEach(el => {
+        const idx = parseInt(el.dataset.keyIdx, 10);
+        el.classList.toggle('key-active', state.heldKeySet.has(idx));
       });
 
-      const bar = document.getElementById(`plateBar_${plateIdx}`);
-      if (bar) bar.style.height = `${Math.round(pressureY * 100)}%`;
-
       const ratios = SCALES[state.scale] || SCALES.just;
-      const root = params.droneRoot * 2;
-      const targetFreq = root * ratios[plateIdx % 12];
+      const degInOct = clampedKey % 12;
+      const octBonus = Math.floor(clampedKey / 12);
+      const octMult = Math.pow(2, octBonus + state.octaveShift);
+      const targetFreq = params.droneRoot * 2 * ratios[degInOct] * octMult;
       const now = ctx.currentTime;
 
-      vcoMainOsc.frequency.setTargetAtTime(targetFreq, now, 0.06);
-      vcoSubOsc.frequency.setTargetAtTime(targetFreq * 0.5, now, 0.06);
-      vcoModOsc.frequency.setTargetAtTime(targetFreq * 1.5, now, 0.06);
-      shimmerHarmOsc1.frequency.setTargetAtTime(targetFreq * 2.0, now, 0.18);
+      vcoMainOsc.frequency.setTargetAtTime(targetFreq, now, 0.05);
+      vcoSubOsc.frequency.setTargetAtTime(targetFreq * 0.5, now, 0.05);
+      vcoModOsc.frequency.setTargetAtTime(targetFreq * 1.5, now, 0.05);
+      shimmerHarmOsc1.frequency.setTargetAtTime(targetFreq * 2.0, now, 0.16);
 
       vcoEnvGain.gain.cancelScheduledValues(now);
-      vcoEnvGain.gain.setTargetAtTime(0.45 + pressureY * 0.4, now, 0.12);
+      vcoEnvGain.gain.setTargetAtTime(0.45 + velocity * 0.4, now, 0.09);
 
-      document.getElementById('chordReadoutBadge').textContent =
-        `${ROMAN_NOTES[plateIdx]} · ${Math.round(targetFreq)}Hz`;
+      document.getElementById('filterStatusBadge').textContent =
+        `${NOTE_GLYPHS[degInOct]} · ${Math.round(targetFreq)}Hz`;
 
       updateDSP();
     }
 
-    function releaseSolarPlate(plateIdx) {
-      if (state.platesHeld[plateIdx]) return; // Si tiene HOLD activo no se apaga
-      const padEl = document.getElementById(`pcbPlate_${plateIdx}`);
-      if (padEl) padEl.classList.remove('touched');
-      const bar = document.getElementById(`plateBar_${plateIdx}`);
-      if (bar) bar.style.height = '0%';
+    function releaseMiniLabKey(keyIdx) {
+      const clampedKey = Math.max(0, Math.min(24, keyIdx));
+      if (state.keyHoldLatch) return;
 
-      if (state.activePlateIdx === plateIdx) {
-        state.activePlateIdx = -1;
+      state.heldKeySet.delete(clampedKey);
+      const keyEl = document.querySelector(`[data-key-idx="${clampedKey}"]`);
+      if (keyEl) keyEl.classList.remove('key-active');
+
+      if (state.heldKeySet.size === 0) {
+        state.activeKeyIdx = -1;
         if (ctx) {
           const now = ctx.currentTime;
           vcoEnvGain.gain.cancelScheduledValues(now);
-          vcoEnvGain.gain.setTargetAtTime(0.08, now, 0.95);
+          vcoEnvGain.gain.setTargetAtTime(0.08, now, 0.85);
         }
       }
     }
 
-    // Actualizar valor de un Knob (desde Mouse o desde Arturia MiniLab MkII CC)
+    // Actualizar valor de un Knob (o Step 1–16 si SHIFT está activo)
     function setKnobValue(knobId, rawVal, fromMidi = false) {
-      const def = KNOB_DEFS.find(k => k.id === knobId);
-      if (!def) return;
+      const defIdx = KNOB_DEFS.findIndex(k => k.id === knobId);
+      if (defIdx === -1) return;
+      const def = KNOB_DEFS[defIdx];
+
+      // Si SHIFT está activo, los 16 Knobs K1–K16 ajustan la nota CV de los 16 Steps (1–16)
+      if (state.shiftSeqEdit && fromMidi) {
+        const normStep = Math.max(0, Math.min(1, (rawVal - def.min) / (def.max - def.min)));
+        const noteIdx = Math.min(11, Math.floor(normStep * 12));
+        state.seqSteps[defIdx].noteIdx = noteIdx;
+        state.seqSteps[defIdx].gate = true;
+        renderSequencerSteps();
+        return;
+      }
 
       const clamped = Math.max(def.min, Math.min(def.max, rawVal));
       params[knobId] = clamped;
@@ -2022,41 +1840,33 @@
       updateDSP();
     }
 
-    // 5. Construir toda la Interfaz Hardware Solar 42N + MiniLab MkII
+    // Construir UI 1:1 con el Arturia MiniLab MkII
     function buildHardwareUI() {
-      // A. 6 Voces Drone Solar 42N
+      // 1. 6 Cámaras de Drone
       const droneGrid = document.getElementById('droneBanksGrid');
       droneGrid.innerHTML = '';
       state.droneVoices.forEach((v, idx) => {
-        const ch = document.createElement('div');
-        ch.className = `drone-channel ${v.muted ? 'muted' : ''}`;
-        ch.id = `droneCh_${idx}`;
-        ch.innerHTML = `
-          <div class="drone-ch-header">
-            <span class="hw-led ${v.muted ? '' : 'amber on'}" id="droneLed_${idx}"></span>
+        const box = document.createElement('div');
+        box.className = `drone-pill-box ${v.muted ? 'muted' : ''}`;
+        box.id = `droneCh_${idx}`;
+        box.innerHTML = `
+          <div style="display:flex; align-items:center; gap:4px; font-size:0.56rem; font-weight:700; color:var(--gold-bright);">
+            <span class="led ${v.muted ? '' : 'amber on'}" id="droneLed_${idx}"></span>
             <span>${v.label}</span>
           </div>
-          <input type="range" class="solar-slider" min="0.5" max="4.0" step="0.01" value="${v.ratio}" id="droneRatio_${idx}" />
-          <span style="font-size:0.6rem; color:var(--silk-cream);" id="droneRatioVal_${idx}">×${v.ratio.toFixed(2)}</span>
-          <button class="drone-toggle-btn" id="droneMuteBtn_${idx}">${v.muted ? '○' : '●'}</button>
+          <input type="range" class="egypt-slider" min="0.5" max="4.0" step="0.01" value="${v.ratio}" id="droneRatio_${idx}" />
+          <span style="font-size:0.54rem; color:var(--cream);" id="droneRatioVal_${idx}">×${v.ratio.toFixed(2)}</span>
         `;
-        droneGrid.appendChild(ch);
+        droneGrid.appendChild(box);
 
         document.getElementById(`droneRatio_${idx}`).addEventListener('input', (e) => {
           v.ratio = parseFloat(e.target.value);
           document.getElementById(`droneRatioVal_${idx}`).textContent = `×${v.ratio.toFixed(2)}`;
           updateDSP();
         });
-
-        document.getElementById(`droneMuteBtn_${idx}`).addEventListener('click', () => {
-          toggleDroneVoice(idx);
-        });
       });
 
-      // B. 8 Pads RGB del Arturia MiniLab MkII
-      renderMiniLabPads();
-
-      // C. 16 Perillas Rotatorias Arturia MiniLab MkII (Knobs 1-8 y Knobs 9-16)
+      // 2. 16 Perillas Rotatorias (K1 y K9 tienen Push-Click igual que en el MiniLab MkII)
       const rowTop = document.getElementById('knobsRowTop');
       const rowBottom = document.getElementById('knobsRowBottom');
       rowTop.innerHTML = '';
@@ -2067,11 +1877,16 @@
         const deg = -135 + norm * 270;
 
         const cell = document.createElement('div');
-        cell.className = `rotary-cell ${def.polivoks ? 'polivoks-knob' : ''}`;
+        cell.className = `rotary-cell ${def.clickable ? 'clickable-encoder' : ''}`;
         cell.id = `knobCell_${def.id}`;
+
+        const pushBadgeHtml = def.clickable
+          ? `<button class="knob-push-cap" id="pushCap_${def.id}" title="Click Encoder (${def.kNum})">${def.id === 'droneLvl' ? '≋ SUPERSAW' : 'LP+HP · ◐↔◑'}</button>`
+          : '';
+
         cell.innerHTML = `
           <div class="knob-top-badges">
-            <span class="knob-k-num">${def.kNum}</span>
+            <span class="knob-k-num">${def.kNum}${def.clickable ? ' ⦿' : ''}</span>
             <span class="knob-cc-tag" id="knobCcBadge_${def.id}">CC${def.cc}</span>
           </div>
           <div class="solar-knob-dial">
@@ -2079,13 +1894,22 @@
           </div>
           <div class="knob-title">${def.name}</div>
           <div class="knob-readout" id="knobVal_${def.id}">${def.fmt(def.val)}</div>
+          ${pushBadgeHtml}
         `;
 
-        // Arrastrar verticalmente con el mouse o seleccionar para MIDI Learn
+        if (def.clickable) {
+          cell.querySelector('.knob-push-cap').addEventListener('pointerdown', (ev) => {
+            ev.stopPropagation();
+            triggerEncoderPush(def.id);
+          });
+        }
+
         let startY = 0;
         let startVal = def.val;
 
         cell.addEventListener('pointerdown', (e) => {
+          if (e.target.classList.contains('knob-push-cap')) return;
+
           if (state.midiLearnActive) {
             state.learningKnobId = def.id;
             document.querySelectorAll('.rotary-cell').forEach(c => c.classList.remove('learning-target'));
@@ -2100,6 +1924,13 @@
 
           const onMove = (ev) => {
             const dy = startY - ev.clientY;
+            if (state.shiftSeqEdit) {
+              const stepDelta = Math.round(dy / 14);
+              const newNote = Math.max(0, Math.min(11, state.seqSteps[idx].noteIdx + (stepDelta > 0 ? 1 : stepDelta < 0 ? -1 : 0)));
+              state.seqSteps[idx].noteIdx = newNote;
+              renderSequencerSteps();
+              return;
+            }
             const span = def.max - def.min;
             const newVal = startVal + (dy / 130) * span;
             setKnobValue(def.id, newVal, false);
@@ -2114,85 +1945,108 @@
           cell.addEventListener('pointerup', onUp);
         });
 
-        // Doble clic reinicia la perilla a su valor original
         cell.addEventListener('dblclick', () => setKnobValue(def.id, def.val, false));
 
         if (idx < 8) rowTop.appendChild(cell);
         else rowBottom.appendChild(cell);
       });
 
-      // D. 12 Placas Táctiles de Cobre Dorado
-      const platesContainer = document.getElementById('copperPlatesContainer');
-      platesContainer.innerHTML = '';
-      for (let i = 0; i < 12; i++) {
-        const unit = document.createElement('div');
-        unit.className = 'copper-plate-unit';
-        unit.innerHTML = `
-          <button class="plate-hold-toggle" id="plateHold_${i}" title="Hold">∞</button>
-          <div class="pcb-touch-pad" id="pcbPlate_${i}">
-            <span class="plate-label-badge">${ROMAN_NOTES[i]}</span>
-            <div class="plate-pressure-bar" id="plateBar_${i}"></div>
-            <span class="plate-label-badge" style="font-size:0.52rem; color:var(--silk-muted);">${PC_KEYS[i].toUpperCase()}</span>
-          </div>
-        `;
-        platesContainer.appendChild(unit);
+      // 3. 8 Pads RGB (Bancos 1–8 y 9–16)
+      renderMiniLabPads();
 
-        const holdBtn = document.getElementById(`plateHold_${i}`);
-        holdBtn.addEventListener('click', () => {
-          state.platesHeld[i] = !state.platesHeld[i];
-          holdBtn.classList.toggle('held', state.platesHeld[i]);
-          if (state.platesHeld[i]) {
-            triggerSolarPlate(i, 0.78);
-          } else {
-            releaseSolarPlate(i);
-          }
-        });
+      // 4. Secuenciador de 16 Steps (1–16)
+      renderSequencerSteps();
 
-        const padEl = document.getElementById(`pcbPlate_${i}`);
-        const handlePadPointer = (e) => {
-          const rect = padEl.getBoundingClientRect();
-          const normY = Math.max(0.05, Math.min(1, 1 - (e.clientY - rect.top) / rect.height));
-          triggerSolarPlate(i, normY);
-        };
+      // 5. Teclado de 25 Mini-Teclas (C2 a C4)
+      build25Keybed();
 
-        padEl.addEventListener('pointerdown', (e) => {
-          padEl.setPointerCapture(e.pointerId);
-          handlePadPointer(e);
-        });
-        padEl.addEventListener('pointermove', (e) => {
-          if (e.buttons > 0) handlePadPointer(e);
-        });
-        padEl.addEventListener('pointerup', () => releaseSolarPlate(i));
-      }
+      bindHardwareEvents();
+    }
 
-      // E. Secuenciador Analógico de 8 Fases Lunares
+    function renderSequencerSteps() {
       const seqContainer = document.getElementById('seqColumnsContainer');
       seqContainer.innerHTML = '';
       state.seqSteps.forEach((st, idx) => {
-        const col = document.createElement('div');
-        col.className = 'seq-col';
-        col.id = `seqCol_${idx}`;
-        col.innerHTML = `
-          <span style="font-size:0.65rem; color:var(--silk-gold);">${LUNAR_PHASES[idx]}</span>
-          <input type="range" class="solar-slider" min="0" max="11" step="1" value="${st.noteIdx}" id="seqCv_${idx}" />
-          <span style="font-size:0.62rem; font-weight:700; color:var(--silk-gold-bright);" id="seqNoteTxt_${idx}">${ROMAN_NOTES[st.noteIdx]}</span>
-          <button class="drone-toggle-btn" id="seqGateBtn_${idx}" style="opacity:${st.gate ? 1 : 0.35}">${st.gate ? '●' : '○'}</button>
+        const cell = document.createElement('div');
+        cell.className = `seq-step-cell ${st.gate ? '' : 'gate-off'} ${idx === state.seqStepIdx ? 'active-step' : ''}`;
+        cell.id = `seqCol_${idx}`;
+        cell.title = `Step ${idx + 1}: Click = Gate ON/OFF · Rueda Mouse / SHIFT+K${idx + 1} = Nota`;
+        cell.innerHTML = `
+          <span style="font-size:0.5rem; color:var(--gold);">${STEP_HIEROGLYPHS[idx]}</span>
+          <span style="font-size:0.56rem; font-weight:700; color:var(--gold-bright);" id="seqNoteTxt_${idx}">${NOTE_GLYPHS[st.noteIdx]}</span>
+          <span style="font-size:0.5rem; color:var(--alien-cyan);">${st.gate ? '●' : '○'}</span>
         `;
-        seqContainer.appendChild(col);
 
-        document.getElementById(`seqCv_${idx}`).addEventListener('input', (e) => {
-          st.noteIdx = parseInt(e.target.value, 10);
-          document.getElementById(`seqNoteTxt_${idx}`).textContent = ROMAN_NOTES[st.noteIdx];
-        });
-
-        document.getElementById(`seqGateBtn_${idx}`).addEventListener('click', (e) => {
+        // Click alterna Gate ON/OFF; Rueda del mouse cambia la nota CV
+        cell.addEventListener('click', () => {
           st.gate = !st.gate;
-          e.target.textContent = st.gate ? '●' : '○';
-          e.target.style.opacity = st.gate ? '1' : '0.35';
+          renderSequencerSteps();
         });
-      });
 
-      bindWaveAndHeaderControls();
+        cell.addEventListener('wheel', (e) => {
+          e.preventDefault();
+          st.noteIdx = (st.noteIdx + (e.deltaY < 0 ? 1 : 11)) % 12;
+          renderSequencerSteps();
+        });
+
+        seqContainer.appendChild(cell);
+      });
+    }
+
+    function build25Keybed() {
+      const container = document.getElementById('keybed25Container');
+      container.innerHTML = '';
+
+      // Patrón cromático de 25 teclas (2 octavas completas de Do a Do: índices 0..24)
+      const isBlack = [false, true, false, true, false, false, true, false, true, false, true, false];
+      const pcKeys25 = ['z','s','x','d','c','v','g','b','h','n','j','m', 'q','2','w','3','e','r','5','t','6','y','7','u','i'];
+
+      // Primero renderizamos las 15 teclas blancas en el grid
+      let whiteCount = 0;
+      const whitePositions = [];
+
+      for (let i = 0; i < 25; i++) {
+        const semitone = i % 12;
+        if (!isBlack[semitone]) {
+          const wk = document.createElement('div');
+          wk.className = 'white-key';
+          wk.dataset.keyIdx = String(i);
+          wk.innerHTML = `
+            <span class="key-glyph">${NOTE_GLYPHS[semitone]}</span>
+            <span style="font-size:0.46rem; color:var(--muted);">${(pcKeys25[i] || '').toUpperCase()}</span>
+          `;
+          bindKeyPointer(wk, i);
+          container.appendChild(wk);
+          whitePositions[i] = whiteCount;
+          whiteCount++;
+        }
+      }
+
+      // Ahora superponemos las 10 teclas negras en sus posiciones exactas
+      for (let i = 0; i < 25; i++) {
+        const semitone = i % 12;
+        if (isBlack[semitone]) {
+          const prevWhiteIdx = whitePositions[i - 1];
+          const leftPercent = ((prevWhiteIdx + 0.68) / 15) * 100;
+          const bk = document.createElement('div');
+          bk.className = 'black-key';
+          bk.dataset.keyIdx = String(i);
+          bk.style.left = `${leftPercent}%`;
+          bk.innerHTML = `<span class="key-glyph">${NOTE_GLYPHS[semitone].split(' ')[0]}</span>`;
+          bindKeyPointer(bk, i);
+          container.appendChild(bk);
+        }
+      }
+    }
+
+    function bindKeyPointer(el, keyIdx) {
+      el.addEventListener('pointerdown', (e) => {
+        el.setPointerCapture(e.pointerId);
+        const rect = el.getBoundingClientRect();
+        const vel = Math.max(0.2, Math.min(1, (e.clientY - rect.top) / rect.height));
+        triggerMiniLabKey(keyIdx, vel);
+      });
+      el.addEventListener('pointerup', () => releaseMiniLabKey(keyIdx));
     }
 
     function toggleDroneVoice(idx) {
@@ -2201,10 +2055,8 @@
       v.muted = !v.muted;
       const ch = document.getElementById(`droneCh_${idx}`);
       const led = document.getElementById(`droneLed_${idx}`);
-      const btn = document.getElementById(`droneMuteBtn_${idx}`);
       if (ch) ch.classList.toggle('muted', v.muted);
-      if (led) led.className = `hw-led ${v.muted ? '' : 'amber on'}`;
-      if (btn) btn.textContent = v.muted ? '○' : '●';
+      if (led) led.className = `led ${v.muted ? '' : 'amber on'}`;
       renderMiniLabPads();
       updateDSP();
     }
@@ -2214,112 +2066,137 @@
       if (!container) return;
       container.innerHTML = '';
 
-      const padLabelsDrones = [
-        '☉ I', '☽ II', '☿ III', '♀ IV',
-        '♂ V', '♃ VI', '🎲', '✦ ∞'
-      ];
-      const padLabelsScenes = [
-        'I', 'II', 'III', 'IV',
-        'V', 'VI', 'VII', 'VIII'
+      const rgbClasses = [
+        'pad-rgb-red', 'pad-rgb-gold', 'pad-rgb-blue', 'pad-rgb-gold',
+        'pad-rgb-green', 'pad-rgb-purple', 'pad-rgb-blue', 'pad-rgb-red'
       ];
 
+      const bankALabels = [
+        '𓂀 DRONE I', '𓋹 DRONE II', '𓇳 DRONE III', '𓆣 DRONE IV',
+        '𓅃 DRONE V', '𓊽 DRONE VI', state.seqRunning ? '▶ SEQ ON' : '⏸ SEQ OFF', '🎲 MUTATE'
+      ];
+
+      const bankBLabels = [
+        'I · GIZA', 'II · ORION', 'III · OSIRIS', 'IV · SIRIUS',
+        'V · ANUBIS', 'VI · THOTH', 'VII · HORUS', 'VIII · DUAT'
+      ];
+
+      const currentPreset = parseInt(document.getElementById('presetSelect').value, 10) || 0;
+
       for (let i = 0; i < 8; i++) {
-        const isDroneMode = state.padMode === 'drones';
-        const isActive = isDroneMode && i < 6 ? !state.droneVoices[i].muted : false;
+        let isActive = false;
+        if (!state.padBankB) {
+          if (i < 6) isActive = !state.droneVoices[i].muted;
+          else if (i === 6) isActive = state.seqRunning;
+          else isActive = true;
+        } else {
+          isActive = (i === currentPreset);
+        }
+
         const pad = document.createElement('div');
-        pad.className = `minilab-pad ${isActive ? 'pad-active' : ''}`;
+        pad.className = `minilab-pad ${rgbClasses[i]} ${isActive ? 'pad-active' : ''}`;
         pad.innerHTML = `
-          <span class="pad-num">P${i + 1}</span>
-          <span class="pad-action">${isDroneMode ? padLabelsDrones[i] : padLabelsScenes[i]}</span>
+          <span class="pad-num">PAD ${i + 1} / ${i + 9}</span>
+          <span class="pad-action">${state.padBankB ? bankBLabels[i] : bankALabels[i]}</span>
         `;
-        pad.addEventListener('click', () => handleMiniLabPadTrigger(i));
+        pad.addEventListener('click', () => handleMiniLabPadTrigger(i, state.padBankB));
         container.appendChild(pad);
       }
     }
 
-    function handleMiniLabPadTrigger(padIdx) {
-      if (state.padMode === 'scenes') {
+    function handleMiniLabPadTrigger(padIdx, isBankB = false) {
+      if (isBankB) {
         document.getElementById('presetSelect').value = String(padIdx);
         loadScenePreset(padIdx);
+        renderMiniLabPads();
         return;
       }
 
       if (padIdx < 6) {
         toggleDroneVoice(padIdx);
       } else if (padIdx === 6) {
-        mutateAmbientTexture();
+        state.seqRunning = !state.seqRunning;
+        const seqBtn = document.getElementById('seqToggleBtn');
+        seqBtn.classList.toggle('active', state.seqRunning);
+        seqBtn.textContent = state.seqRunning ? '▶' : '⏸';
+        renderMiniLabPads();
       } else if (padIdx === 7) {
-        // Maximizar Shimmer y Reverb instantáneamente (Freeze angelical)
-        const nextShim = params.shimmer > 0.85 ? 0.45 : 0.95;
-        setKnobValue('shimmer', nextShim, true);
-        setKnobValue('revMix', 0.92, true);
+        mutateAmbientTexture();
       }
     }
 
-    // 6. Vincular Botones de Formas de Onda, Escenas y Web MIDI API para Arturia MiniLab MkII
-    function bindWaveAndHeaderControls() {
-      const bindPillGroup = (containerId, labelId, callback) => {
-        const container = document.getElementById(containerId);
-        if (!container) return;
-        container.querySelectorAll('.wave-pill').forEach(btn => {
-          btn.addEventListener('click', () => {
-            container.querySelectorAll('.wave-pill').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            const wave = btn.dataset.wave || btn.dataset.mode;
-            if (labelId) document.getElementById(labelId).textContent = btn.textContent;
-            callback(wave);
-          });
-        });
+    function bindHardwareEvents() {
+      // Botones del Ala Izquierda del Arturia MiniLab MkII (SHIFT, PAD 1-8/9-16, OCT-, OCT+)
+      const shiftBtn = document.getElementById('mlShiftBtn');
+      shiftBtn.addEventListener('click', () => {
+        state.shiftSeqEdit = !state.shiftSeqEdit;
+        shiftBtn.classList.toggle('shift-on', state.shiftSeqEdit);
+        document.getElementById('encoderModeBadge').textContent =
+          state.shiftSeqEdit ? 'MODE: 16-STEP CV EDIT (K1–K16)' : 'MODE: SYNTHESIS';
+      });
+
+      const padBankBtn = document.getElementById('mlPadBankBtn');
+      padBankBtn.addEventListener('click', () => {
+        state.padBankB = !state.padBankB;
+        padBankBtn.classList.toggle('bank-b', state.padBankB);
+        padBankBtn.textContent = state.padBankB ? 'BANK 9–16' : 'PAD 1-8/9-16';
+        renderMiniLabPads();
+      });
+
+      const updateOctaveUI = () => {
+        const sign = state.octaveShift > 0 ? `+${state.octaveShift}` : String(state.octaveShift);
+        document.getElementById('keybedOctaveLabel').textContent =
+          `𓋹 MINILAB MkII · 25 VELOCITY KEYS (OCTAVE ${sign})`;
+        updateDSP();
       };
 
-      bindPillGroup('vcoWavePills', 'lblVcoWave', (w) => {
-        state.vcoWave = w;
-        applyWaveformToOsc(vcoMainOsc, w);
+      document.getElementById('mlOctDownBtn').addEventListener('click', () => {
+        state.octaveShift = Math.max(-2, state.octaveShift - 1);
+        updateOctaveUI();
       });
 
-      bindPillGroup('droneWavePills', 'lblDroneWave', (w) => {
-        state.droneWave = w;
-        droneVoiceNodes.forEach(n => {
-          applyWaveformToOsc(n.oscA, w);
-          applyWaveformToOsc(n.oscB, w);
+      document.getElementById('mlOctUpBtn').addEventListener('click', () => {
+        state.octaveShift = Math.min(2, state.octaveShift + 1);
+        updateOctaveUI();
+      });
+
+      // Tiras Táctiles Verticales (Pitch con retorno al centro + Mod CC1 retenida)
+      const bindVerticalStrip = (trackId, fillId, onVal, springCenter = false) => {
+        const track = document.getElementById(trackId);
+        const updateFromPointer = (e) => {
+          const rect = track.getBoundingClientRect();
+          const norm = Math.max(0, Math.min(1, 1 - (e.clientY - rect.top) / rect.height));
+          document.getElementById(fillId).style.height = `${Math.round(norm * 100)}%`;
+          onVal(norm);
+          updateDSP();
+        };
+
+        track.addEventListener('pointerdown', (e) => {
+          track.setPointerCapture(e.pointerId);
+          updateFromPointer(e);
         });
-      });
+        track.addEventListener('pointermove', (e) => {
+          if (e.buttons > 0) updateFromPointer(e);
+        });
+        if (springCenter) {
+          track.addEventListener('pointerup', () => {
+            document.getElementById(fillId).style.height = '50%';
+            onVal(0.5);
+            updateDSP();
+          });
+        }
+      };
 
-      bindPillGroup('yinWavePills', 'lblYinWave', (w) => {
-        state.yinWave = w;
-        yinOscs.forEach(o => applyWaveformToOsc(o.osc, w));
-      });
+      bindVerticalStrip('pitchStripTrack', 'pitchStripFill', (n) => {
+        state.pitchStripNorm = n;
+        const st = ((n - 0.5) * 4).toFixed(1);
+        document.getElementById('pitchStripVal').textContent = `${st > 0 ? '+' : ''}${st} st`;
+      }, true);
 
-      bindPillGroup('yangWavePills', 'lblYangWave', (w) => {
-        state.yangWave = w;
-        yangOscs.forEach(o => applyWaveformToOsc(o.osc, w));
-      });
-
-      bindPillGroup('subWavePills', 'lblSubWave', (w) => {
-        state.subWave = w;
-        applyWaveformToOsc(droneSubOsc, w);
-        applyWaveformToOsc(vcoSubOsc, w);
-      });
-
-      bindPillGroup('lfoWavePills', 'lblLfoWave', (w) => {
-        state.lfoWave = w;
-        applyWaveformToOsc(lfoOsc, w);
-      });
-
-      bindPillGroup('tremWavePills', 'lblTremWave', (w) => {
-        state.tremWave = w;
-        applyWaveformToOsc(tremOsc, w);
-      });
-
-      bindPillGroup('tremModePills', 'lblTremMode', (m) => {
-        state.tremMode = m;
-        updateDSP();
-      });
-
-      bindPillGroup('filterModePills', 'filterModeLbl', (m) => {
-        state.filterMode = m;
-        updateDSP();
-      });
+      bindVerticalStrip('modStripTrack', 'modStripFill', (n) => {
+        state.modStripNorm = n;
+        document.getElementById('modStripVal').textContent = `${Math.round(n * 100)}%`;
+      }, false);
 
       // Power Button
       document.getElementById('powerBtn').addEventListener('click', () => {
@@ -2341,36 +2218,7 @@
         }
       });
 
-      // Tiras Táctiles Interactivas con el Mouse también
-      const bindStripDrag = (trackId, fillId, valId, onVal) => {
-        const track = document.getElementById(trackId);
-        const updateFromEvent = (e) => {
-          const rect = track.getBoundingClientRect();
-          const norm = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
-          document.getElementById(fillId).style.width = `${Math.round(norm * 100)}%`;
-          document.getElementById(valId).textContent = `${Math.round(norm * 100)}%`;
-          onVal(norm);
-          updateDSP();
-        };
-        track.addEventListener('pointerdown', (e) => {
-          track.setPointerCapture(e.pointerId);
-          updateFromEvent(e);
-        });
-        track.addEventListener('pointermove', (e) => {
-          if (e.buttons > 0) updateFromEvent(e);
-        });
-      };
-
-      bindStripDrag('pitchStripTrack', 'pitchStripFill', 'pitchStripVal', (n) => {
-        state.pitchStripNorm = n;
-        setKnobValue('padMorph', n, false);
-      });
-
-      bindStripDrag('modStripTrack', 'modStripFill', 'modStripVal', (n) => {
-        state.modStripNorm = n;
-      });
-
-      // Joystick Vectorial 2D
+      // Stargate Vector XY Canvas
       const vCanvas = document.getElementById('vectorCanvas');
       const moveVec = (e) => {
         const rect = vCanvas.getBoundingClientRect();
@@ -2390,7 +2238,11 @@
       });
       vCanvas.addEventListener('pointerup', () => { state.draggingVec = false; });
 
-      // Botones Superiores
+      document.getElementById('autoOrbitBtn').addEventListener('click', (e) => {
+        state.autoOrbit = !state.autoOrbit;
+        e.target.classList.toggle('active', state.autoOrbit);
+      });
+
       document.getElementById('droneMasterHoldBtn').addEventListener('click', (e) => {
         state.droneMasterHold = !state.droneMasterHold;
         e.target.classList.toggle('active', state.droneMasterHold);
@@ -2398,7 +2250,6 @@
       });
 
       document.getElementById('chordLockBtn').addEventListener('click', () => {
-        // Afinar las 6 voces de Drone en una quinta y octava armónica justa perfecta
         const harmonicSet = [1.0, 1.5, 2.0, 2.5, 3.0, 0.5];
         state.droneVoices.forEach((v, idx) => {
           v.ratio = harmonicSet[idx];
@@ -2408,51 +2259,71 @@
         updateDSP();
       });
 
-      document.getElementById('padModeDronesBtn').addEventListener('click', () => {
-        state.padMode = 'drones';
-        document.getElementById('padModeDronesBtn').classList.add('active');
-        document.getElementById('padModeScenesBtn').classList.remove('active');
-        renderMiniLabPads();
-      });
-
-      document.getElementById('padModeScenesBtn').addEventListener('click', () => {
-        state.padMode = 'scenes';
-        document.getElementById('padModeScenesBtn').classList.add('active');
-        document.getElementById('padModeDronesBtn').classList.remove('active');
-        renderMiniLabPads();
-      });
-
-      document.getElementById('autoOrbitBtn').addEventListener('click', (e) => {
-        state.autoOrbit = !state.autoOrbit;
-        e.target.classList.toggle('active', state.autoOrbit);
-      });
-
-      document.getElementById('releaseAllPlatesBtn').addEventListener('click', () => {
-        state.platesHeld.fill(false);
-        document.querySelectorAll('.plate-hold-toggle').forEach(b => b.classList.remove('held'));
-        for (let i = 0; i < 12; i++) releaseSolarPlate(i);
-      });
-
+      // Controles del Secuenciador de 16 Steps
       document.getElementById('seqToggleBtn').addEventListener('click', (e) => {
         state.seqRunning = !state.seqRunning;
         e.target.classList.toggle('active', state.seqRunning);
         e.target.textContent = state.seqRunning ? '▶' : '⏸';
+        renderMiniLabPads();
+      });
+
+      document.getElementById('seqDirBtn').addEventListener('click', (e) => {
+        const dirs = ['forward', 'pendulum', 'random'];
+        const icons = ['→', '⇄', '🎲'];
+        const nextIdx = (dirs.indexOf(state.seqDir) + 1) % dirs.length;
+        state.seqDir = dirs[nextIdx];
+        e.target.textContent = icons[nextIdx];
+      });
+
+      document.getElementById('seqMultBtn').addEventListener('click', (e) => {
+        const mults = [0.5, 1.0, 2.0];
+        const labels = ['÷2', '×1', '×2'];
+        const nextIdx = (mults.indexOf(state.seqMult) + 1) % mults.length;
+        state.seqMult = mults[nextIdx];
+        e.target.textContent = labels[nextIdx];
+        e.target.classList.toggle('active', state.seqMult !== 1.0);
+        if (state.seqSync) applyTempoSync();
+      });
+
+      document.getElementById('seqSyncBtn').addEventListener('click', (e) => {
+        state.seqSync = !state.seqSync;
+        e.target.classList.toggle('active', state.seqSync);
+        if (state.seqSync) applyTempoSync();
+      });
+
+      document.getElementById('seqResetBtn').addEventListener('click', () => {
+        state.seqStepIdx = 0;
+        state.seqPendulumDir = 1;
+        renderSequencerSteps();
       });
 
       document.getElementById('seqRandomizeBtn').addEventListener('click', () => {
-        state.seqSteps.forEach((st, idx) => {
+        state.seqSteps.forEach((st) => {
           st.noteIdx = Math.floor(Math.random() * 12);
           st.gate = Math.random() > 0.2;
-          document.getElementById(`seqCv_${idx}`).value = st.noteIdx;
-          document.getElementById(`seqNoteTxt_${idx}`).textContent = ROMAN_NOTES[st.noteIdx];
-          const gBtn = document.getElementById(`seqGateBtn_${idx}`);
-          gBtn.textContent = st.gate ? '●' : '○';
-          gBtn.style.opacity = st.gate ? '1' : '0.35';
         });
+        renderSequencerSteps();
+      });
+
+      // Teclado 25 Keys Hold Latch & Release
+      document.getElementById('keyHoldLatchBtn').addEventListener('click', (e) => {
+        state.keyHoldLatch = !state.keyHoldLatch;
+        e.target.classList.toggle('cyan-active', state.keyHoldLatch);
+      });
+
+      document.getElementById('releaseAllKeysBtn').addEventListener('click', () => {
+        state.keyHoldLatch = false;
+        document.getElementById('keyHoldLatchBtn').classList.remove('cyan-active');
+        state.heldKeySet.clear();
+        document.querySelectorAll('[data-key-idx]').forEach(el => el.classList.remove('key-active'));
+        if (ctx) {
+          vcoEnvGain.gain.setTargetAtTime(0.08, ctx.currentTime, 0.5);
+        }
       });
 
       document.getElementById('presetSelect').addEventListener('change', (e) => {
         loadScenePreset(parseInt(e.target.value, 10));
+        renderMiniLabPads();
       });
 
       document.getElementById('scaleSelect').addEventListener('change', (e) => {
@@ -2460,32 +2331,33 @@
         updateDSP();
       });
 
-      // MIDI Learn Button
+      // MIDI Learn
       const learnBtn = document.getElementById('midiLearnBtn');
       learnBtn.addEventListener('click', () => {
         state.midiLearnActive = !state.midiLearnActive;
-        learnBtn.classList.toggle('learn-active', state.midiLearnActive);
+        learnBtn.classList.toggle('cyan-active', state.midiLearnActive);
         if (!state.midiLearnActive) {
           state.learningKnobId = null;
           document.querySelectorAll('.rotary-cell').forEach(c => c.classList.remove('learning-target'));
-          document.getElementById('midiMonitorBadge').textContent = 'MIDI';
+          document.getElementById('midiMonitorBadge').textContent = 'MINILAB MkII';
         } else {
-          document.getElementById('midiMonitorBadge').textContent = '🎛️ ?';
+          document.getElementById('midiMonitorBadge').textContent = '🎛️ MOVE KNOB...';
         }
       });
 
-      // Teclado PC
+      // Teclado PC (25 teclas mapeadas)
+      const pcKeys25 = ['z','s','x','d','c','v','g','b','h','n','j','m', 'q','2','w','3','e','r','5','t','6','y','7','u','i'];
       window.addEventListener('keydown', (e) => {
         if (e.repeat) return;
-        const idx = PC_KEYS.indexOf(e.key.toLowerCase());
-        if (idx !== -1) triggerSolarPlate(idx, 0.78);
+        const idx = pcKeys25.indexOf(e.key.toLowerCase());
+        if (idx !== -1) triggerMiniLabKey(idx, 0.8);
       });
       window.addEventListener('keyup', (e) => {
-        const idx = PC_KEYS.indexOf(e.key.toLowerCase());
-        if (idx !== -1) releaseSolarPlate(idx);
+        const idx = pcKeys25.indexOf(e.key.toLowerCase());
+        if (idx !== -1) releaseMiniLabKey(idx);
       });
 
-      // Grabadora de audio
+      // Grabación de Audio
       const recBtn = document.getElementById('recBtn');
       recBtn.addEventListener('click', () => {
         if (!ctx) initAudioEngine();
@@ -2500,7 +2372,7 @@
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
-            a.download = `420_${Date.now()}.webm`;
+            a.download = `ancient_ambient_machine_${Date.now()}.webm`;
             a.click();
           };
           mediaRecorder.start();
@@ -2524,21 +2396,19 @@
       setKnobValue('hpfCutoff', rnd(25, 420), true);
       setKnobValue('reso', rnd(1.5, 9.5), true);
       setKnobValue('tremDepth', rnd(0.15, 0.72), true);
-      setKnobValue('tremRate', rnd(0.35, 6.5), true);
-      setKnobValue('shimmer', rnd(0.35, 0.90), true);
+      setKnobValue('revMix', rnd(0.50, 0.95), true);
       setKnobValue('atmosFm', rnd(0.1, 0.65), true);
     }
 
-    // 7. Escenas Preconfiguradas (con LPF, HPF y Trémolo)
     const SCENE_PRESETS = [
-      { droneRoot: 55.0, droneSpread: 0.32, padLvl: 0.76, atmosFm: 0.30, cutoff: 1650, hpfCutoff: 45,  reso: 3.6, drive: 0.28, tremDepth: 0.35, tremRate: 1.85, shimmer: 0.68, scale: 'just', vco: 'sawtooth', drone: 'supersaw' },
-      { droneRoot: 41.2, droneSpread: 0.65, padLvl: 0.45, atmosFm: 0.68, cutoff: 780,  hpfCutoff: 110, reso: 10.5,drive: 0.75, tremDepth: 0.62, tremRate: 4.80, shimmer: 0.28, scale: 'phrygian', vco: 'square', drone: 'sawtooth' },
-      { droneRoot: 65.4, droneSpread: 0.18, padLvl: 0.92, atmosFm: 0.18, cutoff: 3400, hpfCutoff: 140, reso: 2.2, drive: 0.14, tremDepth: 0.28, tremRate: 0.85, shimmer: 0.88, scale: 'lydian', vco: 'glass', drone: 'choir' },
-      { droneRoot: 49.0, droneSpread: 0.48, padLvl: 0.62, atmosFm: 0.74, cutoff: 2250, hpfCutoff: 320, reso: 6.4, drive: 0.35, tremDepth: 0.55, tremRate: 6.20, shimmer: 0.62, scale: 'minor', vco: 'triangle', drone: 'glass' },
-      { droneRoot: 58.3, droneSpread: 0.25, padLvl: 0.80, atmosFm: 0.24, cutoff: 1320, hpfCutoff: 55,  reso: 4.5, drive: 0.42, tremDepth: 0.40, tremRate: 1.40, shimmer: 0.65, scale: 'just', vco: 'organ', drone: 'organ' },
-      { droneRoot: 73.4, droneSpread: 0.14, padLvl: 0.78, atmosFm: 0.25, cutoff: 2800, hpfCutoff: 180, reso: 2.8, drive: 0.12, tremDepth: 0.30, tremRate: 2.40, shimmer: 0.54, scale: 'pentatonic', vco: 'glass', drone: 'triangle' },
-      { droneRoot: 43.6, droneSpread: 0.55, padLvl: 0.88, atmosFm: 0.35, cutoff: 1850, hpfCutoff: 35,  reso: 4.8, drive: 0.48, tremDepth: 0.22, tremRate: 0.65, shimmer: 0.72, scale: 'minor', vco: 'sawtooth', drone: 'supersaw' },
-      { droneRoot: 34.0, droneSpread: 0.52, padLvl: 0.82, atmosFm: 0.42, cutoff: 920,  hpfCutoff: 25,  reso: 7.2, drive: 0.44, tremDepth: 0.70, tremRate: 0.35, shimmer: 0.92, scale: 'microtonal', vco: 'organ', drone: 'choir' }
+      { droneRoot: 55.0, droneSpread: 0.32, padLvl: 0.76, atmosFm: 0.30, cutoff: 1650, hpfCutoff: 45,  reso: 3.6, drive: 0.28, tremDepth: 0.35, seqTempo: 68,  revMix: 0.72, scale: 'just',       waveIdx: 0 },
+      { droneRoot: 41.2, droneSpread: 0.65, padLvl: 0.45, atmosFm: 0.68, cutoff: 780,  hpfCutoff: 110, reso: 10.5,drive: 0.75, tremDepth: 0.62, seqTempo: 84,  revMix: 0.55, scale: 'phrygian',   waveIdx: 5 },
+      { droneRoot: 65.4, droneSpread: 0.18, padLvl: 0.92, atmosFm: 0.18, cutoff: 3400, hpfCutoff: 140, reso: 2.2, drive: 0.14, tremDepth: 0.28, seqTempo: 54,  revMix: 0.90, scale: 'lydian',     waveIdx: 1 },
+      { droneRoot: 49.0, droneSpread: 0.48, padLvl: 0.62, atmosFm: 0.74, cutoff: 2250, hpfCutoff: 320, reso: 6.4, drive: 0.35, tremDepth: 0.55, seqTempo: 96,  revMix: 0.76, scale: 'minor',      waveIdx: 3 },
+      { droneRoot: 58.3, droneSpread: 0.25, padLvl: 0.80, atmosFm: 0.24, cutoff: 1320, hpfCutoff: 55,  reso: 4.5, drive: 0.42, tremDepth: 0.40, seqTempo: 62,  revMix: 0.78, scale: 'phrygian',   waveIdx: 2 },
+      { droneRoot: 73.4, droneSpread: 0.14, padLvl: 0.78, atmosFm: 0.25, cutoff: 2800, hpfCutoff: 180, reso: 2.8, drive: 0.12, tremDepth: 0.30, seqTempo: 76,  revMix: 0.65, scale: 'pentatonic', waveIdx: 3 },
+      { droneRoot: 43.6, droneSpread: 0.55, padLvl: 0.88, atmosFm: 0.35, cutoff: 1850, hpfCutoff: 35,  reso: 4.8, drive: 0.48, tremDepth: 0.22, seqTempo: 48,  revMix: 0.82, scale: 'minor',      waveIdx: 0 },
+      { droneRoot: 34.0, droneSpread: 0.52, padLvl: 0.82, atmosFm: 0.42, cutoff: 920,  hpfCutoff: 25,  reso: 7.2, drive: 0.44, tremDepth: 0.70, seqTempo: 40,  revMix: 0.94, scale: 'microtonal', waveIdx: 2 }
     ];
 
     function loadScenePreset(idx) {
@@ -2553,18 +2423,21 @@
       setKnobValue('reso', p.reso, false);
       setKnobValue('drive', p.drive, false);
       setKnobValue('tremDepth', p.tremDepth, false);
-      setKnobValue('tremRate', p.tremRate, false);
-      setKnobValue('shimmer', p.shimmer, false);
+      setKnobValue('seqTempo', p.seqTempo, false);
+      setKnobValue('revMix', p.revMix, false);
 
       state.scale = p.scale;
       document.getElementById('scaleSelect').value = p.scale;
+
+      state.wavePresetIdx = (p.waveIdx - 1 + WAVE_PRESETS.length) % WAVE_PRESETS.length;
+      triggerEncoderPush('droneLvl');
       updateDSP();
     }
 
-    // 8. Integración Completa con el Controlador MIDI Arturia MiniLab MkII
+    // Integración MIDI Completa para el Arturia MiniLab MkII
     function initArturiaMiniLabMidi() {
       if (!navigator.requestMIDIAccess) {
-        document.getElementById('midiMonitorBadge').textContent = 'SIN WEB MIDI';
+        document.getElementById('midiMonitorBadge').textContent = 'NO WEB MIDI';
         return;
       }
 
@@ -2595,7 +2468,7 @@
           });
 
           preferred.onmidimessage = handleMidiPacket;
-          document.getElementById('midiMonitorBadge').textContent = `✦ ${preferred.name.slice(0, 12)}`;
+          document.getElementById('midiMonitorBadge').textContent = `𓂀 ${preferred.name.slice(0, 14)}`;
         };
 
         selectEl.addEventListener('change', (e) => {
@@ -2604,7 +2477,7 @@
           const chosen = inputs.find(i => i.id === e.target.value);
           if (chosen) {
             chosen.onmidimessage = handleMidiPacket;
-            document.getElementById('midiMonitorBadge').textContent = `✦ ${chosen.name.slice(0, 12)}`;
+            document.getElementById('midiMonitorBadge').textContent = `𓂀 ${chosen.name.slice(0, 14)}`;
           }
         });
 
@@ -2620,40 +2493,54 @@
 
       const badge = document.getElementById('midiMonitorBadge');
 
-      // 1. Control Change (CC): 16 Encoders del MiniLab MkII + Mod Strip (CC 1)
+      // 1. Control Change (CC): 16 Encoders + Clicks de K1 (CC 113) y K9 (CC 115) + Tira Mod (CC 1) + Sustain (CC 64)
       if (cmd === 0xb0) {
-        badge.textContent = `MIDI CC${d1}: ${d2}`;
+        badge.textContent = `CC${d1}: ${d2}`;
 
-        // Si MIDI Learn está esperando asignar un Knob
+        // Push-Click físico del Encoder 1 (CC 113) y Encoder 9 (CC 115) en el Arturia MiniLab MkII
+        if (d1 === 113 && d2 > 63) {
+          triggerEncoderPush('droneLvl');
+          return;
+        }
+        if (d1 === 115 && d2 > 63) {
+          triggerEncoderPush('cutoff');
+          return;
+        }
+
+        // Pedal Sustain / Hold Latch (CC 64)
+        if (d1 === 64) {
+          state.keyHoldLatch = d2 >= 64;
+          document.getElementById('keyHoldLatchBtn').classList.toggle('cyan-active', state.keyHoldLatch);
+          return;
+        }
+
         if (state.midiLearnActive && state.learningKnobId && d1 !== 1) {
           const def = KNOB_DEFS.find(k => k.id === state.learningKnobId);
           if (def) {
             def.cc = d1;
             document.getElementById(`knobCcBadge_${def.id}`).textContent = `CC${d1}`;
-            badge.textContent = `ASIGNADO ${def.kNum} → CC${d1}`;
+            badge.textContent = `${def.kNum} → CC${d1}`;
           }
           state.midiLearnActive = false;
           state.learningKnobId = null;
-          document.getElementById('midiLearnBtn').classList.remove('learn-active');
+          document.getElementById('midiLearnBtn').classList.remove('cyan-active');
           document.querySelectorAll('.rotary-cell').forEach(c => c.classList.remove('learning-target'));
           return;
         }
 
-        // Mod Strip (CC 1)
+        // Tira Táctil Vertical de Modulación (CC 1)
         if (d1 === 1) {
           const norm = d2 / 127;
           state.modStripNorm = norm;
-          document.getElementById('modStripFill').style.width = `${Math.round(norm * 100)}%`;
+          document.getElementById('modStripFill').style.height = `${Math.round(norm * 100)}%`;
           document.getElementById('modStripVal').textContent = `${Math.round(norm * 100)}%`;
           updateDSP();
           return;
         }
 
-        // Buscar Knob mapeado a este CC
         const knobDef = KNOB_DEFS.find(k => k.cc === d1 || k.altCc === d1);
         if (knobDef) {
           const span = knobDef.max - knobDef.min;
-          // Detectar si el encoder del Arturia MiniLab MkII está en modo Relativo (61..67) o Absoluto (0..127)
           let newVal;
           if (d2 >= 61 && d2 <= 67 && d2 !== 64 && knobDef._lastRaw === undefined) {
             const delta = (d2 - 64) * (span * 0.015);
@@ -2667,85 +2554,123 @@
         return;
       }
 
-      // 2. Pitch Bend Strip (0xE0)
+      // 2. Tira Táctil Vertical de Pitch Bend (0xE0)
       if (cmd === 0xe0) {
         const pb14 = (d2 << 7) | d1;
         const norm = pb14 / 16383;
         state.pitchStripNorm = norm;
-        document.getElementById('pitchStripFill').style.width = `${Math.round(norm * 100)}%`;
-        document.getElementById('pitchStripVal').textContent = `${Math.round(norm * 100)}%`;
-        setKnobValue('padMorph', norm, true);
+        document.getElementById('pitchStripFill').style.height = `${Math.round(norm * 100)}%`;
+        const st = ((norm - 0.5) * 4).toFixed(1);
+        document.getElementById('pitchStripVal').textContent = `${st > 0 ? '+' : ''}${st} st`;
+        updateDSP();
         return;
       }
 
-      // 3. Note On (Pads 1-8 en notas 36-43 o Teclado de 25 teclas)
+      // 3. Note On: Pads 1–8 (Notas 36–43), Pads 9–16 (Notas 44–51) o las 25 Mini-Teclas
       if (cmd === 0x90 && d2 > 0) {
-        badge.textContent = `NOTE ${d1} VEL ${d2}`;
-        if ((ch === 10 || (d1 >= 36 && d1 <= 43)) && d1 >= 36 && d1 <= 43) {
-          handleMiniLabPadTrigger(d1 - 36);
+        badge.textContent = `NOTE ${d1} V${d2}`;
+        // Pads 1–8 (Banco A)
+        if (ch === 10 && d1 >= 36 && d1 <= 43) {
+          handleMiniLabPadTrigger(d1 - 36, false);
           return;
         }
-        // Teclado de 25 teclas: actualiza fundamental si es octava grave, o toca las 12 placas capacitivas
-        if (d1 < 48) {
-          const newRoot = 440 * Math.pow(2, (d1 - 69) / 12);
-          setKnobValue('droneRoot', newRoot, true);
+        // Pads 9–16 (Banco B)
+        if (ch === 10 && d1 >= 44 && d1 <= 51) {
+          handleMiniLabPadTrigger(d1 - 44, true);
+          return;
         }
-        triggerSolarPlate(d1 % 12, d2 / 127);
+        // Teclado de 25 teclas (Mapea C2=36..C4=60 o cualquier octava a las 25 teclas)
+        const keyIdx = ((d1 - 48) % 25 + 25) % 25;
+        triggerMiniLabKey(keyIdx, d2 / 127);
         return;
       }
 
       // 4. Note Off
       if (cmd === 0x80 || (cmd === 0x90 && d2 === 0)) {
-        if (d1 >= 36 && d1 <= 43 && ch === 10) return;
-        releaseSolarPlate(d1 % 12);
+        if (ch === 10 && d1 >= 36 && d1 <= 51) return;
+        const keyIdx = ((d1 - 48) % 25 + 25) % 25;
+        releaseMiniLabKey(keyIdx);
       }
     }
 
-    // 9. Animación Continua: Secuenciador Analógico + Órbita Lissajous + Pantallas CRT
+    function applyTempoSync() {
+      const beatSec = 60 / Math.max(15, params.seqTempo * state.seqMult);
+      if (tapeDelayL && tapeDelayR && ctx) {
+        const now = ctx.currentTime;
+        tapeDelayL.delayTime.setTargetAtTime(Math.min(1.8, beatSec * 0.75), now, 0.08);
+        tapeDelayR.delayTime.setTargetAtTime(Math.min(1.8, beatSec * 1.0), now, 0.08);
+      }
+      updateDSP();
+    }
+
+    function advanceSequencerStep() {
+      const numSteps = state.seqSteps.length;
+      if (state.seqDir === 'forward') {
+        state.seqStepIdx = (state.seqStepIdx + 1) % numSteps;
+      } else if (state.seqDir === 'pendulum') {
+        state.seqStepIdx += state.seqPendulumDir;
+        if (state.seqStepIdx >= numSteps - 1) {
+          state.seqStepIdx = numSteps - 1;
+          state.seqPendulumDir = -1;
+        } else if (state.seqStepIdx <= 0) {
+          state.seqStepIdx = 0;
+          state.seqPendulumDir = 1;
+        }
+      } else {
+        state.seqStepIdx = Math.floor(Math.random() * numSteps);
+      }
+
+      document.querySelectorAll('.seq-step-cell').forEach((el, i) => {
+        el.classList.toggle('active-step', i === state.seqStepIdx);
+      });
+
+      const clockLed = document.getElementById('seqClockLed');
+      if (clockLed) {
+        clockLed.classList.add('on');
+        setTimeout(() => clockLed.classList.remove('on'), 90);
+      }
+
+      state.shTarget = (Math.random() * 2 - 1);
+
+      if (!ctx) return;
+      const st = state.seqSteps[state.seqStepIdx];
+      if (st && st.gate && state.activeKeyIdx === -1) {
+        const ratios = SCALES[state.scale] || SCALES.just;
+        const octMult = Math.pow(2, state.octaveShift * 0.5);
+        const freq = params.droneRoot * 2 * ratios[st.noteIdx] * octMult;
+        const glideTime = 0.015 + params.atmosFm * 0.35;
+        const now = ctx.currentTime;
+        vcoMainOsc.frequency.setTargetAtTime(freq, now, glideTime);
+        vcoSubOsc.frequency.setTargetAtTime(freq * 0.5, now, glideTime);
+        vcoModOsc.frequency.setTargetAtTime(freq * 2.0, now, glideTime);
+        shimmerHarmOsc2.frequency.setTargetAtTime(freq * 2.0, now, 0.25);
+
+        vcoEnvGain.gain.cancelScheduledValues(now);
+        vcoEnvGain.gain.setTargetAtTime(0.38, now, 0.09);
+        vcoEnvGain.gain.setTargetAtTime(0.10, now + 0.16, 0.5);
+      }
+    }
+
     let phase = 0;
     let lastStepMs = 0;
 
     function mainLoop(timestamp) {
       requestAnimationFrame(mainLoop);
-
       phase += 0.016;
 
-      // Avanzar Secuenciador de 8 pasos
       if (state.running && state.seqRunning && ctx) {
-        const stepInterval = Math.max(180, 950 - params.lfoRate * 380);
-        if (timestamp - lastStepMs >= stepInterval) {
+        const effectiveBpm = Math.max(15, params.seqTempo * state.seqMult);
+        const stepIntervalMs = (60 / effectiveBpm) * 1000 * 0.5;
+        if (timestamp - lastStepMs >= stepIntervalMs) {
           lastStepMs = timestamp;
-          state.seqStepIdx = (state.seqStepIdx + 1) % 8;
-
-          document.querySelectorAll('.seq-col').forEach((el, i) => {
-            el.classList.toggle('active-step', i === state.seqStepIdx);
-          });
-
-          // Actualizar Sample & Hold
-          state.shTarget = (Math.random() * 2 - 1);
-
-          const st = state.seqSteps[state.seqStepIdx];
-          if (st.gate && state.activePlateIdx === -1) {
-            const ratios = SCALES[state.scale] || SCALES.just;
-            const freq = params.droneRoot * 2 * ratios[st.noteIdx];
-            const now = ctx.currentTime;
-            vcoMainOsc.frequency.setTargetAtTime(freq, now, 0.12);
-            vcoSubOsc.frequency.setTargetAtTime(freq * 0.5, now, 0.12);
-            vcoModOsc.frequency.setTargetAtTime(freq * 2.0, now, 0.12);
-            shimmerHarmOsc2.frequency.setTargetAtTime(freq * 2.0, now, 0.25);
-
-            vcoEnvGain.gain.cancelScheduledValues(now);
-            vcoEnvGain.gain.setTargetAtTime(0.38, now, 0.14);
-            vcoEnvGain.gain.setTargetAtTime(0.10, now + 0.22, 0.65);
-          }
+          advanceSequencerStep();
         }
       }
 
       state.shValue += (state.shTarget - state.shValue) * 0.05;
 
-      // Órbita Vectorial Automática
       if (state.autoOrbit && !state.draggingVec) {
-        const t = phase * params.lfoRate * 2.2;
+        const t = phase * 0.35;
         state.vecX = 0.5 + 0.38 * Math.sin(t);
         state.vecY = 0.5 + 0.38 * Math.cos(t * 0.71 + 0.6);
         if (state.running) updateDSP();
@@ -2761,61 +2686,64 @@
       const w = canvas.width, h = canvas.height;
       const cx = w / 2, cy = h / 2;
 
-      c.fillStyle = '#05040a';
+      c.fillStyle = '#050402';
       c.fillRect(0, 0, w, h);
 
-      // Anillos de Astrolabio Cósmico y Geometría Sagrada
-      c.strokeStyle = 'rgba(223, 186, 105, 0.22)';
-      c.lineWidth = 1;
-      [28, 52, 72].forEach(r => {
-        c.beginPath();
-        c.arc(cx, cy, r, 0, Math.PI * 2);
-        c.stroke();
-      });
-
-      // Hexagrama Alquímico Giratorio Lento
+      // Anillo Stargate con 9 Chevrons Alienígenas
       c.save();
       c.translate(cx, cy);
-      c.rotate(phase * 0.18);
-      c.strokeStyle = 'rgba(157, 78, 221, 0.28)';
-      for (let t = 0; t < 2; t++) {
+      c.rotate(phase * 0.14);
+      c.strokeStyle = 'rgba(230, 184, 76, 0.35)';
+      c.lineWidth = 1.2;
+      c.beginPath();
+      c.arc(0, 0, 62, 0, Math.PI * 2);
+      c.stroke();
+
+      c.strokeStyle = 'rgba(0, 245, 212, 0.42)';
+      for (let i = 0; i < 9; i++) {
+        const a = (i * Math.PI * 2) / 9;
         c.beginPath();
-        for (let i = 0; i < 3; i++) {
-          const ang = (i * Math.PI * 2) / 3 + (t * Math.PI);
-          const x = Math.cos(ang) * 52;
-          const y = Math.sin(ang) * 52;
-          if (i === 0) c.moveTo(x, y);
-          else c.lineTo(x, y);
-        }
-        c.closePath();
+        c.moveTo(Math.cos(a) * 54, Math.sin(a) * 54);
+        c.lineTo(Math.cos(a) * 64, Math.sin(a) * 64);
         c.stroke();
       }
       c.restore();
 
+      // Pirámide 3D de Giza en el centro
+      c.strokeStyle = 'rgba(230, 184, 76, 0.55)';
+      c.lineWidth = 1.3;
+      const apexX = cx, apexY = cy - 40;
+      const bL = cx - 48, bR = cx + 48, bY = cy + 32, bMidY = cy + 44;
+      c.beginPath();
+      c.moveTo(apexX, apexY); c.lineTo(bL, bY);
+      c.moveTo(apexX, apexY); c.lineTo(bR, bY);
+      c.moveTo(apexX, apexY); c.lineTo(cx, bMidY);
+      c.moveTo(bL, bY); c.lineTo(cx, bMidY); c.lineTo(bR, bY);
+      c.stroke();
+
       const px = state.vecX * w;
       const py = state.vecY * h;
 
-      // Líneas de constelación hacia los 4 Elementos
-      c.strokeStyle = 'rgba(249, 220, 148, 0.38)';
+      c.strokeStyle = 'rgba(0, 245, 212, 0.35)';
       c.beginPath();
+      c.moveTo(apexX, apexY); c.lineTo(px, py);
       c.moveTo(0, 0); c.lineTo(px, py);
       c.moveTo(w, 0); c.lineTo(px, py);
       c.moveTo(0, h); c.lineTo(px, py);
       c.moveTo(w, h); c.lineTo(px, py);
       c.stroke();
 
-      // Orbe Solar-Lunar Eclipsado en el cursor
-      c.fillStyle = '#f9dc94';
-      c.shadowColor = '#f9dc94';
+      c.fillStyle = '#00f5d4';
+      c.shadowColor = '#00f5d4';
       c.shadowBlur = 14;
       c.beginPath();
-      c.arc(px, py, 8, 0, Math.PI * 2);
+      c.arc(px, py, 7.5, 0, Math.PI * 2);
       c.fill();
       c.shadowBlur = 0;
 
-      c.fillStyle = '#05040a';
+      c.fillStyle = '#050402';
       c.beginPath();
-      c.arc(px + 2.5, py - 1.5, 5.5, 0, Math.PI * 2);
+      c.arc(px, py, 3.2, 0, Math.PI * 2);
       c.fill();
     }
 
@@ -2824,7 +2752,7 @@
       const c = canvas.getContext('2d');
       const w = canvas.width, h = canvas.height;
 
-      c.fillStyle = 'rgba(6, 8, 11, 0.35)';
+      c.fillStyle = 'rgba(6, 5, 3, 0.38)';
       c.fillRect(0, 0, w, h);
 
       if (!analyser) return;
@@ -2836,13 +2764,13 @@
       for (let i = 0; i < bars; i++) {
         const v = freq[i * 2] / 255;
         const bh = v * h * 0.75;
-        c.fillStyle = `rgba(216, 177, 90, ${0.15 + v * 0.4})`;
+        c.fillStyle = `rgba(230, 184, 76, ${0.15 + v * 0.45})`;
         c.fillRect(i * bw, h - bh, bw - 1, bh);
       }
 
       const time = new Uint8Array(analyser.fftSize);
       analyser.getByteTimeDomainData(time);
-      c.strokeStyle = '#00e5ff';
+      c.strokeStyle = '#00f5d4';
       c.lineWidth = 1.8;
       c.beginPath();
       const slice = w / time.length;
@@ -2853,14 +2781,13 @@
       }
       c.stroke();
 
-      // Dibujar ventana de corte Pasa-Altos (HPF) y Pasa-Bajos (LPF) en el CRT
       const hpfX = Math.min(w * 0.48, (Math.log10(Math.max(20, params.hpfCutoff) / 20) / Math.log10(2400 / 20)) * (w * 0.48));
       const lpfX = Math.max(hpfX + 8, (Math.log10(Math.max(80, params.cutoff) / 80) / Math.log10(9500 / 80)) * w);
 
-      c.fillStyle = 'rgba(217, 56, 41, 0.09)';
+      c.fillStyle = 'rgba(0, 245, 212, 0.08)';
       c.fillRect(hpfX, 0, Math.max(4, lpfX - hpfX), h);
 
-      c.strokeStyle = 'rgba(255, 107, 91, 0.75)';
+      c.strokeStyle = 'rgba(230, 184, 76, 0.75)';
       c.lineWidth = 1.2;
       c.beginPath();
       c.moveTo(hpfX, 0); c.lineTo(hpfX, h);
