@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Obsidian Monolith Background -->
+    <path
+        android:fillColor="#080604"
+        android:pathData="M0,0h108v108h-108z" />
+    <!-- Gold Cartouche Frame -->
+    <path
+        android:fillColor="#16110A"
+        android:strokeColor="#E6B84C"
+        android:strokeWidth="3"
+        android:pathData="M10,10h88v88h-88z" />
+    <!-- Outer Stargate Ring -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#00F5D4"
+        android:strokeWidth="2.5"
+        android:pathData="M54,18A36,36 0 1,1 53.9,18z" />
+    <!-- Golden Pyramid of Giza / Orion -->
+    <path
+        android:fillColor="#291F0E"
+        android:strokeColor="#FFE494"
+        android:strokeWidth="2.8"
+        android:pathData="M54,24L22,78L86,78Z" />
+    <!-- Alien Cyan Eye of Horus / Ra Orb at Apex -->
+    <path
+        android:fillColor="#00F5D4"
+        android:pathData="M54,44A9,9 0 1,1 53.9,44z" />
+    <path
+        android:fillColor="#080604"
+        android:pathData="M54,49A4,4 0 1,1 53.9,49z" />
+</vector>

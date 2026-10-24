@@ -30,3 +30,7 @@ android-omnichord/.gradle/
 android-omnichord/build/
 android-omnichord/app/build/
 android-omnichord/local.properties
+android-ancient-ambient/.gradle/
+android-ancient-ambient/build/
+android-ancient-ambient/app/build/
+android-ancient-ambient/local.properties
